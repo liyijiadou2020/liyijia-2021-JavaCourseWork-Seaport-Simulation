@@ -1,0 +1,13 @@
+{
+  "countUnloaded" : 45,
+  "countLoose" : 1,
+  "countLiquid" : 2,
+  "countContainer" : 1,
+  "totalFine" : 1878900,
+  "sumWaitDuration" : 455.0,
+  "avrWaitDuration" : 10.11111111111111,
+  "sumDelay" : 2724.0,
+  "avrDelay" : 60.53333333333333,
+  "maxDelay" : 1413.0,
+  "avrWaitLength" : 0.5001388888888889
+}

@@ -1,0 +1,8035 @@
+{
+  "schedules" : [ {
+    "arriveTime" : {
+      "day" : 1,
+      "hour" : 17,
+      "minute" : 21
+    },
+    "nameShip" : "GZ",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 50085
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 12,
+      "minute" : 50
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 10,
+      "hour" : 2,
+      "minute" : 51
+    },
+    "nameShip" : "GY",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 5994
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 1,
+      "minute" : 0
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 29,
+      "hour" : 19,
+      "minute" : 46
+    },
+    "nameShip" : "YA",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 53215
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 13,
+      "minute" : 38
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 26,
+      "hour" : 21,
+      "minute" : 5
+    },
+    "nameShip" : "RWCP",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 69598
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 14,
+      "minute" : 52
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 11,
+      "hour" : 20,
+      "minute" : 37
+    },
+    "nameShip" : "XH",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 2156
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 21
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 29,
+      "hour" : 15,
+      "minute" : 15
+    },
+    "nameShip" : "KZF",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 50707
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 10,
+      "minute" : 50
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 25,
+      "hour" : 2,
+      "minute" : 53
+    },
+    "nameShip" : "CONI",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 4271
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 43
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 26,
+      "hour" : 20,
+      "minute" : 43
+    },
+    "nameShip" : "FTS",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 3033
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 30
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 8,
+      "hour" : 4,
+      "minute" : 48
+    },
+    "nameShip" : "LNQQ",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 54598
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 11,
+      "minute" : 39
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 6,
+      "hour" : 13,
+      "minute" : 38
+    },
+    "nameShip" : "OF",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 42473
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 10,
+      "minute" : 53
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 26,
+      "hour" : 6,
+      "minute" : 47
+    },
+    "nameShip" : "VPY",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 67223
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 14,
+      "minute" : 21
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 20,
+      "hour" : 9,
+      "minute" : 29
+    },
+    "nameShip" : "UC",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 59853
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 15,
+      "minute" : 20
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 18,
+      "hour" : 2,
+      "minute" : 41
+    },
+    "nameShip" : "HA",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 3400
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 34
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 18,
+      "hour" : 8,
+      "minute" : 28
+    },
+    "nameShip" : "JSB",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 56555
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 12,
+      "minute" : 5
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 8,
+      "hour" : 11,
+      "minute" : 18
+    },
+    "nameShip" : "SEK",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 59938
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 12,
+      "minute" : 48
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 28,
+      "hour" : 17,
+      "minute" : 35
+    },
+    "nameShip" : "MSHD",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 4125
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 41
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 26,
+      "hour" : 3,
+      "minute" : 6
+    },
+    "nameShip" : "UUCY",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 2114
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 21
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 25,
+      "hour" : 13,
+      "minute" : 3
+    },
+    "nameShip" : "CNJQ",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 3114
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 31
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 16,
+      "hour" : 8,
+      "minute" : 10
+    },
+    "nameShip" : "JO",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 2716
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 27
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 12,
+      "hour" : 10,
+      "minute" : 34
+    },
+    "nameShip" : "SZ",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 61387
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 13,
+      "minute" : 7
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 29,
+      "hour" : 16,
+      "minute" : 53
+    },
+    "nameShip" : "RFE",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 50482
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 10,
+      "minute" : 47
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 27,
+      "hour" : 7,
+      "minute" : 52
+    },
+    "nameShip" : "JWE",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 66580
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 14,
+      "minute" : 13
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 22,
+      "hour" : 12,
+      "minute" : 24
+    },
+    "nameShip" : "MGWB",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 60981
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 13,
+      "minute" : 1
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 7,
+      "hour" : 18,
+      "minute" : 47
+    },
+    "nameShip" : "IOZ",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 3019
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 30
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 24,
+      "hour" : 15,
+      "minute" : 27
+    },
+    "nameShip" : "ZBVA",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 4291
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 43
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 11,
+      "hour" : 5,
+      "minute" : 34
+    },
+    "nameShip" : "IH",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 5978
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 1,
+      "minute" : 0
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 11,
+      "hour" : 15,
+      "minute" : 26
+    },
+    "nameShip" : "CX",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 59665
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 15,
+      "minute" : 17
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 6,
+      "hour" : 23,
+      "minute" : 50
+    },
+    "nameShip" : "BKZR",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 51104
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 13,
+      "minute" : 6
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 25,
+      "hour" : 15,
+      "minute" : 54
+    },
+    "nameShip" : "SQ",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 64748
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 13,
+      "minute" : 50
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 5,
+      "hour" : 18,
+      "minute" : 39
+    },
+    "nameShip" : "MYC",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 55492
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 11,
+      "minute" : 51
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 7,
+      "hour" : 20,
+      "minute" : 36
+    },
+    "nameShip" : "QQ",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 54380
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 11,
+      "minute" : 37
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 1,
+      "hour" : 11,
+      "minute" : 44
+    },
+    "nameShip" : "XSIT",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 60173
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 12,
+      "minute" : 51
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 28,
+      "hour" : 21,
+      "minute" : 45
+    },
+    "nameShip" : "YVP",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 4010
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 40
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 12,
+      "hour" : 20,
+      "minute" : 31
+    },
+    "nameShip" : "RY",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 2171
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 21
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 7,
+      "hour" : 17,
+      "minute" : 7
+    },
+    "nameShip" : "LOL",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 58781
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 15,
+      "minute" : 4
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 5,
+      "hour" : 12,
+      "minute" : 46
+    },
+    "nameShip" : "CC",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 55361
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 14,
+      "minute" : 11
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 26,
+      "hour" : 0,
+      "minute" : 34
+    },
+    "nameShip" : "IEOD",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 2399
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 24
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 28,
+      "hour" : 20,
+      "minute" : 10
+    },
+    "nameShip" : "NSZ",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 68520
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 14,
+      "minute" : 38
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 17,
+      "hour" : 2,
+      "minute" : 7
+    },
+    "nameShip" : "UI",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 3019
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 30
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 8,
+      "hour" : 5,
+      "minute" : 59
+    },
+    "nameShip" : "IXQ",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 55932
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 14,
+      "minute" : 20
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 24,
+      "hour" : 3,
+      "minute" : 37
+    },
+    "nameShip" : "KK",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 2766
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 27
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 21,
+      "hour" : 15,
+      "minute" : 53
+    },
+    "nameShip" : "OS",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 50126
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 10,
+      "minute" : 42
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 2,
+      "hour" : 19,
+      "minute" : 57
+    },
+    "nameShip" : "MZ",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 5011
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 50
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 27,
+      "hour" : 2,
+      "minute" : 43
+    },
+    "nameShip" : "GCHY",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 2700
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 27
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 0,
+      "hour" : 20,
+      "minute" : 59
+    },
+    "nameShip" : "PJOJ",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 41727
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 10,
+      "minute" : 41
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 21,
+      "hour" : 17,
+      "minute" : 28
+    },
+    "nameShip" : "GUPB",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 54470
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 11,
+      "minute" : 38
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 29,
+      "hour" : 19,
+      "minute" : 8
+    },
+    "nameShip" : "RRIQ",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 47756
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 12,
+      "minute" : 14
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 26,
+      "hour" : 4,
+      "minute" : 43
+    },
+    "nameShip" : "AL",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 64763
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 13,
+      "minute" : 50
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 10,
+      "hour" : 17,
+      "minute" : 41
+    },
+    "nameShip" : "AAU",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 2451
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 24
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 8,
+      "hour" : 4,
+      "minute" : 37
+    },
+    "nameShip" : "UW",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 4295
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 43
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 16,
+      "hour" : 11,
+      "minute" : 50
+    },
+    "nameShip" : "PRQ",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 2194
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 22
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 11,
+      "hour" : 1,
+      "minute" : 18
+    },
+    "nameShip" : "SD",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 63499
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 13,
+      "minute" : 34
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 3,
+      "hour" : 23,
+      "minute" : 1
+    },
+    "nameShip" : "KFVN",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 62863
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 13,
+      "minute" : 25
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 21,
+      "hour" : 16,
+      "minute" : 37
+    },
+    "nameShip" : "QAG",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 4264
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 43
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 23,
+      "hour" : 0,
+      "minute" : 39
+    },
+    "nameShip" : "HO",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 40977
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 10,
+      "minute" : 30
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 15,
+      "hour" : 19,
+      "minute" : 25
+    },
+    "nameShip" : "FTTR",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 55951
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 11,
+      "minute" : 57
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 0,
+      "hour" : 12,
+      "minute" : 54
+    },
+    "nameShip" : "NY",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 40357
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 10,
+      "minute" : 20
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 24,
+      "hour" : 1,
+      "minute" : 6
+    },
+    "nameShip" : "YKGR",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 68494
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 14,
+      "minute" : 38
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 6,
+      "hour" : 20,
+      "minute" : 3
+    },
+    "nameShip" : "AGLV",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 2596
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 26
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 15,
+      "hour" : 12,
+      "minute" : 6
+    },
+    "nameShip" : "HVPG",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 5644
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 57
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 11,
+      "hour" : 9,
+      "minute" : 46
+    },
+    "nameShip" : "QM",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 5212
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 52
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 18,
+      "hour" : 4,
+      "minute" : 17
+    },
+    "nameShip" : "PKI",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 64074
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 13,
+      "minute" : 41
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 23,
+      "hour" : 8,
+      "minute" : 51
+    },
+    "nameShip" : "JBJ",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 59310
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 15,
+      "minute" : 12
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 24,
+      "hour" : 0,
+      "minute" : 23
+    },
+    "nameShip" : "NGTL",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 52007
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 11,
+      "minute" : 6
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 18,
+      "hour" : 1,
+      "minute" : 31
+    },
+    "nameShip" : "DZJ",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 47675
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 12,
+      "minute" : 13
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 11,
+      "hour" : 14,
+      "minute" : 7
+    },
+    "nameShip" : "NM",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 5269
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 53
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 9,
+      "hour" : 15,
+      "minute" : 40
+    },
+    "nameShip" : "BGGB",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 5094
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 51
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 7,
+      "hour" : 23,
+      "minute" : 14
+    },
+    "nameShip" : "GDLY",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 65834
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 14,
+      "minute" : 4
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 24,
+      "hour" : 19,
+      "minute" : 10
+    },
+    "nameShip" : "JH",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 57803
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 14,
+      "minute" : 49
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 1,
+      "hour" : 18,
+      "minute" : 29
+    },
+    "nameShip" : "MO",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 59707
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 12,
+      "minute" : 45
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 29,
+      "hour" : 4,
+      "minute" : 48
+    },
+    "nameShip" : "CQY",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 55660
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 14,
+      "minute" : 16
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 2,
+      "hour" : 11,
+      "minute" : 40
+    },
+    "nameShip" : "KSJO",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 4557
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 46
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 25,
+      "hour" : 20,
+      "minute" : 1
+    },
+    "nameShip" : "NMG",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 5340
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 53
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 28,
+      "hour" : 12,
+      "minute" : 35
+    },
+    "nameShip" : "NH",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 54797
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 11,
+      "minute" : 42
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 18,
+      "hour" : 15,
+      "minute" : 17
+    },
+    "nameShip" : "JC",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 68610
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 14,
+      "minute" : 39
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 26,
+      "hour" : 9,
+      "minute" : 49
+    },
+    "nameShip" : "IBZC",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 4576
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 46
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 26,
+      "hour" : 5,
+      "minute" : 41
+    },
+    "nameShip" : "HYZY",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 62978
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 13,
+      "minute" : 27
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 13,
+      "hour" : 18,
+      "minute" : 36
+    },
+    "nameShip" : "NYG",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 5778
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 58
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 7,
+      "hour" : 5,
+      "minute" : 58
+    },
+    "nameShip" : "YNYX",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 52120
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 11,
+      "minute" : 8
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 24,
+      "hour" : 19,
+      "minute" : 3
+    },
+    "nameShip" : "FZ",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 48367
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 12,
+      "minute" : 24
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 8,
+      "hour" : 16,
+      "minute" : 54
+    },
+    "nameShip" : "WHB",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 3990
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 40
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 7,
+      "hour" : 22,
+      "minute" : 14
+    },
+    "nameShip" : "PH",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 54849
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 14,
+      "minute" : 3
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 19,
+      "hour" : 23,
+      "minute" : 19
+    },
+    "nameShip" : "FZCA",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 60412
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 12,
+      "minute" : 54
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 22,
+      "hour" : 6,
+      "minute" : 42
+    },
+    "nameShip" : "QWIE",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 53498
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 11,
+      "minute" : 25
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 25,
+      "hour" : 16,
+      "minute" : 32
+    },
+    "nameShip" : "RX",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 47505
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 12,
+      "minute" : 10
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 15,
+      "hour" : 23,
+      "minute" : 59
+    },
+    "nameShip" : "HZT",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 69311
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 14,
+      "minute" : 48
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 20,
+      "hour" : 10,
+      "minute" : 51
+    },
+    "nameShip" : "BW",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 62073
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 13,
+      "minute" : 15
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 14,
+      "hour" : 18,
+      "minute" : 5
+    },
+    "nameShip" : "RREQ",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 46793
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 11,
+      "minute" : 59
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 1,
+      "hour" : 0,
+      "minute" : 24
+    },
+    "nameShip" : "QLQK",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 59845
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 12,
+      "minute" : 47
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 10,
+      "hour" : 4,
+      "minute" : 30
+    },
+    "nameShip" : "BS",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 5240
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 52
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 8,
+      "hour" : 8,
+      "minute" : 39
+    },
+    "nameShip" : "KELG",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 3669
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 37
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 16,
+      "hour" : 14,
+      "minute" : 57
+    },
+    "nameShip" : "AUI",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 53373
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 13,
+      "minute" : 41
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 7,
+      "hour" : 12,
+      "minute" : 21
+    },
+    "nameShip" : "OM",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 3544
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 35
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 9,
+      "hour" : 18,
+      "minute" : 36
+    },
+    "nameShip" : "PJGH",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 2072
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 20
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 14,
+      "hour" : 23,
+      "minute" : 30
+    },
+    "nameShip" : "DOP",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 41460
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 10,
+      "minute" : 37
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 21,
+      "hour" : 3,
+      "minute" : 1
+    },
+    "nameShip" : "RNFA",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 5514
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 55
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 25,
+      "hour" : 4,
+      "minute" : 24
+    },
+    "nameShip" : "OHNC",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 40500
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 10,
+      "minute" : 23
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 26,
+      "hour" : 21,
+      "minute" : 27
+    },
+    "nameShip" : "MCGM",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 5563
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 56
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 24,
+      "hour" : 1,
+      "minute" : 23
+    },
+    "nameShip" : "RV",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 40969
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 10,
+      "minute" : 30
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 17,
+      "hour" : 2,
+      "minute" : 47
+    },
+    "nameShip" : "QH",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 41850
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 10,
+      "minute" : 43
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 25,
+      "hour" : 3,
+      "minute" : 52
+    },
+    "nameShip" : "COOY",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 3622
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 36
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 21,
+      "hour" : 6,
+      "minute" : 49
+    },
+    "nameShip" : "CJ",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 63919
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 13,
+      "minute" : 39
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 16,
+      "hour" : 15,
+      "minute" : 3
+    },
+    "nameShip" : "IN",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 52126
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 13,
+      "minute" : 21
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 19,
+      "hour" : 7,
+      "minute" : 23
+    },
+    "nameShip" : "ALP",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 57039
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 14,
+      "minute" : 37
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 3,
+      "hour" : 23,
+      "minute" : 5
+    },
+    "nameShip" : "MR",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 65578
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 14,
+      "minute" : 0
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 11,
+      "hour" : 3,
+      "minute" : 51
+    },
+    "nameShip" : "TZW",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 68882
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 14,
+      "minute" : 43
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 14,
+      "hour" : 21,
+      "minute" : 47
+    },
+    "nameShip" : "GDDW",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 54969
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 14,
+      "minute" : 5
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 17,
+      "hour" : 0,
+      "minute" : 4
+    },
+    "nameShip" : "QIZ",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 40796
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 10,
+      "minute" : 27
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 1,
+      "hour" : 7,
+      "minute" : 6
+    },
+    "nameShip" : "OIEK",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 54089
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 13,
+      "minute" : 52
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 20,
+      "hour" : 6,
+      "minute" : 10
+    },
+    "nameShip" : "CQ",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 51003
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 10,
+      "minute" : 53
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 10,
+      "hour" : 3,
+      "minute" : 15
+    },
+    "nameShip" : "UKVG",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 3020
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 30
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 0,
+      "hour" : 1,
+      "minute" : 35
+    },
+    "nameShip" : "YTFZ",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 5321
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 53
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 25,
+      "hour" : 5,
+      "minute" : 9
+    },
+    "nameShip" : "WJEL",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 51352
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 13,
+      "minute" : 10
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 11,
+      "hour" : 23,
+      "minute" : 15
+    },
+    "nameShip" : "QKDM",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 4475
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 45
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 11,
+      "hour" : 13,
+      "minute" : 55
+    },
+    "nameShip" : "MDZC",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 57919
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 12,
+      "minute" : 22
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 5,
+      "hour" : 13,
+      "minute" : 31
+    },
+    "nameShip" : "KNS",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 63685
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 13,
+      "minute" : 36
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 28,
+      "hour" : 17,
+      "minute" : 14
+    },
+    "nameShip" : "NWU",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 51386
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 10,
+      "minute" : 58
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 27,
+      "hour" : 14,
+      "minute" : 28
+    },
+    "nameShip" : "ZA",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 5821
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 58
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 13,
+      "hour" : 8,
+      "minute" : 45
+    },
+    "nameShip" : "LJZ",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 5349
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 54
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 8,
+      "hour" : 3,
+      "minute" : 37
+    },
+    "nameShip" : "BC",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 49810
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 12,
+      "minute" : 46
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 1,
+      "hour" : 7,
+      "minute" : 36
+    },
+    "nameShip" : "BVF",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 3826
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 38
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 5,
+      "hour" : 5,
+      "minute" : 52
+    },
+    "nameShip" : "RWKV",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 48559
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 12,
+      "minute" : 27
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 7,
+      "hour" : 14,
+      "minute" : 27
+    },
+    "nameShip" : "NCEQ",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 52245
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 11,
+      "minute" : 9
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 19,
+      "hour" : 15,
+      "minute" : 26
+    },
+    "nameShip" : "LZ",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 2687
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 27
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 7,
+      "hour" : 15,
+      "minute" : 3
+    },
+    "nameShip" : "NMGN",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 5752
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 58
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 12,
+      "hour" : 21,
+      "minute" : 5
+    },
+    "nameShip" : "QKS",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 69894
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 14,
+      "minute" : 56
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 26,
+      "hour" : 8,
+      "minute" : 39
+    },
+    "nameShip" : "FN",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 55583
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 14,
+      "minute" : 15
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 2,
+      "hour" : 10,
+      "minute" : 51
+    },
+    "nameShip" : "IGFZ",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 3862
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 39
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 14,
+      "hour" : 3,
+      "minute" : 30
+    },
+    "nameShip" : "JCBF",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 5229
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 52
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 14,
+      "hour" : 21,
+      "minute" : 44
+    },
+    "nameShip" : "NA",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 50625
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 12,
+      "minute" : 58
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 13,
+      "hour" : 9,
+      "minute" : 29
+    },
+    "nameShip" : "DGZ",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 50725
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 10,
+      "minute" : 50
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 5,
+      "hour" : 7,
+      "minute" : 14
+    },
+    "nameShip" : "QP",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 2503
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 25
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 25,
+      "hour" : 0,
+      "minute" : 43
+    },
+    "nameShip" : "FW",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 55621
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 11,
+      "minute" : 53
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 9,
+      "hour" : 1,
+      "minute" : 48
+    },
+    "nameShip" : "JBA",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 62140
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 13,
+      "minute" : 16
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 12,
+      "hour" : 5,
+      "minute" : 28
+    },
+    "nameShip" : "BQ",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 2568
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 25
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 16,
+      "hour" : 22,
+      "minute" : 26
+    },
+    "nameShip" : "KWV",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 59746
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 12,
+      "minute" : 45
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 5,
+      "hour" : 1,
+      "minute" : 7
+    },
+    "nameShip" : "BF",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 69076
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 14,
+      "minute" : 45
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 25,
+      "hour" : 0,
+      "minute" : 16
+    },
+    "nameShip" : "NRV",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 69797
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 14,
+      "minute" : 54
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 6,
+      "hour" : 11,
+      "minute" : 42
+    },
+    "nameShip" : "HRLW",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 3788
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 38
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 26,
+      "hour" : 1,
+      "minute" : 17
+    },
+    "nameShip" : "UPUG",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 2767
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 27
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 19,
+      "hour" : 7,
+      "minute" : 11
+    },
+    "nameShip" : "IRS",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 51251
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 10,
+      "minute" : 57
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 28,
+      "hour" : 21,
+      "minute" : 44
+    },
+    "nameShip" : "UKGV",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 59542
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 12,
+      "minute" : 43
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 10,
+      "hour" : 6,
+      "minute" : 43
+    },
+    "nameShip" : "RXUD",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 54423
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 11,
+      "minute" : 37
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 4,
+      "hour" : 21,
+      "minute" : 52
+    },
+    "nameShip" : "EZ",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 5505
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 55
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 9,
+      "hour" : 1,
+      "minute" : 24
+    },
+    "nameShip" : "UWI",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 49363
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 12,
+      "minute" : 39
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 24,
+      "hour" : 6,
+      "minute" : 16
+    },
+    "nameShip" : "EM",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 52109
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 13,
+      "minute" : 21
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 28,
+      "hour" : 7,
+      "minute" : 0
+    },
+    "nameShip" : "QTFT",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 65052
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 13,
+      "minute" : 54
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 13,
+      "hour" : 22,
+      "minute" : 0
+    },
+    "nameShip" : "LCAM",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 5187
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 52
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 5,
+      "hour" : 2,
+      "minute" : 30
+    },
+    "nameShip" : "LOW",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 57213
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 12,
+      "minute" : 13
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 19,
+      "hour" : 5,
+      "minute" : 24
+    },
+    "nameShip" : "WVY",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 58283
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 12,
+      "minute" : 27
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 1,
+      "hour" : 18,
+      "minute" : 31
+    },
+    "nameShip" : "BL",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 57311
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 12,
+      "minute" : 14
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 23,
+      "hour" : 9,
+      "minute" : 45
+    },
+    "nameShip" : "AIYJ",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 4706
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 47
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 22,
+      "hour" : 18,
+      "minute" : 37
+    },
+    "nameShip" : "ONY",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 2879
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 29
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 11,
+      "hour" : 9,
+      "minute" : 59
+    },
+    "nameShip" : "XZE",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 54172
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 13,
+      "minute" : 53
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 28,
+      "hour" : 11,
+      "minute" : 15
+    },
+    "nameShip" : "UPS",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 2464
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 24
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 25,
+      "hour" : 22,
+      "minute" : 57
+    },
+    "nameShip" : "BGU",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 4193
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 42
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 22,
+      "hour" : 3,
+      "minute" : 55
+    },
+    "nameShip" : "UJSC",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 59630
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 12,
+      "minute" : 44
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 21,
+      "hour" : 6,
+      "minute" : 40
+    },
+    "nameShip" : "QRY",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 54061
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 11,
+      "minute" : 33
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 21,
+      "hour" : 16,
+      "minute" : 4
+    },
+    "nameShip" : "EV",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 58297
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 14,
+      "minute" : 56
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 11,
+      "hour" : 21,
+      "minute" : 39
+    },
+    "nameShip" : "WC",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 59808
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 15,
+      "minute" : 20
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 18,
+      "hour" : 14,
+      "minute" : 49
+    },
+    "nameShip" : "WU",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 53781
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 13,
+      "minute" : 47
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 6,
+      "hour" : 0,
+      "minute" : 51
+    },
+    "nameShip" : "DUS",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 50152
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 12,
+      "minute" : 51
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 7,
+      "hour" : 17,
+      "minute" : 10
+    },
+    "nameShip" : "YYW",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 64736
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 13,
+      "minute" : 49
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 3,
+      "hour" : 9,
+      "minute" : 27
+    },
+    "nameShip" : "PI",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 69053
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 14,
+      "minute" : 45
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 16,
+      "hour" : 3,
+      "minute" : 31
+    },
+    "nameShip" : "NNN",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 4592
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 46
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 9,
+      "hour" : 15,
+      "minute" : 14
+    },
+    "nameShip" : "DQ",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 53350
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 11,
+      "minute" : 23
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 2,
+      "hour" : 8,
+      "minute" : 53
+    },
+    "nameShip" : "PH",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 3572
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 36
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 27,
+      "hour" : 5,
+      "minute" : 44
+    },
+    "nameShip" : "APS",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 3232
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 32
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 1,
+      "hour" : 21,
+      "minute" : 13
+    },
+    "nameShip" : "SD",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 2954
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 29
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 29,
+      "hour" : 5,
+      "minute" : 49
+    },
+    "nameShip" : "EFV",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 5453
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 55
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 11,
+      "hour" : 3,
+      "minute" : 23
+    },
+    "nameShip" : "TTXA",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 41123
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 10,
+      "minute" : 32
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 28,
+      "hour" : 3,
+      "minute" : 3
+    },
+    "nameShip" : "NHGV",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 47437
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 12,
+      "minute" : 9
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 18,
+      "hour" : 3,
+      "minute" : 40
+    },
+    "nameShip" : "JHTT",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 2378
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 24
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 28,
+      "hour" : 1,
+      "minute" : 59
+    },
+    "nameShip" : "FW",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 48673
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 12,
+      "minute" : 28
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 26,
+      "hour" : 22,
+      "minute" : 6
+    },
+    "nameShip" : "WZ",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 3430
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 34
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 5,
+      "hour" : 18,
+      "minute" : 33
+    },
+    "nameShip" : "OPOT",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 67774
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 14,
+      "minute" : 28
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 19,
+      "hour" : 14,
+      "minute" : 50
+    },
+    "nameShip" : "AFBA",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 3214
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 32
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 23,
+      "hour" : 6,
+      "minute" : 38
+    },
+    "nameShip" : "CZJV",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 62005
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 13,
+      "minute" : 14
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 19,
+      "hour" : 14,
+      "minute" : 47
+    },
+    "nameShip" : "CPK",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 48209
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 12,
+      "minute" : 21
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 28,
+      "hour" : 22,
+      "minute" : 40
+    },
+    "nameShip" : "NDOT",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 3606
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 36
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 25,
+      "hour" : 11,
+      "minute" : 34
+    },
+    "nameShip" : "IEU",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 63053
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 13,
+      "minute" : 28
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 27,
+      "hour" : 0,
+      "minute" : 10
+    },
+    "nameShip" : "YA",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 52641
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 11,
+      "minute" : 14
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 9,
+      "hour" : 6,
+      "minute" : 23
+    },
+    "nameShip" : "WTFV",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 50913
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 13,
+      "minute" : 3
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 26,
+      "hour" : 7,
+      "minute" : 9
+    },
+    "nameShip" : "NQH",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 3960
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 40
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 2,
+      "hour" : 19,
+      "minute" : 41
+    },
+    "nameShip" : "FL",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 54060
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 13,
+      "minute" : 51
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 5,
+      "hour" : 1,
+      "minute" : 23
+    },
+    "nameShip" : "DB",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 64455
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 13,
+      "minute" : 46
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 29,
+      "hour" : 14,
+      "minute" : 19
+    },
+    "nameShip" : "SR",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 67919
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 14,
+      "minute" : 30
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 11,
+      "hour" : 19,
+      "minute" : 37
+    },
+    "nameShip" : "JTE",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 51816
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 11,
+      "minute" : 4
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 6,
+      "hour" : 21,
+      "minute" : 54
+    },
+    "nameShip" : "NI",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 43077
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 11,
+      "minute" : 2
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 11,
+      "hour" : 22,
+      "minute" : 30
+    },
+    "nameShip" : "XM",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 2107
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 21
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 27,
+      "hour" : 1,
+      "minute" : 0
+    },
+    "nameShip" : "VD",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 44289
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 11,
+      "minute" : 21
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 7,
+      "hour" : 6,
+      "minute" : 23
+    },
+    "nameShip" : "YXQX",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 59968
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 15,
+      "minute" : 22
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 13,
+      "hour" : 7,
+      "minute" : 53
+    },
+    "nameShip" : "NU",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 60665
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 12,
+      "minute" : 57
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 19,
+      "hour" : 12,
+      "minute" : 3
+    },
+    "nameShip" : "APA",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 2564
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 25
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 6,
+      "hour" : 10,
+      "minute" : 27
+    },
+    "nameShip" : "QESQ",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 59379
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 12,
+      "minute" : 41
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 16,
+      "hour" : 0,
+      "minute" : 23
+    },
+    "nameShip" : "OZKV",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 53659
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 13,
+      "minute" : 45
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 2,
+      "hour" : 4,
+      "minute" : 0
+    },
+    "nameShip" : "NQPY",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 44789
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 11,
+      "minute" : 29
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 10,
+      "hour" : 10,
+      "minute" : 32
+    },
+    "nameShip" : "IJZX",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 46188
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 11,
+      "minute" : 50
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 18,
+      "hour" : 21,
+      "minute" : 12
+    },
+    "nameShip" : "EH",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 5275
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 53
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 10,
+      "hour" : 20,
+      "minute" : 1
+    },
+    "nameShip" : "XPFL",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 5042
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 50
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 24,
+      "hour" : 11,
+      "minute" : 1
+    },
+    "nameShip" : "XMV",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 56979
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 12,
+      "minute" : 10
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 14,
+      "hour" : 12,
+      "minute" : 7
+    },
+    "nameShip" : "FSQ",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 65591
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 14,
+      "minute" : 0
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 2,
+      "hour" : 18,
+      "minute" : 2
+    },
+    "nameShip" : "YG",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 4198
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 42
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 12,
+      "hour" : 12,
+      "minute" : 9
+    },
+    "nameShip" : "GQYT",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 56009
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 14,
+      "minute" : 21
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 13,
+      "hour" : 19,
+      "minute" : 17
+    },
+    "nameShip" : "YQB",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 3610
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 36
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 13,
+      "hour" : 7,
+      "minute" : 38
+    },
+    "nameShip" : "MBE",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 50918
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 13,
+      "minute" : 3
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 14,
+      "hour" : 23,
+      "minute" : 8
+    },
+    "nameShip" : "XVHK",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 3678
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 37
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 23,
+      "hour" : 0,
+      "minute" : 6
+    },
+    "nameShip" : "YIE",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 63334
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 13,
+      "minute" : 31
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 4,
+      "hour" : 10,
+      "minute" : 38
+    },
+    "nameShip" : "DJI",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 61768
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 13,
+      "minute" : 11
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 26,
+      "hour" : 15,
+      "minute" : 13
+    },
+    "nameShip" : "JXBI",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 43467
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 11,
+      "minute" : 8
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 17,
+      "hour" : 23,
+      "minute" : 20
+    },
+    "nameShip" : "VL",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 52955
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 13,
+      "minute" : 34
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 4,
+      "hour" : 2,
+      "minute" : 22
+    },
+    "nameShip" : "DQWH",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 55041
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 11,
+      "minute" : 45
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 20,
+      "hour" : 15,
+      "minute" : 49
+    },
+    "nameShip" : "ZZ",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 46960
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 12,
+      "minute" : 2
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 12,
+      "hour" : 14,
+      "minute" : 49
+    },
+    "nameShip" : "KGBR",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 2065
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 20
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 8,
+      "hour" : 1,
+      "minute" : 43
+    },
+    "nameShip" : "BES",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 49413
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 12,
+      "minute" : 40
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 22,
+      "hour" : 5,
+      "minute" : 43
+    },
+    "nameShip" : "ZFJI",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 55750
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 11,
+      "minute" : 54
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 0,
+      "hour" : 21,
+      "minute" : 8
+    },
+    "nameShip" : "SJY",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 49010
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 12,
+      "minute" : 34
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 16,
+      "hour" : 12,
+      "minute" : 37
+    },
+    "nameShip" : "KF",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 68434
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 14,
+      "minute" : 37
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 14,
+      "hour" : 19,
+      "minute" : 25
+    },
+    "nameShip" : "LXY",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 55643
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 14,
+      "minute" : 16
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 4,
+      "hour" : 5,
+      "minute" : 49
+    },
+    "nameShip" : "HKI",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 67724
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 14,
+      "minute" : 28
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 2,
+      "hour" : 18,
+      "minute" : 12
+    },
+    "nameShip" : "CQ",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 40024
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 10,
+      "minute" : 15
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 22,
+      "hour" : 17,
+      "minute" : 10
+    },
+    "nameShip" : "VRU",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 68672
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 14,
+      "minute" : 40
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 28,
+      "hour" : 9,
+      "minute" : 12
+    },
+    "nameShip" : "RDCI",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 57503
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 14,
+      "minute" : 44
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 27,
+      "hour" : 10,
+      "minute" : 4
+    },
+    "nameShip" : "IZF",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 4453
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 44
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 1,
+      "hour" : 19,
+      "minute" : 53
+    },
+    "nameShip" : "BGGL",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 63622
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 13,
+      "minute" : 35
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 29,
+      "hour" : 5,
+      "minute" : 51
+    },
+    "nameShip" : "JJZ",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 62147
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 13,
+      "minute" : 16
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 0,
+      "hour" : 9,
+      "minute" : 15
+    },
+    "nameShip" : "ZJ",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 54231
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 13,
+      "minute" : 54
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 29,
+      "hour" : 1,
+      "minute" : 6
+    },
+    "nameShip" : "FQWM",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 53345
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 11,
+      "minute" : 23
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 1,
+      "hour" : 19,
+      "minute" : 21
+    },
+    "nameShip" : "KAT",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 54962
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 14,
+      "minute" : 5
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 23,
+      "hour" : 6,
+      "minute" : 21
+    },
+    "nameShip" : "UT",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 3121
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 31
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 23,
+      "hour" : 17,
+      "minute" : 34
+    },
+    "nameShip" : "VL",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 59159
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 12,
+      "minute" : 38
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 21,
+      "hour" : 1,
+      "minute" : 17
+    },
+    "nameShip" : "TZ",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 43972
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 11,
+      "minute" : 16
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 17,
+      "hour" : 1,
+      "minute" : 46
+    },
+    "nameShip" : "XKHI",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 59484
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 15,
+      "minute" : 15
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 2,
+      "hour" : 0,
+      "minute" : 52
+    },
+    "nameShip" : "COT",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 50969
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 10,
+      "minute" : 53
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 25,
+      "hour" : 0,
+      "minute" : 1
+    },
+    "nameShip" : "NUDL",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 54942
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 11,
+      "minute" : 44
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 14,
+      "hour" : 19,
+      "minute" : 19
+    },
+    "nameShip" : "MTN",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 48014
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 12,
+      "minute" : 18
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 3,
+      "hour" : 14,
+      "minute" : 24
+    },
+    "nameShip" : "OK",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 64754
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 13,
+      "minute" : 50
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 8,
+      "hour" : 14,
+      "minute" : 42
+    },
+    "nameShip" : "NWI",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 3012
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 30
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 24,
+      "hour" : 2,
+      "minute" : 44
+    },
+    "nameShip" : "CQF",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 44971
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 11,
+      "minute" : 31
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 22,
+      "hour" : 13,
+      "minute" : 51
+    },
+    "nameShip" : "GG",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 65229
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 13,
+      "minute" : 56
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 20,
+      "hour" : 22,
+      "minute" : 12
+    },
+    "nameShip" : "UZG",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 58940
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 15,
+      "minute" : 6
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 9,
+      "hour" : 7,
+      "minute" : 28
+    },
+    "nameShip" : "TC",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 5976
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 1,
+      "minute" : 0
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 14,
+      "hour" : 3,
+      "minute" : 47
+    },
+    "nameShip" : "AMY",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 2665
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 26
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 18,
+      "hour" : 15,
+      "minute" : 31
+    },
+    "nameShip" : "PPRI",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 5128
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 51
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 24,
+      "hour" : 14,
+      "minute" : 24
+    },
+    "nameShip" : "CE",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 3321
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 33
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 8,
+      "hour" : 19,
+      "minute" : 54
+    },
+    "nameShip" : "DX",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 4203
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 42
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 14,
+      "hour" : 14,
+      "minute" : 16
+    },
+    "nameShip" : "CH",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 2873
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 29
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 17,
+      "hour" : 22,
+      "minute" : 13
+    },
+    "nameShip" : "FD",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 60774
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 12,
+      "minute" : 59
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 17,
+      "hour" : 10,
+      "minute" : 25
+    },
+    "nameShip" : "LIHY",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 5576
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 56
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 5,
+      "hour" : 23,
+      "minute" : 55
+    },
+    "nameShip" : "QPN",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 4506
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 45
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 29,
+      "hour" : 20,
+      "minute" : 6
+    },
+    "nameShip" : "CP",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 49947
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 12,
+      "minute" : 48
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 24,
+      "hour" : 4,
+      "minute" : 6
+    },
+    "nameShip" : "HZ",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 63904
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 13,
+      "minute" : 39
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 28,
+      "hour" : 22,
+      "minute" : 4
+    },
+    "nameShip" : "BMEQ",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 40450
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 10,
+      "minute" : 22
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 17,
+      "hour" : 16,
+      "minute" : 59
+    },
+    "nameShip" : "IW",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 69911
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 14,
+      "minute" : 56
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 1,
+      "hour" : 5,
+      "minute" : 21
+    },
+    "nameShip" : "ZY",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 3466
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 35
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 27,
+      "hour" : 6,
+      "minute" : 52
+    },
+    "nameShip" : "NBYT",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 68961
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 14,
+      "minute" : 44
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 15,
+      "hour" : 1,
+      "minute" : 42
+    },
+    "nameShip" : "CQ",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 5112
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 51
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 14,
+      "hour" : 20,
+      "minute" : 8
+    },
+    "nameShip" : "UX",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 59760
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 12,
+      "minute" : 46
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 29,
+      "hour" : 2,
+      "minute" : 46
+    },
+    "nameShip" : "VO",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 2774
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 28
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 17,
+      "hour" : 11,
+      "minute" : 14
+    },
+    "nameShip" : "EIOM",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 58787
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 15,
+      "minute" : 4
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 13,
+      "hour" : 17,
+      "minute" : 56
+    },
+    "nameShip" : "IO",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 3726
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 37
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 8,
+      "hour" : 23,
+      "minute" : 32
+    },
+    "nameShip" : "SIA",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 44537
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 11,
+      "minute" : 25
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 24,
+      "hour" : 0,
+      "minute" : 47
+    },
+    "nameShip" : "VCG",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 3205
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 32
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 12,
+      "hour" : 8,
+      "minute" : 27
+    },
+    "nameShip" : "RYEQ",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 47148
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 12,
+      "minute" : 5
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 21,
+      "hour" : 13,
+      "minute" : 34
+    },
+    "nameShip" : "JTM",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 53314
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 11,
+      "minute" : 23
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 11,
+      "hour" : 10,
+      "minute" : 30
+    },
+    "nameShip" : "NMY",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 4749
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 47
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 23,
+      "hour" : 6,
+      "minute" : 15
+    },
+    "nameShip" : "MOH",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 49368
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 12,
+      "minute" : 39
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 23,
+      "hour" : 19,
+      "minute" : 9
+    },
+    "nameShip" : "TF",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 5216
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 52
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 10,
+      "hour" : 20,
+      "minute" : 51
+    },
+    "nameShip" : "TAH",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 43398
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 11,
+      "minute" : 7
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 14,
+      "hour" : 4,
+      "minute" : 57
+    },
+    "nameShip" : "EFXE",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 3813
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 38
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 10,
+      "hour" : 16,
+      "minute" : 27
+    },
+    "nameShip" : "IADP",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 4829
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 48
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 25,
+      "hour" : 16,
+      "minute" : 13
+    },
+    "nameShip" : "IDS",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 40254
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 10,
+      "minute" : 19
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 21,
+      "hour" : 2,
+      "minute" : 22
+    },
+    "nameShip" : "UX",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 41283
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 10,
+      "minute" : 35
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 12,
+      "hour" : 12,
+      "minute" : 33
+    },
+    "nameShip" : "YMNZ",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 4025
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 40
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 27,
+      "hour" : 13,
+      "minute" : 48
+    },
+    "nameShip" : "QZJS",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 56159
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 11,
+      "minute" : 59
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 25,
+      "hour" : 6,
+      "minute" : 40
+    },
+    "nameShip" : "OMD",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 43457
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 11,
+      "minute" : 8
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 5,
+      "hour" : 18,
+      "minute" : 11
+    },
+    "nameShip" : "ICWT",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 63907
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 13,
+      "minute" : 39
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 20,
+      "hour" : 11,
+      "minute" : 22
+    },
+    "nameShip" : "PZPL",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 4011
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 40
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 21,
+      "hour" : 0,
+      "minute" : 45
+    },
+    "nameShip" : "NT",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 56939
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 12,
+      "minute" : 9
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 3,
+      "hour" : 9,
+      "minute" : 58
+    },
+    "nameShip" : "TOZP",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 48496
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 12,
+      "minute" : 26
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 11,
+      "hour" : 16,
+      "minute" : 42
+    },
+    "nameShip" : "KCHU",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 57274
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 14,
+      "minute" : 41
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 12,
+      "hour" : 0,
+      "minute" : 58
+    },
+    "nameShip" : "DRRF",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 55338
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 14,
+      "minute" : 11
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 18,
+      "hour" : 9,
+      "minute" : 17
+    },
+    "nameShip" : "DX",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 68688
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 14,
+      "minute" : 40
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 23,
+      "hour" : 23,
+      "minute" : 12
+    },
+    "nameShip" : "TG",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 41657
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 10,
+      "minute" : 40
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 26,
+      "hour" : 19,
+      "minute" : 38
+    },
+    "nameShip" : "EDGI",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 59266
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 12,
+      "minute" : 39
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 13,
+      "hour" : 3,
+      "minute" : 38
+    },
+    "nameShip" : "MAKF",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 53202
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 13,
+      "minute" : 38
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 11,
+      "hour" : 5,
+      "minute" : 34
+    },
+    "nameShip" : "QRW",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 59799
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 12,
+      "minute" : 46
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 3,
+      "hour" : 12,
+      "minute" : 33
+    },
+    "nameShip" : "WB",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 65316
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 13,
+      "minute" : 57
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 12,
+      "hour" : 9,
+      "minute" : 32
+    },
+    "nameShip" : "KBL",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 56958
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 14,
+      "minute" : 36
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 8,
+      "hour" : 4,
+      "minute" : 34
+    },
+    "nameShip" : "UL",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 4290
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 43
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 17,
+      "hour" : 9,
+      "minute" : 6
+    },
+    "nameShip" : "LMSS",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 54721
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 11,
+      "minute" : 41
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 28,
+      "hour" : 8,
+      "minute" : 40
+    },
+    "nameShip" : "NOOJ",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 3634
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 36
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 13,
+      "hour" : 20,
+      "minute" : 23
+    },
+    "nameShip" : "FT",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 5876
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 59
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 0,
+      "hour" : 6,
+      "minute" : 19
+    },
+    "nameShip" : "OKQT",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 2109
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 21
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 3,
+      "hour" : 12,
+      "minute" : 51
+    },
+    "nameShip" : "MWJU",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 5649
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 57
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 28,
+      "hour" : 12,
+      "minute" : 20
+    },
+    "nameShip" : "YQ",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 41529
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 10,
+      "minute" : 38
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 8,
+      "hour" : 3,
+      "minute" : 57
+    },
+    "nameShip" : "FVUU",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 5898
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 59
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 6,
+      "hour" : 13,
+      "minute" : 13
+    },
+    "nameShip" : "HEI",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 3143
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 31
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 24,
+      "hour" : 11,
+      "minute" : 50
+    },
+    "nameShip" : "JM",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 48729
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 12,
+      "minute" : 29
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 18,
+      "hour" : 12,
+      "minute" : 24
+    },
+    "nameShip" : "SY",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 52071
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 13,
+      "minute" : 21
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 6,
+      "hour" : 16,
+      "minute" : 56
+    },
+    "nameShip" : "TVT",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 50132
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 12,
+      "minute" : 51
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 0,
+      "hour" : 11,
+      "minute" : 40
+    },
+    "nameShip" : "THBU",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 47963
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 12,
+      "minute" : 17
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 6,
+      "hour" : 13,
+      "minute" : 11
+    },
+    "nameShip" : "OTL",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 67264
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 14,
+      "minute" : 22
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 27,
+      "hour" : 1,
+      "minute" : 10
+    },
+    "nameShip" : "SZVL",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 3340
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 33
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 1,
+      "hour" : 19,
+      "minute" : 4
+    },
+    "nameShip" : "XG",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 5542
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 55
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 14,
+      "hour" : 14,
+      "minute" : 1
+    },
+    "nameShip" : "AW",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 5432
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 54
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 22,
+      "hour" : 2,
+      "minute" : 23
+    },
+    "nameShip" : "ID",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 60397
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 12,
+      "minute" : 54
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 24,
+      "hour" : 11,
+      "minute" : 13
+    },
+    "nameShip" : "YO",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 63449
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 13,
+      "minute" : 33
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 27,
+      "hour" : 6,
+      "minute" : 50
+    },
+    "nameShip" : "YZF",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 4931
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 49
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 26,
+      "hour" : 8,
+      "minute" : 0
+    },
+    "nameShip" : "QEJQ",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 5530
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 55
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 28,
+      "hour" : 12,
+      "minute" : 33
+    },
+    "nameShip" : "SZ",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 62875
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 13,
+      "minute" : 26
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 8,
+      "hour" : 1,
+      "minute" : 1
+    },
+    "nameShip" : "CO",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 53746
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 13,
+      "minute" : 46
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 26,
+      "hour" : 2,
+      "minute" : 22
+    },
+    "nameShip" : "SH",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 47060
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 12,
+      "minute" : 4
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 26,
+      "hour" : 2,
+      "minute" : 0
+    },
+    "nameShip" : "IOT",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 57424
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 14,
+      "minute" : 43
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 22,
+      "hour" : 4,
+      "minute" : 1
+    },
+    "nameShip" : "VLDC",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 2737
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 27
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 19,
+      "hour" : 5,
+      "minute" : 28
+    },
+    "nameShip" : "QDB",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 5193
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 52
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 0,
+      "hour" : 19,
+      "minute" : 12
+    },
+    "nameShip" : "KMMJ",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 3440
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 34
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 11,
+      "hour" : 17,
+      "minute" : 57
+    },
+    "nameShip" : "JZE",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 5082
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 51
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 19,
+      "hour" : 9,
+      "minute" : 16
+    },
+    "nameShip" : "CS",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 63774
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 13,
+      "minute" : 37
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 18,
+      "hour" : 23,
+      "minute" : 1
+    },
+    "nameShip" : "TJ",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 3565
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 36
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 12,
+      "hour" : 0,
+      "minute" : 32
+    },
+    "nameShip" : "YL",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 62402
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 13,
+      "minute" : 20
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 4,
+      "hour" : 22,
+      "minute" : 12
+    },
+    "nameShip" : "QPW",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 58198
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 14,
+      "minute" : 55
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 19,
+      "hour" : 2,
+      "minute" : 8
+    },
+    "nameShip" : "OIV",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 3365
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 33
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 3,
+      "hour" : 1,
+      "minute" : 24
+    },
+    "nameShip" : "GTG",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 56041
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 11,
+      "minute" : 58
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 22,
+      "hour" : 23,
+      "minute" : 45
+    },
+    "nameShip" : "WGNZ",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 61359
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 13,
+      "minute" : 6
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 20,
+      "hour" : 2,
+      "minute" : 39
+    },
+    "nameShip" : "OXRB",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 57502
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 12,
+      "minute" : 17
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 8,
+      "hour" : 23,
+      "minute" : 2
+    },
+    "nameShip" : "ZNKJ",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 46003
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 11,
+      "minute" : 47
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 19,
+      "hour" : 23,
+      "minute" : 44
+    },
+    "nameShip" : "OBL",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 3096
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 31
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 24,
+      "hour" : 21,
+      "minute" : 41
+    },
+    "nameShip" : "YO",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 56769
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 12,
+      "minute" : 7
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 1,
+      "hour" : 23,
+      "minute" : 6
+    },
+    "nameShip" : "WW",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 52403
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 11,
+      "minute" : 11
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 8,
+      "hour" : 21,
+      "minute" : 0
+    },
+    "nameShip" : "RD",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 48610
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 12,
+      "minute" : 27
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 14,
+      "hour" : 14,
+      "minute" : 21
+    },
+    "nameShip" : "WN",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 57228
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 14,
+      "minute" : 40
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 20,
+      "hour" : 4,
+      "minute" : 46
+    },
+    "nameShip" : "HZNO",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 69229
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 14,
+      "minute" : 47
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 11,
+      "hour" : 6,
+      "minute" : 36
+    },
+    "nameShip" : "ZLBT",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 5359
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 54
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 12,
+      "hour" : 5,
+      "minute" : 10
+    },
+    "nameShip" : "XSQ",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 3699
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 37
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 2,
+      "hour" : 9,
+      "minute" : 1
+    },
+    "nameShip" : "JSRB",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 65071
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 13,
+      "minute" : 54
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 14,
+      "hour" : 3,
+      "minute" : 11
+    },
+    "nameShip" : "VNS",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 41329
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 10,
+      "minute" : 35
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 25,
+      "hour" : 13,
+      "minute" : 27
+    },
+    "nameShip" : "JWR",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 51497
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 11,
+      "minute" : 0
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 20,
+      "hour" : 20,
+      "minute" : 49
+    },
+    "nameShip" : "LADN",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 41411
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 10,
+      "minute" : 37
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 10,
+      "hour" : 16,
+      "minute" : 32
+    },
+    "nameShip" : "PVZ",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 43218
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 11,
+      "minute" : 4
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 9,
+      "hour" : 18,
+      "minute" : 12
+    },
+    "nameShip" : "LEJX",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 43143
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 11,
+      "minute" : 3
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 26,
+      "hour" : 12,
+      "minute" : 55
+    },
+    "nameShip" : "TBFV",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 52986
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 11,
+      "minute" : 19
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 17,
+      "hour" : 0,
+      "minute" : 44
+    },
+    "nameShip" : "HEO",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 42414
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 10,
+      "minute" : 52
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 29,
+      "hour" : 4,
+      "minute" : 23
+    },
+    "nameShip" : "YXR",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 4907
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 49
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 17,
+      "hour" : 12,
+      "minute" : 59
+    },
+    "nameShip" : "FZ",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 4118
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 41
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 26,
+      "hour" : 8,
+      "minute" : 4
+    },
+    "nameShip" : "FCNO",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 46095
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 11,
+      "minute" : 49
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 16,
+      "hour" : 16,
+      "minute" : 33
+    },
+    "nameShip" : "DY",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 5263
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 53
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 25,
+      "hour" : 10,
+      "minute" : 20
+    },
+    "nameShip" : "XBU",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 48077
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 12,
+      "minute" : 19
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 14,
+      "hour" : 18,
+      "minute" : 37
+    },
+    "nameShip" : "MQMU",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 46664
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 11,
+      "minute" : 57
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 19,
+      "hour" : 14,
+      "minute" : 10
+    },
+    "nameShip" : "NCDE",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 66710
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 14,
+      "minute" : 15
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 18,
+      "hour" : 6,
+      "minute" : 16
+    },
+    "nameShip" : "UOEZ",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 4428
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 44
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 11,
+      "hour" : 5,
+      "minute" : 13
+    },
+    "nameShip" : "JBFG",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 57440
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 14,
+      "minute" : 43
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 4,
+      "hour" : 9,
+      "minute" : 50
+    },
+    "nameShip" : "HVUS",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 42053
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 10,
+      "minute" : 46
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 24,
+      "hour" : 10,
+      "minute" : 25
+    },
+    "nameShip" : "IM",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 52207
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 11,
+      "minute" : 9
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 16,
+      "hour" : 4,
+      "minute" : 36
+    },
+    "nameShip" : "DDK",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 50711
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 10,
+      "minute" : 50
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 19,
+      "hour" : 20,
+      "minute" : 41
+    },
+    "nameShip" : "MP",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 57154
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 12,
+      "minute" : 12
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 18,
+      "hour" : 13,
+      "minute" : 4
+    },
+    "nameShip" : "FQPD",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 46421
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 11,
+      "minute" : 54
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 0,
+      "hour" : 17,
+      "minute" : 58
+    },
+    "nameShip" : "NSUG",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 52222
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 11,
+      "minute" : 9
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 15,
+      "hour" : 4,
+      "minute" : 51
+    },
+    "nameShip" : "JI",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 40839
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 10,
+      "minute" : 28
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 14,
+      "hour" : 6,
+      "minute" : 2
+    },
+    "nameShip" : "GTB",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 2679
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 27
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 4,
+      "hour" : 3,
+      "minute" : 43
+    },
+    "nameShip" : "KU",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 54415
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 11,
+      "minute" : 37
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 23,
+      "hour" : 21,
+      "minute" : 38
+    },
+    "nameShip" : "KU",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 4070
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 41
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 0,
+      "hour" : 8,
+      "minute" : 22
+    },
+    "nameShip" : "YUXD",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 53794
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 11,
+      "minute" : 29
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 29,
+      "hour" : 19,
+      "minute" : 37
+    },
+    "nameShip" : "FFL",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 67227
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 14,
+      "minute" : 21
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 22,
+      "hour" : 20,
+      "minute" : 53
+    },
+    "nameShip" : "NG",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 41468
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 10,
+      "minute" : 37
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 24,
+      "hour" : 8,
+      "minute" : 13
+    },
+    "nameShip" : "RR",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 3699
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 37
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 1,
+      "hour" : 2,
+      "minute" : 6
+    },
+    "nameShip" : "SD",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 58496
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 12,
+      "minute" : 29
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 9,
+      "hour" : 17,
+      "minute" : 23
+    },
+    "nameShip" : "HAA",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 4763
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 48
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 22,
+      "hour" : 3,
+      "minute" : 39
+    },
+    "nameShip" : "ECBD",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 4698
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 47
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 6,
+      "hour" : 2,
+      "minute" : 31
+    },
+    "nameShip" : "IE",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 59793
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 12,
+      "minute" : 46
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 9,
+      "hour" : 10,
+      "minute" : 55
+    },
+    "nameShip" : "DE",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 40318
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 10,
+      "minute" : 20
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 4,
+      "hour" : 3,
+      "minute" : 10
+    },
+    "nameShip" : "TJS",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 5876
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 59
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 23,
+      "hour" : 6,
+      "minute" : 57
+    },
+    "nameShip" : "GZZ",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 4360
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 44
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 19,
+      "hour" : 17,
+      "minute" : 19
+    },
+    "nameShip" : "JMIW",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 63437
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 13,
+      "minute" : 33
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 23,
+      "hour" : 2,
+      "minute" : 24
+    },
+    "nameShip" : "FRAN",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 45247
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 11,
+      "minute" : 36
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 6,
+      "hour" : 15,
+      "minute" : 38
+    },
+    "nameShip" : "OBL",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 69020
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 14,
+      "minute" : 44
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 23,
+      "hour" : 8,
+      "minute" : 32
+    },
+    "nameShip" : "FVG",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 5994
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 1,
+      "minute" : 0
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 12,
+      "hour" : 16,
+      "minute" : 44
+    },
+    "nameShip" : "WDGN",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 65197
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 13,
+      "minute" : 55
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 2,
+      "hour" : 16,
+      "minute" : 38
+    },
+    "nameShip" : "HCYP",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 48035
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 12,
+      "minute" : 19
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 14,
+      "hour" : 15,
+      "minute" : 19
+    },
+    "nameShip" : "LFJP",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 2625
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 26
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 12,
+      "hour" : 11,
+      "minute" : 1
+    },
+    "nameShip" : "YZH",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 52653
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 13,
+      "minute" : 30
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 4,
+      "hour" : 6,
+      "minute" : 6
+    },
+    "nameShip" : "OQET",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 51030
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 13,
+      "minute" : 5
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 15,
+      "hour" : 9,
+      "minute" : 5
+    },
+    "nameShip" : "YYWG",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 67987
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 14,
+      "minute" : 31
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 28,
+      "hour" : 2,
+      "minute" : 17
+    },
+    "nameShip" : "PB",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 57778
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 12,
+      "minute" : 20
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 11,
+      "hour" : 0,
+      "minute" : 45
+    },
+    "nameShip" : "FMSK",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 58176
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 12,
+      "minute" : 25
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 8,
+      "hour" : 21,
+      "minute" : 1
+    },
+    "nameShip" : "EM",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 57949
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 14,
+      "minute" : 51
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 25,
+      "hour" : 23,
+      "minute" : 31
+    },
+    "nameShip" : "BNON",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 5833
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 58
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 3,
+      "hour" : 16,
+      "minute" : 30
+    },
+    "nameShip" : "WLO",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 45315
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 11,
+      "minute" : 37
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 6,
+      "hour" : 18,
+      "minute" : 6
+    },
+    "nameShip" : "JD",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 5246
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 52
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 14,
+      "hour" : 18,
+      "minute" : 3
+    },
+    "nameShip" : "BL",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 5230
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 52
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 6,
+      "hour" : 21,
+      "minute" : 32
+    },
+    "nameShip" : "EDYV",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 63082
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 13,
+      "minute" : 28
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 16,
+      "hour" : 0,
+      "minute" : 42
+    },
+    "nameShip" : "JPWT",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 65193
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 13,
+      "minute" : 55
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 23,
+      "hour" : 16,
+      "minute" : 35
+    },
+    "nameShip" : "UN",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 69940
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 14,
+      "minute" : 56
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 21,
+      "hour" : 11,
+      "minute" : 21
+    },
+    "nameShip" : "WLR",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 3880
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 39
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 1,
+      "hour" : 5,
+      "minute" : 14
+    },
+    "nameShip" : "FU",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 51325
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 13,
+      "minute" : 9
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 16,
+      "hour" : 22,
+      "minute" : 4
+    },
+    "nameShip" : "TROP",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 52294
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 11,
+      "minute" : 10
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 17,
+      "hour" : 1,
+      "minute" : 59
+    },
+    "nameShip" : "QM",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 57519
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 14,
+      "minute" : 44
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 11,
+      "hour" : 1,
+      "minute" : 9
+    },
+    "nameShip" : "II",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 56819
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 12,
+      "minute" : 8
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 4,
+      "hour" : 6,
+      "minute" : 42
+    },
+    "nameShip" : "QZ",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 53100
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 11,
+      "minute" : 20
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 9,
+      "hour" : 11,
+      "minute" : 29
+    },
+    "nameShip" : "OQW",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 4006
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 40
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 29,
+      "hour" : 12,
+      "minute" : 45
+    },
+    "nameShip" : "NON",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 2549
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 25
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 3,
+      "hour" : 23,
+      "minute" : 16
+    },
+    "nameShip" : "ECEZ",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 58341
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 12,
+      "minute" : 27
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 4,
+      "hour" : 6,
+      "minute" : 29
+    },
+    "nameShip" : "IRXV",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 3658
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 36
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 18,
+      "hour" : 17,
+      "minute" : 24
+    },
+    "nameShip" : "DKEC",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 5779
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 58
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 5,
+      "hour" : 11,
+      "minute" : 26
+    },
+    "nameShip" : "IBXF",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 3163
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 31
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 6,
+      "hour" : 11,
+      "minute" : 37
+    },
+    "nameShip" : "EKRJ",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 58680
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 12,
+      "minute" : 32
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 8,
+      "hour" : 7,
+      "minute" : 8
+    },
+    "nameShip" : "XBG",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 60454
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 12,
+      "minute" : 55
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 12,
+      "hour" : 16,
+      "minute" : 41
+    },
+    "nameShip" : "VOM",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 47485
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 12,
+      "minute" : 10
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 6,
+      "hour" : 21,
+      "minute" : 41
+    },
+    "nameShip" : "JWR",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 3261
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 32
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 6,
+      "hour" : 2,
+      "minute" : 46
+    },
+    "nameShip" : "FNW",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 69894
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 14,
+      "minute" : 56
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 11,
+      "hour" : 5,
+      "minute" : 5
+    },
+    "nameShip" : "YIK",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 45986
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 11,
+      "minute" : 47
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 15,
+      "hour" : 9,
+      "minute" : 56
+    },
+    "nameShip" : "QWDX",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 42711
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 10,
+      "minute" : 57
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 13,
+      "hour" : 4,
+      "minute" : 45
+    },
+    "nameShip" : "GZN",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 48601
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 12,
+      "minute" : 27
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 19,
+      "hour" : 4,
+      "minute" : 55
+    },
+    "nameShip" : "DOQ",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 61429
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 13,
+      "minute" : 7
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 23,
+      "hour" : 2,
+      "minute" : 31
+    },
+    "nameShip" : "YZ",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 45826
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 11,
+      "minute" : 45
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 3,
+      "hour" : 21,
+      "minute" : 51
+    },
+    "nameShip" : "CWPS",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 58365
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 14,
+      "minute" : 57
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 12,
+      "hour" : 11,
+      "minute" : 12
+    },
+    "nameShip" : "SRP",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 66628
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 14,
+      "minute" : 14
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 18,
+      "hour" : 14,
+      "minute" : 37
+    },
+    "nameShip" : "EWTW",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 5637
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 56
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 26,
+      "hour" : 16,
+      "minute" : 42
+    },
+    "nameShip" : "OO",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 2814
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 28
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 27,
+      "hour" : 0,
+      "minute" : 8
+    },
+    "nameShip" : "VNVA",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 5448
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 55
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 23,
+      "hour" : 21,
+      "minute" : 22
+    },
+    "nameShip" : "YYO",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 59401
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 15,
+      "minute" : 13
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 11,
+      "hour" : 18,
+      "minute" : 12
+    },
+    "nameShip" : "RYWX",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 61998
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 13,
+      "minute" : 14
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 20,
+      "hour" : 7,
+      "minute" : 43
+    },
+    "nameShip" : "LP",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 2858
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 28
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 9,
+      "hour" : 18,
+      "minute" : 21
+    },
+    "nameShip" : "LPP",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 50767
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 13,
+      "minute" : 1
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 4,
+      "hour" : 8,
+      "minute" : 50
+    },
+    "nameShip" : "BAAB",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 51860
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 11,
+      "minute" : 4
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 27,
+      "hour" : 5,
+      "minute" : 48
+    },
+    "nameShip" : "JGPK",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 3997
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 40
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 11,
+      "hour" : 15,
+      "minute" : 21
+    },
+    "nameShip" : "XB",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 48577
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 12,
+      "minute" : 27
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 29,
+      "hour" : 19,
+      "minute" : 1
+    },
+    "nameShip" : "OTN",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 62305
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 13,
+      "minute" : 18
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 4,
+      "hour" : 2,
+      "minute" : 3
+    },
+    "nameShip" : "HK",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 3262
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 32
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 20,
+      "hour" : 7,
+      "minute" : 59
+    },
+    "nameShip" : "WKVW",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 44239
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 11,
+      "minute" : 20
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 9,
+      "hour" : 9,
+      "minute" : 22
+    },
+    "nameShip" : "MFK",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 47024
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 12,
+      "minute" : 3
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 11,
+      "hour" : 13,
+      "minute" : 34
+    },
+    "nameShip" : "OO",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 55219
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 11,
+      "minute" : 47
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 3,
+      "hour" : 1,
+      "minute" : 47
+    },
+    "nameShip" : "TV",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 58892
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 12,
+      "minute" : 35
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 25,
+      "hour" : 7,
+      "minute" : 33
+    },
+    "nameShip" : "ITUX",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 51631
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 11,
+      "minute" : 1
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 4,
+      "hour" : 10,
+      "minute" : 7
+    },
+    "nameShip" : "QLSF",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 5177
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 52
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 16,
+      "hour" : 23,
+      "minute" : 0
+    },
+    "nameShip" : "ZOMZ",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 55431
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 14,
+      "minute" : 12
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 10,
+      "hour" : 0,
+      "minute" : 52
+    },
+    "nameShip" : "UQWC",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 2554
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 25
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 17,
+      "hour" : 20,
+      "minute" : 37
+    },
+    "nameShip" : "XPJ",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 59882
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 15,
+      "minute" : 21
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 8,
+      "hour" : 13,
+      "minute" : 46
+    },
+    "nameShip" : "AKN",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 51442
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 10,
+      "minute" : 59
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 3,
+      "hour" : 7,
+      "minute" : 53
+    },
+    "nameShip" : "DZO",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 49311
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 12,
+      "minute" : 38
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 9,
+      "hour" : 5,
+      "minute" : 35
+    },
+    "nameShip" : "ONS",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 4993
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 50
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 4,
+      "hour" : 5,
+      "minute" : 19
+    },
+    "nameShip" : "WKXP",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 66452
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 14,
+      "minute" : 11
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 4,
+      "hour" : 23,
+      "minute" : 35
+    },
+    "nameShip" : "OIPX",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 63543
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 13,
+      "minute" : 34
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 5,
+      "hour" : 21,
+      "minute" : 12
+    },
+    "nameShip" : "RFRP",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 52503
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 13,
+      "minute" : 27
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 6,
+      "hour" : 21,
+      "minute" : 31
+    },
+    "nameShip" : "INBG",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 3455
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 34
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 12,
+      "hour" : 1,
+      "minute" : 51
+    },
+    "nameShip" : "YYI",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 60523
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 12,
+      "minute" : 55
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 2,
+      "hour" : 13,
+      "minute" : 32
+    },
+    "nameShip" : "QDO",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 57753
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 14,
+      "minute" : 48
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 8,
+      "hour" : 9,
+      "minute" : 45
+    },
+    "nameShip" : "XKSZ",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 52838
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 11,
+      "minute" : 17
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 22,
+      "hour" : 17,
+      "minute" : 34
+    },
+    "nameShip" : "ZQ",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 43371
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 11,
+      "minute" : 7
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 24,
+      "hour" : 20,
+      "minute" : 19
+    },
+    "nameShip" : "NU",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 5002
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 50
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 4,
+      "hour" : 9,
+      "minute" : 43
+    },
+    "nameShip" : "AHO",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 5647
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 57
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 0,
+      "hour" : 11,
+      "minute" : 7
+    },
+    "nameShip" : "WUKB",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 4275
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 43
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 12,
+      "hour" : 15,
+      "minute" : 19
+    },
+    "nameShip" : "RV",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 43632
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 11,
+      "minute" : 11
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 27,
+      "hour" : 14,
+      "minute" : 40
+    },
+    "nameShip" : "AMWF",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 45423
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 11,
+      "minute" : 38
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 6,
+      "hour" : 9,
+      "minute" : 14
+    },
+    "nameShip" : "PC",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 54713
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 11,
+      "minute" : 41
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 15,
+      "hour" : 11,
+      "minute" : 55
+    },
+    "nameShip" : "TS",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 49472
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 12,
+      "minute" : 41
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 15,
+      "hour" : 22,
+      "minute" : 53
+    },
+    "nameShip" : "WUG",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 5491
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 55
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 15,
+      "hour" : 14,
+      "minute" : 46
+    },
+    "nameShip" : "OF",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 65405
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 13,
+      "minute" : 58
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 6,
+      "hour" : 18,
+      "minute" : 49
+    },
+    "nameShip" : "XT",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 66318
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 14,
+      "minute" : 10
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 25,
+      "hour" : 17,
+      "minute" : 45
+    },
+    "nameShip" : "YOJP",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 46873
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 12,
+      "minute" : 1
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 23,
+      "hour" : 4,
+      "minute" : 42
+    },
+    "nameShip" : "JE",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 68413
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 14,
+      "minute" : 37
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 14,
+      "hour" : 22,
+      "minute" : 13
+    },
+    "nameShip" : "ULQM",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 2973
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 30
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 4,
+      "hour" : 17,
+      "minute" : 7
+    },
+    "nameShip" : "SW",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 52548
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 13,
+      "minute" : 28
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 25,
+      "hour" : 16,
+      "minute" : 43
+    },
+    "nameShip" : "VPAC",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 5195
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 52
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 18,
+      "hour" : 19,
+      "minute" : 53
+    },
+    "nameShip" : "VNZK",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 51934
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 13,
+      "minute" : 18
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 14,
+      "hour" : 13,
+      "minute" : 54
+    },
+    "nameShip" : "DYQL",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 55876
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 14,
+      "minute" : 19
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 7,
+      "hour" : 7,
+      "minute" : 9
+    },
+    "nameShip" : "DR",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 67340
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 14,
+      "minute" : 23
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 6,
+      "hour" : 18,
+      "minute" : 19
+    },
+    "nameShip" : "FL",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 60706
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 12,
+      "minute" : 58
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 28,
+      "hour" : 7,
+      "minute" : 37
+    },
+    "nameShip" : "RQRV",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 67257
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 14,
+      "minute" : 22
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 6,
+      "hour" : 19,
+      "minute" : 11
+    },
+    "nameShip" : "PJD",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 63850
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 13,
+      "minute" : 38
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 16,
+      "hour" : 16,
+      "minute" : 28
+    },
+    "nameShip" : "AK",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 65892
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 14,
+      "minute" : 4
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 20,
+      "hour" : 12,
+      "minute" : 19
+    },
+    "nameShip" : "XL",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 44944
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 11,
+      "minute" : 31
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 10,
+      "hour" : 3,
+      "minute" : 41
+    },
+    "nameShip" : "LU",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 45819
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 11,
+      "minute" : 44
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 25,
+      "hour" : 4,
+      "minute" : 9
+    },
+    "nameShip" : "IL",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 47028
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 12,
+      "minute" : 3
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 5,
+      "hour" : 17,
+      "minute" : 40
+    },
+    "nameShip" : "AG",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 55883
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 14,
+      "minute" : 19
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 15,
+      "hour" : 15,
+      "minute" : 5
+    },
+    "nameShip" : "HCT",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 4967
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 50
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 8,
+      "hour" : 10,
+      "minute" : 53
+    },
+    "nameShip" : "OU",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 3331
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 33
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 7,
+      "hour" : 2,
+      "minute" : 26
+    },
+    "nameShip" : "XX",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 45893
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 11,
+      "minute" : 46
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 19,
+      "hour" : 1,
+      "minute" : 17
+    },
+    "nameShip" : "ZBI",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 64655
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 13,
+      "minute" : 48
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 26,
+      "hour" : 15,
+      "minute" : 50
+    },
+    "nameShip" : "DOL",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 4437
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 44
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 27,
+      "hour" : 16,
+      "minute" : 30
+    },
+    "nameShip" : "PSH",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 55976
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 11,
+      "minute" : 57
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 2,
+      "hour" : 11,
+      "minute" : 32
+    },
+    "nameShip" : "ZO",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 55891
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 11,
+      "minute" : 56
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 1,
+      "hour" : 18,
+      "minute" : 0
+    },
+    "nameShip" : "WF",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 52166
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 11,
+      "minute" : 8
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 11,
+      "hour" : 22,
+      "minute" : 23
+    },
+    "nameShip" : "NRCE",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 41792
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 10,
+      "minute" : 42
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 2,
+      "hour" : 7,
+      "minute" : 58
+    },
+    "nameShip" : "JN",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 62832
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 13,
+      "minute" : 25
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 18,
+      "hour" : 17,
+      "minute" : 22
+    },
+    "nameShip" : "EY",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 51679
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 13,
+      "minute" : 15
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 16,
+      "hour" : 0,
+      "minute" : 21
+    },
+    "nameShip" : "LS",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 55699
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 14,
+      "minute" : 16
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 2,
+      "hour" : 21,
+      "minute" : 0
+    },
+    "nameShip" : "VBB",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 2919
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 29
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 24,
+      "hour" : 4,
+      "minute" : 2
+    },
+    "nameShip" : "RZIX",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 65514
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 13,
+      "minute" : 59
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 16,
+      "hour" : 2,
+      "minute" : 44
+    },
+    "nameShip" : "RPE",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 49116
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 12,
+      "minute" : 35
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 1,
+      "hour" : 6,
+      "minute" : 15
+    },
+    "nameShip" : "YJUR",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 46775
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 11,
+      "minute" : 59
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 5,
+      "hour" : 23,
+      "minute" : 13
+    },
+    "nameShip" : "ATQ",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 2091
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 21
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 7,
+      "hour" : 20,
+      "minute" : 39
+    },
+    "nameShip" : "KO",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 4885
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 49
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 25,
+      "hour" : 23,
+      "minute" : 26
+    },
+    "nameShip" : "ZMD",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 62351
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 13,
+      "minute" : 19
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 8,
+      "hour" : 14,
+      "minute" : 50
+    },
+    "nameShip" : "WDK",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 43214
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 11,
+      "minute" : 4
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 19,
+      "hour" : 22,
+      "minute" : 51
+    },
+    "nameShip" : "TXOC",
+    "cargo" : {
+      "typeCargo" : "LIQUID",
+      "weight" : 69718
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 14,
+      "minute" : 53
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 19,
+      "hour" : 20,
+      "minute" : 6
+    },
+    "nameShip" : "FTQM",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 3224
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 32
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 2,
+      "hour" : 10,
+      "minute" : 27
+    },
+    "nameShip" : "DMYC",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 3509
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 35
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 13,
+      "hour" : 2,
+      "minute" : 54
+    },
+    "nameShip" : "KT",
+    "cargo" : {
+      "typeCargo" : "CONTAINER",
+      "weight" : 3982
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 0,
+      "minute" : 40
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 23,
+      "hour" : 13,
+      "minute" : 27
+    },
+    "nameShip" : "ODUU",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 50830
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 13,
+      "minute" : 2
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 13,
+      "hour" : 9,
+      "minute" : 58
+    },
+    "nameShip" : "QXGK",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 50524
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 12,
+      "minute" : 57
+    }
+  }, {
+    "arriveTime" : {
+      "day" : 17,
+      "hour" : 17,
+      "minute" : 57
+    },
+    "nameShip" : "UZ",
+    "cargo" : {
+      "typeCargo" : "LOOSE",
+      "weight" : 42197
+    },
+    "unloadDuration" : {
+      "day" : 0,
+      "hour" : 10,
+      "minute" : 49
+    }
+  } ]
+}
