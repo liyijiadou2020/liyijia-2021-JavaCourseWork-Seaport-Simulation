@@ -1,10 +1,8 @@
 package conductor;
-
 import Service2.AddParameter;
 import Service3.Simulator;
 import pojo.Performance;
-import Service1.Timetable;
-
+import pojo.Timetable;
 import static Service2.MyJsonReaderWriter.*;
 import static utils.ParameterFormer.*;
 
@@ -25,8 +23,8 @@ public class Main {
             /**
              * manually input Schedule
              */
-            AddParameter.enterSchedule(timetable);
-            AddParameter.enterPerformance(performance);
+//            AddParameter.enterSchedule(timetable);
+//            AddParameter.enterPerformance(performance);
 
             /**
              * write timetable to timetable.json & write performance to performance.json
@@ -47,7 +45,7 @@ public class Main {
             /**
              * write into result.json
              */
-            writeSimulationResult();
+            writeSimulationResult(Simulator.getResult());
         }
         catch (Exception e){
             e.printStackTrace();

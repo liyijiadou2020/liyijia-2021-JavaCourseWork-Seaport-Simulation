@@ -14,7 +14,7 @@ package utils;
 import Service3.Statistics;
 import org.jetbrains.annotations.NotNull;
 import pojo.*;
-import Service1.Timetable;
+import pojo.Timetable;
 
 import java.util.Random;
 
@@ -28,9 +28,9 @@ public class ParameterFormer {
                 + String.format("\n%-50s", "| Count of liquid cranes  ") + String.format("|    %-20s |", statistics.getCountLiquid())
                 + String.format("\n%-50s", "| Count of container cranes  ") + String.format("|    %-20s |", statistics.getCountContainer())
                 + String.format("\n%-50s", "| Count of unloaded ships  ") + String.format("|    %-20s |", statistics.getCountUnloaded())
-                + String.format("\n%-50s", "| Total fine") + String.format("|    %-20s |", statistics.getTotalFine())
-                + String.format("\n%-50s", "| Max delay  ")      + String.format("|    %-20s |", statistics.getMaxDelay())
-                + String.format("\n%-50s", "| Average delay  ")  + String.format("|    %-20s |", statistics.getAvrDelay())
+                + String.format("\n%-50s", "| Total fine($)") + String.format("|    %-20s |", statistics.getTotalFine())
+                + String.format("\n%-50s", "| Max delay(min)")      + String.format("|    %-20s |", statistics.getMaxDelay())
+                + String.format("\n%-50s", "| Average delay(min)")  + String.format("|    %-20s |", statistics.getAvrDelay())
                 + String.format("\n%-50s", "| Average wait duration on one ship(min)  ")   + String.format("|    %-20s |", statistics.getAvrWaitDuration())
                 + String.format("\n%-50s", "| Sum wait duration(min)  ") + String.format("|    %-20s |", statistics.getSumWaitDuration())
                 + String.format("\n%-50s", "| Average wait length in one day") + String.format("|    %-20s |", statistics.getAvrWaitLength())+STATISTIC_BOTTOM // fixme
@@ -76,6 +76,11 @@ public class ParameterFormer {
         System.out.println(performance);
         System.out.println(BOTTOM_LINE);
     }
+
+    public static void printStatistics(Statistics statistics) {
+        System.out.println(stringStatistics(statistics));
+    }
+
 
 
 

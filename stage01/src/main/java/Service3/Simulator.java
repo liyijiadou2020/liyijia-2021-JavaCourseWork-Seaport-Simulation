@@ -2,7 +2,7 @@ package Service3;
 
 import Service2.MyJsonReaderWriter;
 import pojo.Ship;
-import Service1.Timetable;
+import pojo.Timetable;
 import pojo.*;
 import java.io.IOException;
 import java.util.*;
@@ -10,8 +10,7 @@ import java.util.concurrent.*;
 import static Service2.MyJsonReaderWriter.getTimetableFromJson;
 import static pojo.CargoType.*;
 import static utils.Constant.*;
-import static utils.ParameterFormer.stringShip;
-import static utils.ParameterFormer.stringStatistics;
+import static utils.ParameterFormer.*;
 
 
 public class Simulator {
@@ -59,7 +58,8 @@ public class Simulator {
 
         printUnloadedShips();
         generateResultStatistics();
-        System.out.println(stringStatistics(result));
+        printStatistics(result);
+
     }
 
     private static void generateResultStatistics() {
@@ -73,7 +73,7 @@ public class Simulator {
         for (CargoType typeCargo : values()) {
             for (Ship ship : unloaded.get(typeCargo)) {
                 if (!isMinFine.get(typeCargo))  // care 没有进去 //WD+=(SUT-AT)
-                    mapSumWD.put(typeCargo,mapSumWD.get(typeCargo) + ( ship.getStartUnloadTime().receiveTimeInMinute() - ship.getArriveTime().receiveTimeInMinute() ));
+                    mapSumWD.put(typeCargo,mapSumWD.get(typeCargo) + ( ship.getStartUnloadTime().inMinutes() - ship.getArriveTime().inMinutes() ));
             }
 
             mapCountUnloaded.put(typeCargo, mapCountUnloaded.get(typeCargo) + unloaded.get(typeCargo).size());
@@ -124,10 +124,9 @@ public class Simulator {
 
     private static void initShips() {
         for (Schedule nodeTimetable : timetable.getSchedules()) {
-            int randomTimeAdd = DayHourMinute.generateRandomMinute(-MINUTE_IN_SEVEN_DAYS, MINUTE_IN_SEVEN_DAYS);
             Ship ship;
             try {
-                ship = new Ship(nodeTimetable.getArriveTime().addTime(randomTimeAdd), //初始化一条船, arrive time
+                ship = new Ship(nodeTimetable.getArriveTime().addTime(DayHourMinute.generateRandomMinute(-MINUTE_IN_SEVEN_DAYS, MINUTE_IN_SEVEN_DAYS)), //初始化一条船, arrive time
                         nodeTimetable.getNameShip(), // shipName
                         nodeTimetable.getCargo(), // cargo
                         nodeTimetable.getUnloadDuration()); // unload minutes
@@ -141,8 +140,6 @@ public class Simulator {
     private static void initBeforeOptimization() {
         initStatistic();
         initQueues();
-        modeling();
-        countFine();
     }
 
 
@@ -172,9 +169,16 @@ public class Simulator {
     private static void optimize() {
 
         /**
-         * MUST clear old data before new-round optimization!
+         * MUST clear old data before new-round optimization:
+         *         initStatistic(); //  set countWaiting, countUnloaded, sumDelay, maxDelay, sumWD, sumUD, fine to 0
+         *         initQueues(); // initialize queueShips. Put all the ships into queueShips to start new-round optimize
+         *         modeling(); //
+         *         countFine();
+         *
          */
         initBeforeOptimization();
+        modeling();
+        countFine();
 
         /**
          * Mark down the old solution(count of 3 types of cranes)
@@ -185,7 +189,8 @@ public class Simulator {
         }
 
         /**
-         * Only when all 3 type find optimization, can the loop breaks.
+         * Only when all 3 fleets(exist 3 fleets: container type, loose type and liquid type)
+         * find optimization, can the loop breaks.
          */
         while (!isMinFine.get(LOOSE) || !isMinFine.get(LIQUID) || !isMinFine.get(CONTAINER)) {
             /**
@@ -196,6 +201,8 @@ public class Simulator {
                 else  mapFreeCranesCount.put(typeCargo, 0);
             }
             initBeforeOptimization();
+            modeling();
+            countFine();
 
             for (CargoType typeCargo : values()) {
                 if (!isMinFine.get(typeCargo)) {
@@ -238,14 +245,15 @@ public class Simulator {
     }
 
     /**
+     *
      * 计算金额的总数：
      * 对于每一个类型
-     *  对于类型下的每一条已经完成卸载的船
-     *      计算罚款时间（ 公式：罚款时间 = 完成卸载时刻-（实际到达时刻+卸货的时间） ）
+     *  对于船队中的每一条已经完成卸载的船
+     *      计算罚款时间（ 公式：罚款时间 = 完成卸载时刻-（实际到达时刻+卸货的时间） ） timeFine=FUT-(AT+UD)
      *      计算罚款金额（ 公式：罚款时间*100， 注意，未满1小时要按照1小时收费 ）
      *      算好了金额，放入mapFine中
-     *  对于类型下每一条等待卸货的船
-     *      计算罚款时间（ 公式：30天的时间-（到达时刻+卸货的时间） ）
+     *  对于船队中每一条等待卸货的船
+     *      计算罚款时间（ 公式：30天的时间-（到达时刻+卸货的时间） ） 30daysEndTime - (AT+UD)
      *      计算罚款金额（ 公式：罚款时间*100， 注意，未满1小时要按照1小时收费 ）
      *      算好了金额，放入mapFine中
      *
@@ -253,9 +261,9 @@ public class Simulator {
     private static void countFine() {
         for (CargoType typeCargo : values()) {
             for (Ship ship : unloaded.get(typeCargo)) { //对于已经卸货的船
-                int timeFine = (ship.getFinishUnloadTime().receiveTimeInMinute() - // FUT-(AT+UD) (罚款时间 = 完成卸载时刻-（实际到达时刻+卸货的时间）)
-                        (ship.getArriveTime().receiveTimeInMinute() +
-                                ship.getUnloadDuration().receiveTimeInMinute()));
+                int timeFine = (ship.getFinishUnloadTime().inMinutes() - // (罚款时间 = 完成卸载时刻-（实际到达时刻+卸货的时间）)
+                        (ship.getArriveTime().inMinutes() +
+                                ship.getUnloadDuration().inMinutes()));
                 if (timeFine > 0) {
                     timeFine = timeFine / 60 + (timeFine % 60 == 0 ? 0 : 1);
                     int fine = timeFine * 100;
@@ -265,8 +273,8 @@ public class Simulator {
 
             for (Ship ship : waiting.get(typeCargo)) {
                 int timeFine = (MINUTE_IN_THIRTY_DAYS - /* 罚款时间=30天的时间-（到达时刻+卸货的时间） */
-                        (ship.getArriveTime().receiveTimeInMinute() +
-                                ship.getUnloadDuration().receiveTimeInMinute()));
+                        (ship.getArriveTime().inMinutes() +
+                                ship.getUnloadDuration().inMinutes()));
                 if (timeFine > 0) {
                     timeFine = timeFine / 60 + (timeFine % 60 == 0 ? 0 : 1);
                     int fine = timeFine * 100;
@@ -274,16 +282,22 @@ public class Simulator {
                 }
             }
         }
-    }
+    }// countFine
 
     private static void modeling() {
 
-        timer = new TaskTimer(); //在这里初始化时间
+        /**
+         * initialize timer
+         */
+        timer = new TaskTimer();
         int countAllCranes = 0;
         Map<CargoType, Integer> mapOldFreeCranesCount = new HashMap<>();
 
         /**
-         * 将countOfFreeCranes中的值刷入countAllCranes，将countOfFreeCranes的值刷入oldCountOfFreeCranes（注意，oldCountOfFreeCranes不是同步的）
+         * 1. summary all cranes into countAllCranes
+         * 2. put all cranes in mapFreeCranesCount into mapOldFreeCranesCount (for comparing later )
+         * 将countOfFreeCranes中的值刷入countAllCranes，
+         * 将countOfFreeCranes的值刷入oldCountOfFreeCranes（注意，oldCountOfFreeCranes不是同步的,因为它不需要同步）
          */
         for (CargoType typeCargo : values()) {
             countAllCranes += mapFreeCranesCount.get(typeCargo); // 将countOfFreeCranes中的所有值加入countAllCranes
@@ -294,10 +308,17 @@ public class Simulator {
          *
          * CyclicBarrier：countAllCranes-一起跑的线程数. timer-任务类,里面放了所有线程完成了(跑到了终点)之后要执行的动作
          * 当countAllCranes这么多个线程到达了之后，最后一个线程去做timer的任务：nowTime++
-         * 需求：一个线程组的线程需要等待所有线程完成任务后再继续执行下一次任务
+         * 使用需求：一个线程组的线程需要等待所有线程完成任务后再继续执行下一次任务
          */
         cyclicBarrier = new CyclicBarrier(countAllCranes, timer);
         /**
+         *
+         * For every fleet, find optimization. If not optimal yet:
+         *  1. initialize queues, used in Crane.run(): unloading, unloaded, mapCranes, waiting
+         *  2. put all cranes in mapFreeCranesCount into mapCranes
+         *  3. start threads in mapCranes
+         *
+         *
          * 这一个for循环里面做了什么：
          * 对于每个类型：
          * 1. 初始化nowInUnloading，unloadedShips，mapOfCranes
@@ -324,24 +345,25 @@ public class Simulator {
                  * 2. 将mapCranes的List<Thread>中的每一个Thread（即Crane）都启动起来
                  *
                  */
-                for (int i = 0; i < mapFreeCranesCount.get(typeCargo); i++) { // 空闲的cranes?
-                    // 向mapOfCranes的List<Thread>中【增加】一台起重机
-                    // 线程执行的任务是Crane中的run().
-                    // 要给Crane传入速率
+                for (int i = 0; i < mapFreeCranesCount.get(typeCargo); i++) {
                     mapCranes.get(typeCargo).add(new Thread(new Crane(mapPerformanceCrane.get(typeCargo),
                             typeCargo)));
                 }
 
-                for (Thread crane : mapCranes.get(typeCargo)) { //把该类型下的所有起重机启动起来
+                for (Thread crane : mapCranes.get(typeCargo)) {
                     crane.start(); //TODO
                 }
             }
         }
 
         /**
-         * 这两个嵌套的for循环里面做了什么：
-         * 对于每个类型：
-         *  对于每一台起重机
+         * TODO
+         * For every crane in every fleet, if any optimal solution not found, wait others util optimal found.
+         * If not min fine, then main thread wait until crane finish its task(run).
+         * After finishing, put the mapOldFreeCranesCount into mapFreeCranesCount
+         *
+         *
+         *
          *      【？】如果有任意一个船队没有取得达到最优解，那么当前线程阻塞，直到起重机完成它的任务（run里面的内容）。
          *      完成了之后把oldCountOfFreeCranes中的int放入countOfFreeCranes
          */
@@ -361,7 +383,8 @@ public class Simulator {
     } // executeModeling
 
     /**
-     * queuesShips初始化，并且用ships把ConcurrentLinkedQueue<Ship>填满
+     * initialize queueShips. Put all the ships into queueShips to start new-round optimize
+     * 用ships把ConcurrentLinkedQueue<Ship>填满
      */
     private static void initQueues() {
         for (CargoType typeCargo : values()) {

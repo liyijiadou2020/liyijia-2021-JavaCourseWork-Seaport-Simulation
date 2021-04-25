@@ -134,7 +134,7 @@ public class DayHourMinute implements Comparable<DayHourMinute> {
         convert(day, hour, minute);
     }
 
-    public Integer receiveTimeInMinute() {
+    public Integer inMinutes() {
         return minute + hour * 60 + day * 24 * 60;
     }
 

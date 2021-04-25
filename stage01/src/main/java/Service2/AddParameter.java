@@ -1,5 +1,5 @@
 package Service2;
-import Service1.Timetable;
+import pojo.Timetable;
 import pojo.*;
 
 import java.util.Scanner;
@@ -29,7 +29,7 @@ public class AddParameter {
             int hour = input.nextInt();
             System.out.println("Enter minute: (0-59)");
             int min = input.nextInt();
-            // 检验输入合法
+
             System.out.println("Enter ship name: ");
             String name=input.next();
             System.out.println("Enter cargo type: (1-Loose, 2-Liquid, 3-Container)");

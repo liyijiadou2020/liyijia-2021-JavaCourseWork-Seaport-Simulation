@@ -1,18 +1,19 @@
 package Service2;
 
 import Service3.Simulator;
+import Service3.Statistics;
 import org.jetbrains.annotations.Nullable;
 import pojo.Performance;
-import Service1.Timetable;
+import pojo.Timetable;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectWriter;
 
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.Writer;
+import java.io.*;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.Locale;
+
+import static utils.Constant.*;
 
 /**
  * @Autor: liyijiadou
@@ -22,36 +23,56 @@ import java.nio.file.Paths;
  */
 public class MyJsonReaderWriter {
 
+
     /**
      * Write into timeTable.json & performanceCranes.json
      */
-    public static void writeTimetable(Timetable timeTable) throws IOException {
+    public static void writeTimetable(Timetable timetable) throws IOException {
 
-        Path pathToTimeTable = Paths.get("timetable.json"); // param: the path string or part of the path string
-        ObjectWriter objectWriterTimeTable = new ObjectMapper().writer().withDefaultPrettyPrinter(); /* 导入json的三个依赖,记得设置为统一的版本,否则会找不到类报错! */
-        Writer jsonFileTimeTable = new FileWriter(String.valueOf(pathToTimeTable));
-        objectWriterTimeTable.writeValue(jsonFileTimeTable, timeTable);  // 将timeTable写入timeTable.json
+        File file = new File(TIMETABLE_JSON_PATH);
+        if (TIMETABLE_JSON_PATH.isEmpty() || !TIMETABLE_JSON_PATH.toLowerCase(Locale.ROOT).endsWith(".json")) {
+            throw new FileNotFoundException("[ERROR] File path is empty or not a Json file");
+        }else if (!file.exists()) {
+            file.createNewFile();
+        }
+
+        ObjectMapper mapper = new ObjectMapper();
+        mapper.writeValue(new FileWriter(file), timetable);
+
+        System.out.println(file.getName()+" is formed.");
 
     }
 
     public static void writePerformance(Performance performanceCranes) throws IOException{
 
-        Path pathToPerformanceCranes = Paths.get("performance.json");
-        ObjectWriter objectWriterPerformanceCranes = new ObjectMapper().writer().withDefaultPrettyPrinter();
-        Writer jsonFilePerformanceCranes = new FileWriter(String.valueOf(pathToPerformanceCranes));
-        objectWriterPerformanceCranes.writeValue(jsonFilePerformanceCranes, performanceCranes); // 将Cranes的速率写入performanceCranes.json
+        File file = new File(PERFORMANCE_JSON_PATH);
+        if (PERFORMANCE_JSON_PATH.isEmpty() || !PERFORMANCE_JSON_PATH.toLowerCase(Locale.ROOT).endsWith(".json")) {
+            throw new FileNotFoundException("[ERROR] File path is empty or not a Json file");
+        }else if (!file.exists()) {
+            file.createNewFile();
+        }
+
+        ObjectMapper mapper = new ObjectMapper();
+        mapper.writeValue(new FileWriter(file), performanceCranes);
+
+        System.out.println(file.getName()+" is formed.");
     }
 
 
     // TODO 将结果写入result.json
-    public static void writeSimulationResult() throws IOException {
-        /**
-         * 写入timeTable.json&performanceCranes.json
-         */
-        Path pathResult = Paths.get("result.json"); // param: the path string or part of the path string
-        ObjectWriter objectWriterTimeTable = new ObjectMapper().writer().withDefaultPrettyPrinter(); /* 导入json的三个依赖,记得设置为统一的版本,否则会找不到类报错! */
-        Writer jsonFileTimeTable = new FileWriter(String.valueOf(pathResult));
-        objectWriterTimeTable.writeValue(jsonFileTimeTable, Simulator.getResult());  // 将timeTable写入timeTable.json
+    public static void writeSimulationResult(Statistics result) throws IOException {
+
+        File file = new File(RESULT_JSON_PATH);
+        if (RESULT_JSON_PATH.isEmpty() || !RESULT_JSON_PATH.toLowerCase(Locale.ROOT).endsWith(".json")) {
+            throw new FileNotFoundException("[ERROR] File path is empty or not a Json file");
+        }else if (!file.exists()) {
+            file.createNewFile();
+        }
+
+        ObjectMapper mapper = new ObjectMapper();
+        mapper.writeValue(new FileWriter(file), result);
+
+        System.out.println(file.getName()+" is formed.");
 
     }
 

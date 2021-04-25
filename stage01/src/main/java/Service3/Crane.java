@@ -1,8 +1,6 @@
 package Service3;
 
-import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import pojo.Ship;
-import pojo.Cargo;
 import pojo.DayHourMinute;
 import pojo.CargoType;
 import java.util.Objects;
@@ -13,6 +11,7 @@ import java.util.concurrent.CyclicBarrier;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 import static Service3.Simulator.*;
+import static utils.Constant.COAST_PER_HOUR;
 import static utils.Constant.MINUTE_IN_THIRTY_DAYS;
 
 public class Crane implements Runnable {
@@ -31,11 +30,13 @@ public class Crane implements Runnable {
      *  1. Retrieval operations (including get) generally do not block, so may overlap with update operations (including put and remove).
      *  2.
      *  Why CHM?
-     *      1. efficient, one of the most common used concurrent container
+     *      1. Efficient, one of the most common used concurrent container
      *      2. Every fleet owners a lock, but fleets can work concurrently.
      *          (e.x. When LIQUID fleet works, CONTAINER fleet is not blocking. Instead, it can work too)
+     *
      */
     private static final ConcurrentMap<CargoType, Lock> mapLockers = new ConcurrentHashMap<>(); //ConcurrentMap- 每个线程对应一把锁
+    public static volatile int fineCounter=0;
 
     public Crane(Integer performance, CargoType typeOfCargo) {
         this.performance = performance;
@@ -50,13 +51,13 @@ public class Crane implements Runnable {
         return typeCargo;
     }
 
-
     @Override
     public void run() {
-
         Thread.currentThread().setName(Thread.currentThread().getName()+"-"+typeCargo.toString());
+        /**
+         * init
+         */
         CyclicBarrier cyclicBarrier = Simulator.cyclicBarrier;
-
         Ship currentShip = null;
         int currentDelay = 0;
 
@@ -86,7 +87,7 @@ public class Crane implements Runnable {
                  *
                  */
                     if ( (!queuesAllShips.get(typeCargo).isEmpty())
-                            && Objects.requireNonNull(queuesAllShips.get(typeCargo).peek()).getArriveTime().receiveTimeInMinute() <=
+                            && Objects.requireNonNull(queuesAllShips.get(typeCargo).peek()).getArriveTime().inMinutes() <=
                             now()) {
                         // modified
                         System.out.println("Arrived a ship: "+ queuesAllShips.get(typeCargo).peek().getName()
@@ -243,14 +244,24 @@ public class Crane implements Runnable {
             } // while
             mapLockers.get(typeCargo).lock();
 
+            /**
+             * Calculate fine.
+             * 算法1: timeFine= FUT-(AT+UD)
+             *                 int timeFine = currentShip.getFinishUnloadTime().inMinutes() - (currentShip.getArriveTime().inMinutes()
+             *                         + currentShip.getUnloadDuration().inMinutes());
+             * 算法2: timeFine= WD+delay
+             *      int timeFine = currentShip.getWaitDuration().inMinutes()+currentShip.getUnloadDelay().inMinutes();
+             *
+             */
             if (currentShip != null) {
-                int timeFine = now() - (currentShip.getArriveTime().receiveTimeInMinute() +
-                        currentShip.getUnloadDuration().receiveTimeInMinute());
+                // modified
+                System.out.println("-->Crane: Counted ships num="+(++fineCounter));
+                int timeFine = currentShip.getWaitDuration().inMinutes()+currentShip.getUnloadDelay().inMinutes();
                 if (timeFine > 0) {
-                    timeFine = timeFine / 60 +
-                            timeFine % 60 != 0 ? 1 : 0;
-                    int fine = timeFine * 100;
+                    timeFine = timeFine / 60 + timeFine % 60 != 0 ? 1 : 0;
+                    int fine = timeFine * COAST_PER_HOUR;
                     mapFine.replace(typeCargo, mapFine.get(typeCargo) + fine);
+                    System.out.println("current ship is " + currentShip.getName()+" fine is "+fine);
                 }
             }
             mapLockers.get(typeCargo).unlock();
