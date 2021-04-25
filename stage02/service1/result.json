@@ -1,1 +1,0 @@
-"{\r\n  \"countUnloaded\" : 51,\r\n  \"countLoose\" : 2,\r\n  \"countLiquid\" : 1,\r\n  \"countContainer\" : 1,\r\n  \"totalFine\" : 1668200,\r\n  \"sumWaitDuration\" : 386.0,\r\n  \"avrWaitDuration\" : 7.568627450980392,\r\n  \"sumDelay\" : 2724.0,\r\n  \"avrDelay\" : 53.411764705882355,\r\n  \"maxDelay\" : 1419.0,\r\n  \"avrWaitLength\" : 4.664513888888889\r\n}"

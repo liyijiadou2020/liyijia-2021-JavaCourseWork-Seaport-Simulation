@@ -52,6 +52,9 @@ public class Crane implements Runnable {
     }
 
     @Override
+    /**
+     * waiting -> current -> unloading -> unloaded
+     */
     public void run() {
         Thread.currentThread().setName(Thread.currentThread().getName()+"-"+typeCargo.toString());
         /**
