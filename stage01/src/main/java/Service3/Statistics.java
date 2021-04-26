@@ -7,6 +7,20 @@ package Service3;
  */
 public class Statistics {
 
+    /**
+     * countUnloaded : число разгруженных судов
+     * countLoose : число сыпучих
+     * countLiquid : число жидких
+     * countContainer : число контейнеров
+     * totalFine : общая сумма штрафа
+     * sumWaitDuration : общая сумма времени ожижания
+     * avrWaitDuration : среднее время ожижания всех разгруженных судов
+     * sumDelay : общая сумма задержки разгрузки
+     * avrDelay : средняя задержка всех разгруженных судов
+     * maxDelay : максимальная задержка всех разгруженных судов
+     * avrWaitLength : средняя длина очереди на разгрузки
+     *
+     */
     private int countUnloaded;
     private int countLoose;
     private int countLiquid;

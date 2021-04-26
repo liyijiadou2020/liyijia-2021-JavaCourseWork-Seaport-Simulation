@@ -19,51 +19,133 @@ import static com.example.utils.ParameterFormer.stringStatistics;
 
 public class Simulator {
 
+    /**
+     * restTemplate : для запусзить сервис третий
+     */
     static RestTemplateBuilder builder = new RestTemplateBuilder();
     static RestTemplate restTemplate = builder.build();
 
+    /**
+     * result : отчёт, содержающий результат моделирования
+     */
     private static Statistics result = new Statistics();
-    private static Timetable timetable;
-    private static ArrayList<Ship> ships=new ArrayList<>(); //TreeSet<Ship>
-    private static final Map<CargoType, Boolean> isMinFine = new HashMap<>();
-    private static int countUnloaded=0;
-    public static Integer sumFine = 0;
-    public static volatile TaskTimer timer;
-    public static CyclicBarrier cyclicBarrier; //它的作用就是会让所有线程都等待完成后才会继续下一步行动。
 
+    /**
+     * timetable : заданное расписание
+     */
+    private static Timetable timetable;
+
+    /**
+     * ships : все судна
+     */
+    private static ArrayList<Ship> ships=new ArrayList<>();
+
+    /**
+     * штрафные суммы минимизированные или нет
+     */
+    private static final Map<CargoType, Boolean> isMinFine = new HashMap<>();
+
+    /**
+     * countUnloaded : число разгруженных судов
+     */
+    private static int countUnloaded=0;
+
+    /**
+     * sumFine : общая сумма штрафа
+     */
+    public static Integer sumFine = 0;
+
+    /**
+     * TODO
+     * Таймер
+     */
+    public static volatile TaskTimer timer;
+
+    /** TODO
+     * Средство синхронизации, которое позволяет ряд потоков всем, ожидает друг друга, чтобы достигнуть общей точки барьера.
+     */
+    public static CyclicBarrier cyclicBarrier; // make all threads wait for completion before proceeding to the next step
+
+    /**
+     * -----------
+     * Разделяю все судны на три флота(fleet) по виду груза: сыпучий флот, жидкий флот и флот контейнера
+     * Для каждого флота необходимо определить число кранов, чтобы сумма штрафа ВСЕХ СУДОВ была минимизированная
+     * Можем сказать, что у каждого флота есть своя статистика, которая включит:
+     *      -сумма продолжительности разгрузки : mapSumUD
+     *      -сумма задержки окончания разгруки : mapSumDelay
+     *      -максимальная задержика окончания разгруки : mapMaxDelay
+     *      -число ожидающих суднов на разгрузку : mapCountWaiting
+     *      -число разгруженных суднов : mapCountUnloaded
+     *      -сумма времени ожидания : mapSumWD
+     *      -лист краноа(потоков) : mapCranes
+     *      -число кранов(потоков) : countCranes
+     *      -производительность кранов : mapPerformanceCrane
+     * Все статистики расположенные в Map, чтобы для каждого занного вида грузка можем получить нужную статистику
+     * -----------
+     */
     public static Map<CargoType, Double> mapSumUD = new HashMap<>(); /* 停靠时间总和, sumTimeStop */
     public static Map<CargoType, Integer> mapSumDelay = new HashMap<>(); /* 停靠时间总和, sumTimeStop */
     public static Map<CargoType, Integer> mapMaxDelay = new HashMap<>();/* 最大停靠时间, maxTimeStop, mapMaxPD */
     public static Map<CargoType, Integer> mapCountWaiting = new HashMap<>(); /* 等待卸货的船的个数?, countWaitUnloadingShips */
     public static Map<CargoType, Integer> mapCountUnloaded = new HashMap<>(); /* 完成卸货的船的个数, countShipsUnloaded */
     public static Map<CargoType, Integer> mapSumWD = new HashMap<>();
+    public static Map<CargoType, List<Thread>> mapCranes = new HashMap<>(); // 起重机列表
+    public static Map<CargoType, Integer> countCranes = new HashMap<>(); // 起重机数量
+    public static Map<CargoType, Integer> mapPerformanceCrane = new HashMap<>(); // 速度
 
     /**
+     * Один кран, это один поток.
+     * Когда несколько кранов работает всместе, необходимо использовать потокобезопасные контейнер, чтобы изменения данного
+     * потока были видны для остальных потоков
+     *      -очерезь разгружающих суднов : unloading
+     *      -очередь разгруженных судов : unloaded
+     *      -очередь ожидающих суднов на разгрузку : waiting
+     * Для очерези я взяла CopyOnWriteArrayList, потому что нам нужно чаще читать а меншее записать. Тем более, CopyOnWriteArrayList
+     * позволяет несколько потоков допустить к очереди суднов(CopyOnWriteArrayList<Ship>)
+     *
      * CopyOnWriteArrayList-Copy when writing, thread safe, fix to the situation that read more but write less often
      */
     public static ConcurrentMap<CargoType, CopyOnWriteArrayList<Ship>> unloading = new ConcurrentHashMap<>(); /*正在卸货的船*/
     public static ConcurrentMap<CargoType, CopyOnWriteArrayList<Ship>> unloaded = new ConcurrentHashMap<>();  /*完成卸货的船*/
+    public static ConcurrentMap<CargoType, LinkedBlockingQueue<Ship>> waiting = new ConcurrentHashMap<>(); /* ??? 和上面的区别是?queuesForUnloading, queuesWaiting */
+
     /**
+     *      -очередь всех суднов, из которого нужно оптимизировать : queuesAllShips
+     *      -число свободных кранов : mapFreeCranesCount
+     *      -сумма штрафа : mapFine
      * ConcurrentLinkedQueue- in CAS algorithm,(non-blocking queue), FIFO.
      */
     public static ConcurrentMap<CargoType, LinkedBlockingQueue<Ship>> queuesAllShips = new ConcurrentHashMap<>();  /*队列中的卸货的船*/
-    public static ConcurrentMap<CargoType, LinkedBlockingQueue<Ship>> waiting = new ConcurrentHashMap<>(); /* ??? 和上面的区别是?queuesForUnloading, queuesWaiting */
     public static ConcurrentMap<CargoType, Integer> mapFreeCranesCount = new ConcurrentHashMap<>(); //空闲的起重机, executeModeling/mapCountFreeCranes
     public static ConcurrentMap<CargoType, Integer> mapFine = new ConcurrentHashMap<>(); // 罚金
-    public static Map<CargoType, List<Thread>> mapCranes = new HashMap<>(); // 起重机列表
-    public static Map<CargoType, Integer> cranesCount = new HashMap<>(); // 起重机数量
-    public static Map<CargoType, Integer> mapPerformanceCrane = new HashMap<>(); // 速度
+
 
 
     public static Statistics getResult() {
         return result;
     }
 
+    /**
+     * моделирование + принт результат
+     * @throws IOException
+     */
     public static void simulate() throws IOException {
+        /**
+         * моделировать
+         */
         optimize();
 
+        /**
+         * принт разгруженные судны
+         */
         printUnloadedShips();
+        /**
+         * собираем все статискити, запишем в result
+         */
         generateResultStatistics();
+        /**
+         * принт результат
+         */
         System.out.println(stringStatistics(result));
     }
 
@@ -82,7 +164,7 @@ public class Simulator {
             }
 
             mapCountUnloaded.put(typeCargo, mapCountUnloaded.get(typeCargo) + unloaded.get(typeCargo).size());
-            sumFine += mapFine.get(typeCargo) - (cranesCount.get(typeCargo) - 1) * COAST_ONE_CRANE;
+            sumFine += mapFine.get(typeCargo) - (countCranes.get(typeCargo) - 1) * COAST_ONE_CRANE;
             sumDelay += mapSumDelay.get(typeCargo); // modified:原本:sumDelay += mapSumUD.get(typeCargo)
             countUnloaded += mapCountUnloaded.get(typeCargo);
             countWaiting += mapCountWaiting.get(typeCargo);
@@ -92,9 +174,9 @@ public class Simulator {
 
 
         result.setCountUnloaded(countUnloaded);
-        result.setCountLoose(cranesCount.get(LOOSE));
-        result.setCountLiquid(cranesCount.get(LIQUID));
-        result.setCountContainer(cranesCount.get(CONTAINER));
+        result.setCountLoose(countCranes.get(LOOSE));
+        result.setCountLiquid(countCranes.get(LIQUID));
+        result.setCountContainer(countCranes.get(CONTAINER));
         result.setTotalFine(sumFine);
         result.setSumWaitDuration(sumWD);
         result.setAvrWaitDuration((sumWD/countUnloaded));
@@ -165,8 +247,6 @@ public class Simulator {
     private static void initBeforeOptimization() {
         initStatistic();
         initQueues();
-        modeling();
-        countFine();
     }
 
 
@@ -196,12 +276,37 @@ public class Simulator {
     private static void optimize() {
 
         /**
+         * Нужно обнулить все переменные на процессе оптимизирования. Эти пероеменные включают:
+         *      -Статистика: mapSumWD.put(cargo, 0);
+         *                   mapCountWaiting.put(cargo, 0);
+         *                   mapMaxDelay.put(cargo, 0);
+         *                   mapSumUD.put(cargo, 0.0);
+         *                   mapSumDelay.put(cargo, 0);
+         *                   mapCountUnloaded.put(cargo, 0);
+         *                   mapFine.put(cargo, 0);
+         *      -очереди суднов: queuesAllShips
+         *
          * MUST clear old data before new-round optimization!
+         *         initStatistic();
+         *         initQueues();
+         *         modeling();
+         *         countFine();
          */
         initBeforeOptimization();
+        /**
+         * моделирование : заданные числа кранов кажного флота, начинаем все их потоки, после время прошло 30 дня, высчислить сумму штрафа
+         * Попропуем допавить один кран, и повторяем процесс моделирования, высчислить сумму штрафа, сравниваем с прошедщего варианта.
+         * Если для данного варианта сумма штрафа уже выше, чем прошедщего варианта, то можем сказать, что мы нашли оптимизированный результат
+         */
+        modeling();
+        /**
+         * высчислить сумму штрафа после моделирования
+         */
+        countFine();
 
         /**
          * Mark down the old solution(count of 3 types of cranes)
+         * Отметить старое решение (всего 3 типа кранов).
          */
         ConcurrentMap<CargoType, Integer> oldMapFine = new ConcurrentHashMap<>();
         for (CargoType typeCargo : values()) {
@@ -209,23 +314,31 @@ public class Simulator {
         }
 
         /**
-         * Only when all 3 type find optimization, can the loop breaks.
+         * Только тогда, когда все 3 типа найдут оптимизацию, цикл может прерваться.
+         *
          */
         while (!isMinFine.get(LOOSE) || !isMinFine.get(LIQUID) || !isMinFine.get(CONTAINER)) {
             /**
-             * If not optimical yet, add a crane for fleet, and try new solution.
+             *
+             * Попробуем добавить один кран, поко не наидем оптимизацию
              */
             for (CargoType typeCargo : values()) {
                 if (!isMinFine.get(typeCargo))   mapFreeCranesCount.put(typeCargo, mapFreeCranesCount.get(typeCargo) + 1);
                 else  mapFreeCranesCount.put(typeCargo, 0);
             }
             initBeforeOptimization();
+            modeling();
+            countFine();
 
+            /**
+             * Здесь мы определяем, достигает ли минимальной штрафа через сравнения с прошедщего варианта. Если да,
+             * то можем выйти от цикла
+             */
             for (CargoType typeCargo : values()) {
                 if (!isMinFine.get(typeCargo)) {
                     if (mapFine.get(typeCargo) + COAST_ONE_CRANE * (mapFreeCranesCount.get(typeCargo) - 1) > oldMapFine.get(typeCargo)){
                         mapFine.put(typeCargo, oldMapFine.get(typeCargo));
-                        cranesCount.put(typeCargo, mapFreeCranesCount.get(typeCargo) - 1);
+                        countCranes.put(typeCargo, mapFreeCranesCount.get(typeCargo) - 1);
                         isMinFine.put(typeCargo, true);
                     } else{
                         oldMapFine.put(typeCargo, mapFine.get(typeCargo) + COAST_ONE_CRANE * (mapFreeCranesCount.get(typeCargo) - 1));
@@ -302,24 +415,20 @@ public class Simulator {
 
     private static void modeling() {
 
-        timer = new TaskTimer(); //在这里初始化时间
+        timer = new TaskTimer(); // Инициализируем время здесь
         int countAllCranes = 0;
         Map<CargoType, Integer> mapOldFreeCranesCount = new HashMap<>();
 
         /**
+         * высчислаем число кранов.
+         * копируем числа свободных кранов
+         *
          * 将countOfFreeCranes中的值刷入countAllCranes，将countOfFreeCranes的值刷入oldCountOfFreeCranes（注意，oldCountOfFreeCranes不是同步的）
          */
         for (CargoType typeCargo : values()) {
             countAllCranes += mapFreeCranesCount.get(typeCargo); // 将countOfFreeCranes中的所有值加入countAllCranes
             mapOldFreeCranesCount.put(typeCargo, mapFreeCranesCount.get(typeCargo)); // 把countOfFreeCranes中的值放入oldCountOfFreeCranes
         }
-        /**
-         * Cyclic-可以重用，Barrier-想要让一组线程等待到某个状态的那个状态成为barrier
-         *
-         * CyclicBarrier：countAllCranes-一起跑的线程数. timer-任务类,里面放了所有线程完成了(跑到了终点)之后要执行的动作
-         * 当countAllCranes这么多个线程到达了之后，最后一个线程去做timer的任务：nowTime++
-         * 需求：一个线程组的线程需要等待所有线程完成任务后再继续执行下一次任务
-         */
         cyclicBarrier = new CyclicBarrier(countAllCranes, timer);
         /**
          * 这一个for循环里面做了什么：
@@ -328,6 +437,12 @@ public class Simulator {
          * 2. countOfFreeCranes里的所有起重机全部加入mapOfCranes
          * 3. 启动mapOfCranes中的所有起重机
          *
+         * Что делается в этом цикле for:
+         *  Для каждого флота, который пока не нашел оптимизацию:
+         *      1. Инициализировать все очереди: unloading, unloaded, mapCranes, waiting
+         *      2. Все краны в mapOfCranes
+         *      3. Запустите все краны в mapOfCranes.
+         *
          */
         for (CargoType typeCargo : values()) {
 
@@ -335,39 +450,24 @@ public class Simulator {
 
                 System.out.println("#Port-------> init queues");
 
-                // 初始化
-                unloading.put(typeCargo, new CopyOnWriteArrayList<>()); // 初始化等待中的船
-                unloaded.put(typeCargo, new CopyOnWriteArrayList<>()); // 初始化完成卸货的船b
-                mapCranes.put(typeCargo, new LinkedList<>()); // 初始化所拥有的cranes
-                waiting.put(typeCargo, new LinkedBlockingQueue<>()); // modified 4-22 ConcurrentLinkedQueue
+                unloading.put(typeCargo, new CopyOnWriteArrayList<>());
+                unloaded.put(typeCargo, new CopyOnWriteArrayList<>());
+                mapCranes.put(typeCargo, new LinkedList<>());
+                waiting.put(typeCargo, new LinkedBlockingQueue<>());
 
-                /**
-                 * 1. 把freeCrane（空闲的起重机）加入到mapCranes中（总的起重机）。
-                 *  mapCranes： Map<TC, List<Thread>>
-                 *        List<Thread>就是所有起重机的list
-                 * 2. 将mapCranes的List<Thread>中的每一个Thread（即Crane）都启动起来
-                 *
-                 */
-                for (int i = 0; i < mapFreeCranesCount.get(typeCargo); i++) { // 空闲的cranes?
-                    // 向mapOfCranes的List<Thread>中【增加】一台起重机
-                    // 线程执行的任务是Crane中的run().
-                    // 要给Crane传入速率
+                for (int i = 0; i < mapFreeCranesCount.get(typeCargo); i++) {
                     mapCranes.get(typeCargo).add(new Thread(new Crane(mapPerformanceCrane.get(typeCargo),
                             typeCargo)));
                 }
 
                 for (Thread crane : mapCranes.get(typeCargo)) { //把该类型下的所有起重机启动起来
-                    crane.start(); //TODO
+                    crane.start();
                 }
             }
         }
 
         /**
-         * 这两个嵌套的for循环里面做了什么：
-         * 对于每个类型：
-         *  对于每一台起重机
-         *      【？】如果有任意一个船队没有取得达到最优解，那么当前线程阻塞，直到起重机完成它的任务（run里面的内容）。
-         *      完成了之后把oldCountOfFreeCranes中的int放入countOfFreeCranes
+         * Ждем, пока не все потоки выполняет разгрузку
          */
         for (CargoType typeCargo : values()) {
             for (Thread crane : mapCranes.get(typeCargo)) {
@@ -382,26 +482,22 @@ public class Simulator {
 
             }
         }
-    } // executeModeling
+    } // modeling
 
-    /**
-     * queuesShips初始化，并且用ships把ConcurrentLinkedQueue<Ship>填满
-     */
+
     private static void initQueues() {
         for (CargoType typeCargo : values()) {
-            queuesAllShips.put(typeCargo, new LinkedBlockingQueue<>()); // modified 4-22 原本是ConcurrentLinkedQueue<>,改成了LinkedBlockingQueue
+            queuesAllShips.put(typeCargo, new LinkedBlockingQueue<>());
         }
         for (Ship ship : ships) {
             queuesAllShips.get(ship.getCargo().getCargoType()).add(new Ship(ship));
         }
     }
 
-    /**
-     * countOfCranes的value全部置1，countOfFreeCranes全部置1
-     */
+
     public static void initCountCranes() {
         for (CargoType typeCargo : values()) {
-            cranesCount.put(typeCargo, 1);
+            countCranes.put(typeCargo, 1);
             mapFreeCranesCount.put(typeCargo, 1);
         }
     }
@@ -423,3 +519,9 @@ public class Simulator {
 
 
 
+         /* Cyclic-可以重用，Barrier-想要让一组线程等待到某个状态的那个状态成为barrier
+                 *
+                 * CyclicBarrier：countAllCranes-一起跑的线程数. timer-任务类,里面放了所有线程完成了(跑到了终点)之后要执行的动作
+                 * 当countAllCranes这么多个线程到达了之后，最后一个线程去做timer的任务：nowTime++
+                 * 需求：一个线程组的线程需要等待所有线程完成任务后再继续执行下一次任务
+                 */

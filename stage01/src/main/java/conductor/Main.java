@@ -1,9 +1,8 @@
 package conductor;
-import Service2.AddParameter;
 import Service3.Simulator;
 import pojo.Performance;
 import pojo.Timetable;
-import static Service2.MyJsonReaderWriter.*;
+import static Service2.JsonHandler1.*;
 import static utils.ParameterFormer.*;
 
 
@@ -45,7 +44,7 @@ public class Main {
             /**
              * write into result.json
              */
-            writeSimulationResult(Simulator.getResult());
+            writeStatistics(Simulator.getResult());
         }
         catch (Exception e){
             e.printStackTrace();

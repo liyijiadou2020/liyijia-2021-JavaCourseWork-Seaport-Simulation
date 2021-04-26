@@ -19,22 +19,6 @@ public class Crane implements Runnable {
 
     private final Integer performance;
     private final CargoType typeCargo;
-    /**
-     * static object - all the cranes share mapLockers, because in specific fleet(e.x. fleet liquid ships)
-     *                 they need to conduct unload task serially
-     *  As the following text suggests:
-     *  | all LOOSE -- lock     |
-     *  | all LIQUID -- lock    |
-     *  | all CONTAINER -- lock |
-     *
-     * ConcurrentHashMap(CHM):
-     *  1. Retrieval operations (including get) generally do not block, so may overlap with update operations (including put and remove).
-     *  2.
-     *  Why CHM?
-     *      1. efficient, one of the most common used concurrent container
-     *      2. Every fleet owners a lock, but fleets can work concurrently.
-     *          (e.x. When LIQUID fleet works, CONTAINER fleet is not blocking, instead it can work too)
-     */
     private static final ConcurrentMap<CargoType, Lock> mapLockers = new ConcurrentHashMap<>(); //ConcurrentMap- 每个线程对应一把锁
 
     public Crane(Integer performance, CargoType typeOfCargo) {
@@ -53,22 +37,24 @@ public class Crane implements Runnable {
 
     @Override
     public void run() {
-        // modified 4-22
+
         Thread.currentThread().setName(Thread.currentThread().getName()+"-"+typeCargo.toString());
         CyclicBarrier cyclicBarrier = Simulator.cyclicBarrier; // 把Port的cyclicBarrier复制一份
 
         Ship currentShip = null;
-        int currentDelay = 0; // currentParkDuration
+        int currentDelay = 0;
 
         try {
             while (now() < MINUTE_IN_THIRTY_DAYS) { //30天内
 
                 /**
+                 * Схватит lock
                  * Current Crane try to lock, if not succeed, Thread span and wait
                  */
                 mapLockers.get(typeCargo).lock();
 
                 /**
+                 * число ожидающих суднов += size waiting
                  * mapCountWaiting中【卸载中船的个数】加等于queuesForUnloading中船的个数
                  * 更新unloading（卸载中的船）的个数
                  *
@@ -284,3 +270,32 @@ public class Crane implements Runnable {
     }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * static object - all the cranes share mapLockers, because in specific fleet(e.x. fleet liquid ships)
+ *                 they need to conduct unload task serially
+ *  As the following text suggests:
+ *  | all LOOSE -- lock     |
+ *  | all LIQUID -- lock    |
+ *  | all CONTAINER -- lock |
+ *
+ * ConcurrentHashMap(CHM):
+ *  1. Retrieval operations (including get) generally do not block, so may overlap with update operations (including put and remove).
+ *  2.
+ *  Why CHM?
+ *      1. efficient, one of the most common used concurrent container
+ *      2. Every fleet owners a lock, but fleets can work concurrently.
+ *          (e.x. When LIQUID fleet works, CONTAINER fleet is not blocking, instead it can work too)
+ */

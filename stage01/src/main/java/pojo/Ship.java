@@ -3,6 +3,18 @@ package pojo;
 
 public class Ship implements Comparable<Ship>{
 
+    /**
+     * arriveTime - день и время прибытия
+     * name - название судна
+     * cargo - вид груза и его вес
+     * cranesCount - число разгрузочных кранов
+     * unloadDuration - продолжительность разгрузки (зависит только от вида груза и его веса(т.е. cargo))
+     * unloadDelay - время задержки окончания разгрузки судна по сравнению обычным
+     * startUnloadTime - время начала разгрузки
+     * finishUnloadTime -  время окончания разгрузки
+     * waitDuration - время ожидания в очерери
+     *
+     */
     private DayHourMinute arriveTime;
     private String name;
     private Cargo cargo;

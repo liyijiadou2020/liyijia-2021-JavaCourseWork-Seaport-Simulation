@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/../../CourseWork/stage02/service1/service1.iml" filepath="$PROJECT_DIR$/../../CourseWork/stage02/service1/service1.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../../CourseWork/stage02/service2/service2.iml" filepath="$PROJECT_DIR$/../../CourseWork/stage02/service2/service2.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../../CourseWork/stage02/service3/service3.iml" filepath="$PROJECT_DIR$/../../CourseWork/stage02/service3/service3.iml" />
       <module fileurl="file://$PROJECT_DIR$/stage01.iml" filepath="$PROJECT_DIR$/stage01.iml" />
     </modules>
   </component>
