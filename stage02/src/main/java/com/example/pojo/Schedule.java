@@ -2,12 +2,22 @@ package com.example.pojo;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 
+/**
+ * Запись судна
+ */
 @JsonAutoDetect
 public class Schedule implements Comparable<Schedule>{
+   /**
+    * arriveTime - день и время прибытия
+    * nameShip - название судна
+    * cargo - вид груза и его вес
+    * unloadDuration - планируемый срок стоянки для разгрузки
+    *
+    */
    private DayHourMinute arriveTime;
    private String nameShip;
    private Cargo cargo;
-   private DayHourMinute unloadDuration; // unloadMinutes: parkingTime(original)
+   private DayHourMinute unloadDuration;
 
    public Schedule() {
    }

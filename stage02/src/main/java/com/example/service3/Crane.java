@@ -66,7 +66,7 @@ public class Crane implements Runnable {
                 /**
                  * Current Crane try to lock, if not succeed, Thread span and wait
                  */
-                mapLockers.get(typeCargo).lock(); //lockers-CocurrentMap<TypeCargo, Lock>, 获取typeCargo对应的锁
+                mapLockers.get(typeCargo).lock();
 
                 /**
                  * mapCountWaiting中【卸载中船的个数】加等于queuesForUnloading中船的个数
@@ -90,7 +90,7 @@ public class Crane implements Runnable {
                             now()) {
                         // modified
                         System.out.println("Arrived a ship: "+ queuesAllShips.get(typeCargo).peek().getName()
-                                + "("+ queuesAllShips.get(typeCargo).peek().getCargo().getTypeCargo() +")...\n"
+                                + "("+ queuesAllShips.get(typeCargo).peek().getCargo().getCargoType() +")...\n"
                                 + "-1->Crane: "
                                 + Thread.currentThread()+" is adding "+ queuesAllShips.get(typeCargo).peek().getName()
                                 +" into waiting queue...");
@@ -119,7 +119,7 @@ public class Crane implements Runnable {
                         unloading.get(typeCargo).add(currentShip); // queuesForUnloading --> nowInUnloading
 
                         currentShip.increaseCrane(); // 当前为unloadingShip服务的起重机数量++
-                        currentDelay = DayHourMinute.generateRandomMinute(0, 1440); // 设置随机的 完成卸货偏移时间delay, set a random dalay(0~1440)
+                        currentDelay = DayHourMinute.randomMinute(0, 1440); // 设置随机的 完成卸货偏移时间delay, set a random dalay(0~1440)
                         currentShip.setUnloadDelay(new DayHourMinute(currentDelay));
                         // （船的卸货时间也许会比预期更多，范围是0~1440分钟.也就是说delay的范围是0~1440分钟）
 
@@ -188,7 +188,7 @@ public class Crane implements Runnable {
                         DayHourMinute wd = new DayHourMinute();
                         wd.setMinute(currentShip.getStartUnloadTime().getMinute()-currentShip.getArriveTime().getMinute());
                         currentShip.setWaitDuration(wd);
-                        mapSumWD.put(currentShip.getCargo().getTypeCargo(), wd.getMinute());
+                        mapSumWD.put(currentShip.getCargo().getCargoType(), wd.getMinute());
                         System.out.println("~~~> Crane: current ship WD="+wd.getMinute());
                         // ------ 4-21 -----
                         System.out.println("-6->Crane: "+Thread.currentThread()+". currentShip: "+currentShip.getName()+"starts unloading...");

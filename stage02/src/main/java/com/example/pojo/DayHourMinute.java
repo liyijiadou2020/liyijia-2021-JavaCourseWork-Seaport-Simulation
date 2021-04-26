@@ -34,34 +34,37 @@ public class DayHourMinute implements Comparable<DayHourMinute> {
 
         int day1 = day;
         int hour1 = hour;
-        int minute1 = minute;
+        int min1 = minute;
 
         // minute --> hour
-        int minuteToHour = minute1 / 60;
-        hour1 += minuteToHour;
-        minute1 %= 60;
+        int tmpHour = min1 / 60;
+        hour1 += tmpHour;
+        min1 %= 60;
 
         // hour --> day
-        int hourToDay = hour1 / 24;
-        day1 += hourToDay;
+        int tmpDay = hour1 / 24;
+        day1 += tmpDay;
         hour1 %= 24;
 
 
-        minuteToHour = minute1 / 60;
+        tmpHour = min1 / 60; //TODO 这里为什么
 
-        if (minuteToHour < 0) {
-            hour1 += minuteToHour;
-            minute1 += 60 * Math.abs(minuteToHour);
-            if (minute1 % 60 != 0) {
+        /**
+         * 为什么会小于0?
+         */
+        if (tmpHour < 0) {
+            hour1 += tmpHour;
+            min1 += 60 * Math.abs(tmpHour);
+            if (min1 % 60 != 0) {
                 hour1--;
-                minute1 += 60;
+                min1 += 60;
             }
         }
 
-        hourToDay = hour1 / 24;
-        if (hourToDay < 0) {
-            day1 += hourToDay;
-            hour1 += 24 * Math.abs(hourToDay);
+        tmpDay = hour1 / 24;
+        if (tmpDay < 0) {
+            day1 += tmpDay;
+            hour1 += 24 * Math.abs(tmpDay);
             if (hour1 % 24 != 0) {
                 day1--;
                 hour1 += 24;
@@ -73,7 +76,7 @@ public class DayHourMinute implements Comparable<DayHourMinute> {
             throw new IllegalArgumentException("-->DayHourMinute: #INVALID INPUT!# ");
         }
 
-        if (minute1 <0){
+        if (min1 <0){
             this.day =0;
             this.hour =0;
             this.minute=0;
@@ -82,16 +85,16 @@ public class DayHourMinute implements Comparable<DayHourMinute> {
 
         this.day = day1;
         this.hour = hour1;
-        this.minute = minute1;
+        this.minute = min1;
     }
 
-    public static DayHourMinute generateRandomDateAndTime(Integer minDay, Integer maxDay) {
+    public static DayHourMinute randomDayHourMinute(Integer minDay, Integer maxDay) {
         return new DayHourMinute((int) (Math.floor(Math.random() * (maxDay - minDay)) + minDay),
                 (int) (Math.floor(Math.random() * 24)),
                 (int) (Math.floor(Math.random() * 60)));
     }
 
-    public static int generateRandomMinute(Integer minMinute, Integer maxMinute) {
+    public static int randomMinute(Integer minMinute, Integer maxMinute) {
         return (int) Math.floor(Math.random() * (maxMinute - minMinute));
     }
 

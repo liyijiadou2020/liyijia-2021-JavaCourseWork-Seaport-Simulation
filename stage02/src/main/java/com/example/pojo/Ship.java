@@ -3,16 +3,29 @@ package com.example.pojo;
 
 public class Ship implements Comparable<Ship>{
 
+    /**
+     * arriveTime - день и время прибытия
+     * name - название судна
+     * cargo - вид груза и его вес
+     * cranesCount - число разгрузочных кранов
+     * unloadDuration - продолжительность разгрузки (зависит только от вида груза и его веса(т.е. cargo))
+     * unloadDelay - время задержки окончания разгрузки судна по сравнению обычным
+     * startUnloadTime - время начала разгрузки
+     * finishUnloadTime -  время окончания разгрузки
+     * waitDuration - время ожидания в очерери
+     *
+     */
     private DayHourMinute arriveTime; /*Arrive time*/
     private String name;
     private Cargo cargo;
+    private int cranesCount = 0;
+    private boolean isUnloading = false;
     private DayHourMinute unloadDuration; /* parkingTime,unloadMinutes: 卸货所用的分钟数, == UD*/
-    private DayHourMinute UnloadDelay;
+    private DayHourMinute unloadDelay;
     private DayHourMinute startUnloadTime = new DayHourMinute(); /* startTimeUnloading */
     private DayHourMinute finishUnloadTime = new DayHourMinute(); /* finishTimeUnloading */
     private DayHourMinute waitDuration = new DayHourMinute();
-    private int cranesCount = 0;
-    private boolean isUnloading = false;
+
 
     @Override
     public String toString() {
@@ -21,7 +34,7 @@ public class Ship implements Comparable<Ship>{
                 ", name='" + name + '\'' +
                 ", cargo=" + cargo +
                 ", unloadDuration=" + unloadDuration +
-                ", UnloadDelay=" + UnloadDelay +
+                ", UnloadDelay=" + unloadDelay +
                 ", startUnloadTime=" + startUnloadTime +
                 ", finishUnloadTime=" + finishUnloadTime +
                 ", waitDuration=" + waitDuration +
@@ -31,11 +44,11 @@ public class Ship implements Comparable<Ship>{
     }
 
     public DayHourMinute getUnloadDelay() {
-        return UnloadDelay;
+        return unloadDelay;
     }
 
     public void setUnloadDelay(DayHourMinute unloadDelay) {
-        UnloadDelay = unloadDelay;
+        this.unloadDelay = unloadDelay;
     }
 
 

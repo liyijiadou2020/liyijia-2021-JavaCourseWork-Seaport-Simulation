@@ -10,6 +10,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.io.IOException;
+
+import static com.example.service2.JsonHandler.getJson;
 import static com.example.utils.ParameterFormer.getDefaultPerformanceCranes;
 import static com.example.utils.ParameterFormer.randomTimetable;
 
@@ -28,45 +31,27 @@ public class Controller1 {
     static ObjectWriter ow= new ObjectMapper().writer().withDefaultPrettyPrinter();
 
     /**
-     * 成功
+     * GET-endpoint, возвращающий расписание
      * http://localhost:8090/service1/timetable
      * @return
      */
     @GetMapping("/service1/timetable")
-    public static String generateTimetable(){
+    public static String generateTimetable() throws IOException {
         System.out.println("#Service 1-generateTimetable: received request, start generating timetable...");
         Timetable timetable = randomTimetable();
-
-        String json = null;
-
-        try {
-            json = ow.writeValueAsString(timetable);
-        } catch (JsonProcessingException e) {
-            e.printStackTrace();
-        }
-
-        return json;
+        return getJson(timetable);
     }
 
     /**
-     * 成功
+     * GET-endpoint, возвращающий производительность
      * http://localhost:8090/service1/performance
      * @return
      */
     @GetMapping("/service1/performance")
-    public static String generatePerformance(){
+    public static String generatePerformance() throws IOException {
         System.out.println("#Service 1-generatePerformance: received request, start generating performance...");
         Performance performance=getDefaultPerformanceCranes();
-
-        String json = null;
-
-        try {
-            json = ow.writeValueAsString(performance);
-        } catch (JsonProcessingException e) {
-            e.printStackTrace();
-        }
-
-        return json;
+        return getJson(performance);
     }
 
 

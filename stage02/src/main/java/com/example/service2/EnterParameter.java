@@ -17,9 +17,11 @@ import static com.example.utils.ParameterFormer.getCargo;
  * @Version: 0.0
  * @Descriptions:
  */
-public class AddParameter {
+public class EnterParameter {
 
-    // TODO 错误检查
+    /**
+     * Ручно добавить запись через консоль
+     */
     public static void enterSchedule(Timetable timeTable) {
         int counter=0;
 
@@ -55,6 +57,9 @@ public class AddParameter {
 
     }
 
+    /**
+     * Ручно настраивать производительности крана
+     */
     public static void enterPerformance(Performance performance) {
 
         System.out.println("Default performance: Loose:333, Liquid:444, Container:555."

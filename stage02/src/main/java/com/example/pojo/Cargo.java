@@ -4,14 +4,14 @@ import com.fasterxml.jackson.annotation.JsonAutoDetect;
 
 @JsonAutoDetect
 public class Cargo {
-    private CargoType typeCargo;
+    private CargoType cargoType;
     private int weight;
 
     public Cargo() {
     }
 
     public Cargo(Cargo cargo) {
-        typeCargo = cargo.typeCargo;
+        cargoType = cargo.cargoType;
         weight = cargo.weight;
     }
 
@@ -19,16 +19,16 @@ public class Cargo {
         if (amountOfCargo <= 0) {
             throw new IllegalArgumentException("Amount of cargo must be more zero!");
         }
-        this.typeCargo = typeOfCargo;
+        this.cargoType = typeOfCargo;
         this.weight = amountOfCargo;
     }
 
-    public CargoType getTypeCargo() {
-        return typeCargo;
+    public CargoType getCargoType() {
+        return cargoType;
     }
 
-    public void setTypeCargo(CargoType typeCargo) {
-        this.typeCargo = typeCargo;
+    public void setCargoType(CargoType cargoType) {
+        this.cargoType = cargoType;
     }
 
     public Integer getWeight() {
@@ -42,7 +42,7 @@ public class Cargo {
         }
     }
 
-    public void setWeight(Integer weight) {
+    public void setWeight(int weight) {
         if (weight <= 0) {
             throw new IllegalArgumentException("Weight of cargo must not be 0!");
         }
@@ -52,7 +52,7 @@ public class Cargo {
     @Override
     public String toString() {
         return "Cargo{" +
-                "typeOfCargo=" + typeCargo +
+                "typeOfCargo=" + cargoType +
                 ", amountOfCargo=" + weight +
                 '}';
     }

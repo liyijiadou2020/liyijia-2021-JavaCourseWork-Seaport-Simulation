@@ -4,7 +4,6 @@ import com.example.pojo.*;
 import com.example.service1.Timetable;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.web.client.RestTemplate;
 
@@ -113,12 +112,9 @@ public class Simulator {
 
     }
 
-    //modified 4-23
     public static void initPerformanceFromURL() {
-//        RestTemplateBuilder builder = new RestTemplateBuilder();
-//        RestTemplate restTemplate = builder.build();
 
-        System.out.println("In service 3, going to visit http://localhost:8090/service2/performance...");
+        System.out.println("In service 3-initPerformanceFromURL: going to visit endpoint service 2...");
         String stringPerformance = restTemplate.getForObject("http://localhost:8090/service2/performance", String.class);
 
         ObjectMapper objectMapper = new ObjectMapper();
@@ -138,10 +134,7 @@ public class Simulator {
 
     public static void initTimetableFromURL() {
 
-//        RestTemplateBuilder builder = new RestTemplateBuilder();
-//        RestTemplate restTemplate = builder.build();
-
-        String stringTimetable = restTemplate.getForObject("http://localhost:8090/service2/timetable", String.class);
+        String stringTimetable = restTemplate.getForObject("http://localhost:8090/service2/timetable/timetable.json", String.class);
         ObjectMapper objectMapper = new ObjectMapper();
         try {
             timetable = objectMapper.readValue(stringTimetable, Timetable.class);
@@ -155,7 +148,7 @@ public class Simulator {
 
     private static void initShips() {
         for (Schedule nodeTimetable : timetable.getSchedules()) {
-            int randomTimeAdd = DayHourMinute.generateRandomMinute(-MINUTE_IN_SEVEN_DAYS, MINUTE_IN_SEVEN_DAYS);
+            int randomTimeAdd = DayHourMinute.randomMinute(-MINUTE_IN_SEVEN_DAYS, MINUTE_IN_SEVEN_DAYS);
             Ship ship;
             try {
                 ship = new Ship(nodeTimetable.getArriveTime().addTime(randomTimeAdd), //初始化一条船, arrive time
@@ -399,7 +392,7 @@ public class Simulator {
             queuesAllShips.put(typeCargo, new LinkedBlockingQueue<>()); // modified 4-22 原本是ConcurrentLinkedQueue<>,改成了LinkedBlockingQueue
         }
         for (Ship ship : ships) {
-            queuesAllShips.get(ship.getCargo().getTypeCargo()).add(new Ship(ship));
+            queuesAllShips.get(ship.getCargo().getCargoType()).add(new Ship(ship));
         }
     }
 

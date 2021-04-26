@@ -2,29 +2,19 @@ package com.example.controller;
 
 import com.example.pojo.Performance;
 import com.example.service1.Timetable;
-import com.example.service2.AddParameter;
 import com.example.service3.Simulator;
-import com.example.service3.Statistics;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.ObjectWriter;
-import org.jetbrains.annotations.Nullable;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.client.RestTemplate;
 
-import java.io.IOException;
-
-import static com.example.service2.MyJsonReaderWriter.*;
-import static com.example.service2.MyJsonReaderWriter.postSimulationResult;
+import static com.example.service2.JsonHandler.*;
+import static com.example.service2.JsonHandler.postStatistics;
 import static com.example.utils.ParameterFormer.*;
 
 @SpringBootApplication
 @Controller
 public class Controller3 {
-    
+
     // http://localhost:8090/service3/start
     @GetMapping("service3/start")
     public static void start() {
@@ -57,18 +47,28 @@ public class Controller3 {
              */
             printTimetable(timetable);
 
-            /**
-             * simulate
-             */
-            Simulator.initTimetableFromURL();
-            Simulator.initPerformanceFromURL(); // fixme 不成功
-            Simulator.init();
-            Simulator.simulate();
+
 
             /**
-             * write into result.json
+             * обращается к http://localhost:8090/service2/timetable/timetable.json для получения расписвния в виде json-file
              */
-            postSimulationResult();
+            Simulator.initTimetableFromURL();
+            /**
+             * обращается к http://localhost:8090/service2/performance для получения производительности кранов в виде json-file
+             */
+            Simulator.initPerformanceFromURL(); // fixme 不成功
+
+
+            /**
+             * моделирование
+             */
+            Simulator.init();
+            Simulator.simulate();
+            /**
+             *
+             * результат работы отправляется на POST-endpoint сервиса 2
+             */
+            postStatistics();
         }
         catch (Exception e){
             e.printStackTrace();

@@ -15,6 +15,7 @@ public class Constant {
     public static final String TIMETABLE_JSON_PATH = "C:\\LIYIJIA-SpringCourseWork-2021\\stage02\\src\\main\\resources\\static\\timetable.json";
     public static final String RESULT_JSON_PATH = "C:\\LIYIJIA-SpringCourseWork-2021\\stage02\\src\\main\\resources\\static\\result.json";
     public static final String PERFORMANCE_JSON_PATH = "C:\\LIYIJIA-SpringCourseWork-2021\\stage02\\src\\main\\resources\\static\\performance.json";
+    public static final String PACKET_PATH = "C:\\LIYIJIA-SpringCourseWork-2021\\stage02\\src\\main\\resources\\static\\";
 
 
     public static final int COAST_ONE_CRANE = 30000;
@@ -39,9 +40,9 @@ public class Constant {
     public static final String BOTTOM_LINE = "============================================================================================================================================";
     public static final String TIMETABLE_HEADER_LINE = "================================================== TIMETABLE =====================================================================";
     public static final String RESULT_HEADER_LINE = "================================================== RESULT =====================================================================";
-    public static final String SINGLE_BOTTOM_LINE = "------------------------------------------------------------------------------------------------------------------------------------|";
-    public static final String UNLOADED_HEADER = "--------------------------------------Port: UNLOADED SHIPS--------------------------------------------------------------------------|";
-    public static final String STATISTIC_HEADER = "|-------------Statistics of unloaded ships----------------------------------|";
+    public static final String SINGLE_BOTTOM_LINE = "|------------------------------------------------------------------------------------------------------------------------------------|";
+    public static final String UNLOADED_HEADER = "|----- Port: UNLOADED SHIPS -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|";
+    public static final String STATISTIC_HEADER = "|------ Statistics of unloaded ships ----------------------------------------|";
     public static final String STATISTIC_BOTTOM = "\n----------------------------------------------------------------------------|";
 
 
