@@ -12,7 +12,6 @@ package utils;
 
 public class Constant {
 
-
     public static final String TIMETABLE_JSON_PATH = "C:\\LIYIJIA-SpringCourseWork-2021\\stage01\\src\\main\\resources\\static\\timetab.json";
     public static final String RESULT_JSON_PATH = "C:\\LIYIJIA-SpringCourseWork-2021\\stage01\\src\\main\\resources\\static\\result.json";
     public static final String PERFORMANCE_JSON_PATH = "C:\\LIYIJIA-SpringCourseWork-2021\\stage01\\src\\main\\resources\\static\\performance.json";

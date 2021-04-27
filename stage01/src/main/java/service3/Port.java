@@ -1,23 +1,52 @@
-package Service3;
+package service3;
 
-import Service2.JsonHandler;
+import service2.JsonHandler;
 import pojo.Ship;
-import pojo.Timetable;
+import service1.Timetable;
 import pojo.*;
 import java.io.IOException;
 import java.util.*;
 import java.util.concurrent.*;
 
-import static Service2.JsonHandler.getTimetableFromJson;
+import static service2.JsonHandler.getTimetableFromJson;
 import static pojo.CargoType.*;
 import static utils.Constant.*;
 import static utils.ParameterFormer.*;
 
 
-public class Simulator {
+public class Port {
+
+    /**
+     * моделирование + принт результат
+     * @throws IOException
+     */
+    public static void simulate() throws IOException {
+
+        init();
+
+        System.out.println("### In simulate:");
+        printTimetable(timetable);
+
+        /**
+         * моделировать
+         */
+        optimize();
+
+        /**
+         * принт разгруженные судны
+         */
+        printUnloadedShips();
+        /**
+         * собираем все статискити, запишем в result
+         */
+        generateResultStatistics();
+        /**
+         * принт результат
+         */
+        System.out.println(stringStatistics(result));
+    }
 
 
-    // modified 4-27 用来调试
     static int modelingTimes = 0;
 
     /**
@@ -119,35 +148,7 @@ public class Simulator {
         return result;
     }
 
-    /**
-     * моделирование + принт результат
-     * @throws IOException
-     */
-    public static void simulate() throws IOException {
 
-        init();
-
-        System.out.println("### In simulate:");
-        printTimetable(timetable);
-
-        /**
-         * моделировать
-         */
-        optimize();
-
-        /**
-         * принт разгруженные судны
-         */
-        printUnloadedShips();
-        /**
-         * собираем все статискити, запишем в result
-         */
-        generateResultStatistics();
-        /**
-         * принт результат
-         */
-        System.out.println(stringStatistics(result));
-    }
 
     private static void generateResultStatistics() {
 
@@ -212,7 +213,6 @@ public class Simulator {
 
     private static void initShips() {
         for (Schedule nodeTimetable : timetable.getSchedules()) {
-
             int randomTimeAdd = DayHourMinute.generateRandomMinute(-MINUTE_IN_SEVEN_DAYS, MINUTE_IN_SEVEN_DAYS);
             Ship ship;
             try {
@@ -454,7 +454,6 @@ public class Simulator {
                 for (Thread crane : mapCranes.get(typeCargo)) { //把该类型下的所有起重机启动起来
                     System.out.println(typeCargo + " ---->Simulator: crane start: "+(++howManyThreadStart));
                     crane.start();
-
                 }
             }
         }

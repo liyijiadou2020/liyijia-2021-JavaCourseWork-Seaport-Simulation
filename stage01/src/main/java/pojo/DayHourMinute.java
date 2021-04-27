@@ -27,7 +27,17 @@ public class DayHourMinute implements Comparable<DayHourMinute> {
     }
 
     public DayHourMinute(Integer day, Integer hour, Integer minute) {
+        if (day<30 || hour<60 || minute<60){
+            this.day = day;
+            this.hour = hour;
+            this.minute = minute;
+            return;
+        }
         convert(day, hour, minute);
+    }
+
+    public static int randomMinute(Integer minMinute, Integer maxMinute) {
+        return (int) Math.floor(Math.random() * (maxMinute - minMinute));
     }
 
     private void convert(int day, int hour, int minute) {

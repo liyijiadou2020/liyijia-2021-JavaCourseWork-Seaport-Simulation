@@ -22,7 +22,7 @@ public class EnterParameter {
     /**
      * Ручно добавить запись через консоль
      */
-    public static void enterSchedule(Timetable timeTable) {
+    public static void enter(Timetable timeTable) {
         int counter=0;
 
         System.out.println("Do you want to add a ship?(y-yes, other-no)");
@@ -30,14 +30,14 @@ public class EnterParameter {
         String answer=input.next();
 
         while (answer.equals("y")) {
-            System.out.println("Enter arrival data of ship... Now enter day: (1-30)");
+            System.out.println("Enter arrival data of ship... Now enter day: (0-29)");
             int day = input.nextInt();
             System.out.println("Enter hour: (0-23)");
             int hour = input.nextInt();
             System.out.println("Enter minute: (0-59)");
             int min = input.nextInt();
             // 检验输入合法
-            System.out.println("Enter ship name: (length: 2~5)");
+            System.out.println("Enter ship name: ");
             String name=input.next();
             System.out.println("Enter cargo type: (1-Loose, 2-Liquid, 3-Container)");
             int cgNum = input.nextInt();
@@ -60,9 +60,9 @@ public class EnterParameter {
     /**
      * Ручно настраивать производительности крана
      */
-    public static void enterPerformance(Performance performance) {
+    public static void enter(Performance performance) {
 
-        System.out.println("Default performance: Loose:333, Liquid:444, Container:555."
+        System.out.println("Default performance: Loose:33, Liquid:44, Container:55."
                 +"Want to use your performance please use please enter 'y', otherwise enter anyother");
         Scanner input=new Scanner(System.in);
         String answer=input.next();

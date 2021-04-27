@@ -1,9 +1,10 @@
 package conductor;
-import Service3.Simulator;
+import service2.EnterParameter;
+import service3.Port;
 import pojo.Performance;
-import pojo.Timetable;
+import service1.Timetable;
 
-import static Service2.JsonHandler.*;
+import static service2.JsonHandler.*;
 import static utils.ParameterFormer.*;
 
 
@@ -12,21 +13,27 @@ public class Main {
     public static void main(String[] args){
 
         try {
+
             /**
+             * Генерируем расписания прибытия судов и производительность
              * generate timetable & performance
+             * Default: Loose:65, Liquid:78, Container:99
              */
             Timetable timetable = randomTimetable();
             Performance performance = getDefaultPerformanceCranes();
+
 //            printTimetable(timetable);
-            printPerformance(performance);
+//            printPerformance(performance);
 
             /**
+             * ручно добавить записи через консоль
              * manually input Schedule
              */
-//            AddParameter.enterSchedule(timetable);
-//            AddParameter.enterPerformance(performance);
+            EnterParameter.enter(timetable);
+//            EnterParameter.enter(performance);
 
             /**
+             * сохроняет данные в файл
              * write timetable to timetable.json & write performance to performance.json
              */
             writeTimetable(timetable);
@@ -35,18 +42,19 @@ public class Main {
             /**
              * print timetable
              */
-//            printTimetable(timetable);
-//            System.out.println(timetable);
+            printTimetable(timetable);
+            System.out.println(timetable);
 
             /**
-             * simulate 直接从timetable里面获取
+             * моделируем
+             * simulate
              */
-            Simulator.simulate();
+            Port.simulate();
 
             /**
              * write into result.json
              */
-            writeStatistics(Simulator.getResult());
+            writeStatistics(Port.getResult());
         }
         catch (Exception e){
             e.printStackTrace();

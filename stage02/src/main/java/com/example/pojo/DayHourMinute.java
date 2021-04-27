@@ -27,6 +27,12 @@ public class DayHourMinute implements Comparable<DayHourMinute> {
     }
 
     public DayHourMinute(Integer day, Integer hour, Integer minute) {
+        if (day<30 || hour<60 || minute<60){
+            this.day = day;
+            this.hour = hour;
+            this.minute = minute;
+            return;
+        }
         convert(day, hour, minute);
     }
 
@@ -47,11 +53,8 @@ public class DayHourMinute implements Comparable<DayHourMinute> {
         hour1 %= 24;
 
 
-        tmpHour = min1 / 60; //TODO 这里为什么
+        tmpHour = min1 / 60;
 
-        /**
-         * 为什么会小于0?
-         */
         if (tmpHour < 0) {
             hour1 += tmpHour;
             min1 += 60 * Math.abs(tmpHour);
@@ -86,6 +89,10 @@ public class DayHourMinute implements Comparable<DayHourMinute> {
         this.day = day1;
         this.hour = hour1;
         this.minute = min1;
+    }
+
+    public Integer inMinutes() {
+        return minute + hour * 60 + day * 24 * 60;
     }
 
     public static DayHourMinute randomDayHourMinute(Integer minDay, Integer maxDay) {

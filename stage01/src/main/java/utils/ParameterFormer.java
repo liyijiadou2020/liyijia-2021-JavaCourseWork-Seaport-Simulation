@@ -11,10 +11,10 @@
 package utils;
 
 
-import Service3.Statistics;
+import pojo.Statistics;
 import org.jetbrains.annotations.NotNull;
 import pojo.*;
-import pojo.Timetable;
+import service1.Timetable;
 
 import java.util.Random;
 
@@ -63,10 +63,10 @@ public class ParameterFormer {
     public static void printTimetable(Timetable timeTable) {
 
         System.out.println(TIMETABLE_HEADER_LINE);
-        System.out.println("SIZE="+timeTable.getSchedules().size());
         for (Schedule s: timeTable.getSchedules()) {
             System.out.println(stringSchedule(s));
         }
+        System.out.println("SIZE="+timeTable.getSchedules().size());
         System.out.println(BOTTOM_LINE);
     }
 

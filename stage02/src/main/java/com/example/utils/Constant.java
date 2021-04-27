@@ -20,12 +20,12 @@ public class Constant {
 
     public static final int COAST_ONE_CRANE = 30000;
 
-    public static final int MIN_COUNT_OF_NODES = 90;
-    public static final int MAX_COUNT_OF_NODES = 120;
+    public static final int MIN_COUNT_OF_NODES = 200;
+    public static final int MAX_COUNT_OF_NODES = 300;
 
-    public static final int PERFORMANCE_LOOSE = 333;
-    public static final int PERFORMANCE_LIQUID = 444;
-    public static final int PERFORMANCE_CONTAINER = 555;
+    public static final int PERFORMANCE_LOOSE = 33;
+    public static final int PERFORMANCE_LIQUID = 44;
+    public static final int PERFORMANCE_CONTAINER = 55;
 
     public static final int MIN_LOOSE_SHIP = 40000;
     public static final int MAX_LOOSE_SHIP = 60000;
@@ -42,7 +42,7 @@ public class Constant {
     public static final String RESULT_HEADER_LINE = "================================================== RESULT =====================================================================";
     public static final String SINGLE_BOTTOM_LINE = "|------------------------------------------------------------------------------------------------------------------------------------|";
     public static final String UNLOADED_HEADER = "|----- Port: UNLOADED SHIPS -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|";
-    public static final String STATISTIC_HEADER = "|------ Statistics of unloaded ships ----------------------------------------|";
+    public static final String STATISTIC_HEADER = "|------ Statistics of unloaded ships ---------------------------------------|";
     public static final String STATISTIC_BOTTOM = "\n----------------------------------------------------------------------------|";
 
 

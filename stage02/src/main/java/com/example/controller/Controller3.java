@@ -2,10 +2,13 @@ package com.example.controller;
 
 import com.example.pojo.Performance;
 import com.example.service1.Timetable;
+import com.example.service2.EnterParameter;
 import com.example.service3.Simulator;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+
+import java.sql.SQLOutput;
 
 import static com.example.service2.JsonHandler.*;
 import static com.example.service2.JsonHandler.postStatistics;
@@ -27,14 +30,13 @@ public class Controller3 {
             Timetable timetable = randomTimetable();
             Performance performance = getDefaultPerformanceCranes();
 
-//        printTimetable(timetable);
             System.out.println(performance);
 
             /**
              * manually input Schedule
              */
-//            AddParameter.enterSchedule(timetable);
-//            AddParameter.enterPerformance(performance);
+            EnterParameter.enter(timetable);
+//            EnterParameter.enter(performance);
 
             /**
              * write into timetable.json & performance.json
@@ -45,8 +47,7 @@ public class Controller3 {
             /**
              * print timetable
              */
-            printTimetable(timetable);
-
+//            printTimetable(timetable);
 
 
             /**
@@ -56,13 +57,12 @@ public class Controller3 {
             /**
              * обращается к http://localhost:8090/service2/performance для получения производительности кранов в виде json-file
              */
-            Simulator.initPerformanceFromURL(); // fixme 不成功
-
+            Simulator.initPerformanceFromURL();
+            Simulator.init();
 
             /**
              * моделирование
              */
-            Simulator.init();
             Simulator.simulate();
             /**
              *
@@ -73,9 +73,9 @@ public class Controller3 {
         catch (Exception e){
             e.printStackTrace();
         }// catch
+        System.out.println("COMPLETED!");
 
 
     }
-
 
 }

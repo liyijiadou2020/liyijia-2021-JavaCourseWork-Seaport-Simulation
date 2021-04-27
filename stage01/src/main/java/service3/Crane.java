@@ -1,6 +1,8 @@
-package com.example.service3;
+package service3;
 
-import com.example.pojo.*;
+import pojo.CargoType;
+import pojo.DayHourMinute;
+import pojo.Ship;
 
 import java.util.Objects;
 import java.util.concurrent.BrokenBarrierException;
@@ -10,8 +12,8 @@ import java.util.concurrent.CyclicBarrier;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
-import static com.example.service3.Simulator.*;
-import static com.example.utils.Constant.MINUTE_IN_THIRTY_DAYS;
+import static service3.Port.*;
+import static utils.Constant.MINUTE_IN_THIRTY_DAYS;
 
 public class Crane implements Runnable {
 
@@ -37,10 +39,9 @@ public class Crane implements Runnable {
     public void run() {
 
         Thread.currentThread().setName(Thread.currentThread().getName()+"-"+typeCargo.toString());
-        CyclicBarrier cyclicBarrier = Simulator.cyclicBarrier; // 把Port的cyclicBarrier复制一份
+        CyclicBarrier cyclicBarrier = Port.cyclicBarrier; // 把Port的cyclicBarrier复制一份
 
         Ship currentShip = null;
-        int currentDelay = 0;
 
         try {
             while (now() < MINUTE_IN_THIRTY_DAYS) { //30天内
@@ -61,11 +62,13 @@ public class Crane implements Runnable {
                 if ( (!queuesAllShips.get(typeCargo).isEmpty())
                         && Objects.requireNonNull(queuesAllShips.get(typeCargo).peek()).getArriveTime().inMinutes() <=
                         now()) {
-//                    System.out.println("Arrived a ship: "+ queuesAllShips.get(typeCargo).peek().getName()
-//                            + "("+ queuesAllShips.get(typeCargo).peek().getCargo().getCargoType() +")...\n"
-//                            + "-1->Crane: "
-//                            + Thread.currentThread()+" is adding "+ queuesAllShips.get(typeCargo).peek().getName()
-//                            +" into waiting queue...");
+                    // modified
+                    System.out.println("Arrived a ship: "+ queuesAllShips.get(typeCargo).peek().getName()
+                            + " arrival time: " + queuesAllShips.get(typeCargo).peek().getArriveTime()
+                            + "("+ queuesAllShips.get(typeCargo).peek().getCargo().getCargoType() +")...\n"
+                            + "-1->Crane: "
+                            + Thread.currentThread()+" is adding "+ queuesAllShips.get(typeCargo).peek().getName()
+                            +" into waiting queue...");
                     waiting.get(typeCargo).add(queuesAllShips.get(typeCargo).poll());
                 }
 
@@ -84,25 +87,24 @@ public class Crane implements Runnable {
                  *  5.print info of current ship
                  */
                 if ( (currentShip == null) && (!waiting.get(typeCargo).isEmpty())) {
+                    int currentDelay = 0;
 
-//                    System.out.println("-2->Crane: "+Thread.currentThread()+" is adding "+ waiting.get(typeCargo).peek().getName()+" into loading queue...");
+                    System.out.println("-2->Crane: "+Thread.currentThread()+" is adding "+ waiting.get(typeCargo).peek().getName()+" into loading queue...");
 
                     currentShip = waiting.get(typeCargo).poll();
                     unloading.get(typeCargo).add(currentShip); // queuesForUnloading --> nowInUnloading
 
-                    currentShip.increaseCrane(); // 当前为unloadingShip服务的起重机数量++
-                    currentDelay = DayHourMinute.randomMinute(0, 1440); // 设置随机的 完成卸货偏移时间delay, set a random dalay(0~1440)
+                    currentShip.increaseCrane();
+                    currentDelay = DayHourMinute.randomMinute(0, 1440);
                     currentShip.setUnloadDelay(new DayHourMinute(currentDelay));
-                    // （船的卸货时间也许会比预期更多，范围是0~1440分钟.也就是说delay的范围是0~1440分钟）
 
                     mapMaxDelay.put(typeCargo, Integer.max(mapMaxDelay.get(typeCargo), currentDelay)); // 比较：maxTimeStop中和timeStop比较，谁大
                     mapSumDelay.put(typeCargo, currentDelay); // modified 4-22新增
-                    mapSumUD.put(typeCargo, mapSumUD.get(typeCargo) + currentDelay); // todo 将sumTimeStop加上timeStop(有点问题)
+                    mapSumUD.put(typeCargo, mapSumUD.get(typeCargo) + currentDelay);
                     mapFreeCranesCount.replace(typeCargo, mapFreeCranesCount.get(typeCargo) - 1); // 船队所对应的countFreeCranes数量-1
 
-//                    System.out.println("-3->Crane: "+Thread.currentThread()+", currentShip:"+ currentShip.getName() +" delay="+currentDelay+"(min), cranes= "+currentShip.getCranesCount());
+                    System.out.println("-3->Crane: "+Thread.currentThread()+", currentShip:"+ currentShip.getName() +" delay="+currentDelay+"(min), cranes= "+currentShip.getCranesCount());
                 }
-
 
                 if ( currentShip == null && !unloading.get(typeCargo).isEmpty()) {
                     for (Ship ship : unloading.get(typeCargo)) {
@@ -113,9 +115,9 @@ public class Crane implements Runnable {
                             currentShip = ship;
                             currentShip.increaseCrane(); // todo 这里是不是应该把UD/=2？
                             mapFreeCranesCount.replace(typeCargo, mapFreeCranesCount.get(typeCargo) - 1);
-//                            System.out.println("-4->Crane: "+Thread.currentThread()+". Unloading is not empty. currentShip="+currentShip.getName()
-//                                    +", cranes="+currentShip.getCranesCount()
-//                                    +"(after reducing)Free cranes count="+mapFreeCranesCount.get(typeCargo));
+                            System.out.println("-4->Crane: "+Thread.currentThread()+". Unloading is not empty. currentShip="+currentShip.getName()
+                                    +", cranes="+currentShip.getCranesCount()
+                                    +"(after reducing)Free cranes count="+mapFreeCranesCount.get(typeCargo));
                             break;
                         }
                     }
@@ -139,9 +141,9 @@ public class Crane implements Runnable {
                         wd.setMinute(currentShip.getStartUnloadTime().getMinute()-currentShip.getArriveTime().getMinute());
                         currentShip.setWaitDuration(wd);
                         mapSumWD.put(currentShip.getCargo().getCargoType(), wd.getMinute());
-//                        System.out.println("~~~> Crane: current ship WD="+wd.getMinute());
+                        System.out.println("~~~> Crane: current ship WD="+wd.getMinute());
                         // ------ 4-21 -----
-//                        System.out.println("-6->Crane: "+Thread.currentThread()+". currentShip: "+currentShip.getName()+"starts unloading...");
+                        System.out.println("-6->Crane: "+Thread.currentThread()+". currentShip: "+currentShip.getName()+"starts unloading...");
                     }
 
                     if (currentShip.isUnloading()) {
@@ -149,12 +151,12 @@ public class Crane implements Runnable {
                     }
 
                     if (currentShip.getCargo().getWeight() == 0) {
-//                        System.out.println("-8->Crane: "+Thread.currentThread()+" finish unloading "+currentShip.getName()); // 根本没有船进来!!!
+                        System.out.println("-8->Crane: "+Thread.currentThread()+" finish unloading "+currentShip.getName()); // 根本没有船进来!!!
 
                         if (currentShip.getCranesCount() > 0) {
-//                            System.out.println(
-//                                    "-9->Crane "+Thread.currentThread()+ " finished unloading " + currentShip.getName()
-//                                            + "with " + currentShip.getCranesCount() + " crane(s). Releasing the crane...");
+                            System.out.println(
+                                    "-9->Crane "+Thread.currentThread()+ " finished unloading " + currentShip.getName()
+                                            + "with " + currentShip.getCranesCount() + " crane(s). Releasing the crane...");
 
                             currentShip.setCranesCount(currentShip.getCranesCount() - 1);
                             mapFreeCranesCount.replace(typeCargo, mapFreeCranesCount.get(typeCargo) + 1);
@@ -163,20 +165,21 @@ public class Crane implements Runnable {
                         if (currentShip.getCranesCount() == 0) {
 
                             DayHourMinute finishTimeUnloading = new DayHourMinute();
+
                             finishTimeUnloading.setMinute(now());
                             currentShip.setFinishUnloadTime(finishTimeUnloading);
-//                            System.out.println("-10->Crane: "+Thread.currentThread()+ " finished unloading " + currentShip.getName()
-//                                    +". Finished unload time:"+finishTimeUnloading);
-//
-//                            System.out.println("-11-> unloading.size="+unloading.get(typeCargo).size()+" unloaded.size="+unloaded.get(typeCargo).size());
+                            System.out.println("-10->Crane: "+Thread.currentThread()+ " finished unloading " + currentShip.getName()
+                                    +". Finished unload time:"+finishTimeUnloading);
+
+                            System.out.println("-11-> unloading.size="+unloading.get(typeCargo).size()+" unloaded.size="+unloaded.get(typeCargo).size());
 
                             unloaded.get(typeCargo).add(currentShip);
                             currentShip.setUnloading(false);
                             unloading.get(typeCargo).remove(currentShip);
 
-//                            System.out.println("-12->Crane: "+Thread.currentThread()+" removed "+currentShip.getName()+" to unloaded.");
-//
-//                            System.out.println("-13-> unloading.size="+unloading.get(typeCargo).size()+" unloaded.size="+unloaded.get(typeCargo).size());
+                            System.out.println("-12->Crane: "+Thread.currentThread()+" removed "+currentShip.getName()+" to unloaded.");
+
+                            System.out.println("-13-> unloading.size="+unloading.get(typeCargo).size()+" unloaded.size="+unloaded.get(typeCargo).size());
                         }
                         currentShip = null;
                     }
@@ -205,20 +208,14 @@ public class Crane implements Runnable {
     }
 
 
-
     static {
         for (CargoType typeOfCargo : CargoType.values()) {
-//            System.out.println("TypeCargo="+typeOfCargo);
+            System.out.println("TypeCargo="+typeOfCargo);
             mapLockers.put(typeOfCargo,  new ReentrantLock()); /*不公平队列*/
         }
     }
 
 }
-
-
-
-
-
 
 
 
@@ -249,6 +246,11 @@ public class Crane implements Runnable {
  * ConcurrentHashMap是一个线程安全，并且是一个高效的HashMap。
  *
  */
+
+/**
+ * 3 times.
+ */
+
 
 /**
  * static object - all the cranes share mapLockers, because in specific fleet(e.x. fleet liquid ships)

@@ -1,5 +1,5 @@
-package Service2;
-import pojo.Timetable;
+package service2;
+import service1.Timetable;
 import pojo.*;
 
 import java.util.Scanner;
@@ -12,10 +12,10 @@ import static utils.ParameterFormer.*;
  * @Version: 0.0
  * @Descriptions:
  */
-public class AddParameter {
+public class EnterParameter {
 
     // TODO 错误检查
-    public static void enterSchedule(Timetable timeTable) {
+    public static void enter(Timetable timeTable) {
         int counter=0;
 
         System.out.println("Do you want to add a ship?(y-yes, other-no)");
@@ -50,7 +50,7 @@ public class AddParameter {
 
     }
 
-    public static void enterPerformance(Performance performance) {
+    public static void enter(Performance performance) {
         Scanner input = new Scanner(System.in);
         System.out.println("Please enter performance of Loose:");
         int perfLoose = input.nextInt();

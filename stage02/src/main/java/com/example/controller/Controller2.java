@@ -37,7 +37,7 @@ public class Controller2 {
      */
     @GetMapping("/service2/timetable")
     public static String getTimetable() throws IOException {
-        System.out.println("#Service 2-generateTimetable: received request.");
+        System.out.println("[Service 2] GET-endpoint(/service2/timetable): received request.");
 
         /**
          * Get object from the return of url:"http://localhost:8090/service1/timetable"
@@ -64,7 +64,7 @@ public class Controller2 {
      */
     @GetMapping(value="/service2/performance",produces = "application/json")
     public static String getPerformance() throws IOException {
-        System.out.println("#Service 2-generatePerformance: received request.");
+        System.out.println("[Service 2] GET-endpoint(/service2/performance) received request.");
 
         /**
          * Get Performance from the return of url:"http://localhost:8090/service1/performance"
@@ -89,7 +89,7 @@ public class Controller2 {
      */
     @GetMapping("/service2/timetable/{tableName}")
     public static String getTimeTableByName(@PathVariable("tableName")String tName) throws IOException {
-        System.out.println("#Service2-getTimeTableByName: Service 2 received GET-request, getting timetable by name...");
+        System.out.println("[Service 2] GET-endpoint(/service2/timetable/{tableName}) received GET-request, getting timetable by name...");
         System.out.println("Received table name is "+tName);
 
         String path = PACKET_PATH+tName;
@@ -118,7 +118,7 @@ public class Controller2 {
      */
     @PostMapping(value="/service2/result",produces = "application/json", consumes = "application/json")
     public static String receiveResult(@RequestBody String stringStatistics) throws IOException {
-        System.out.println("#Service2-receiveReport: Service 2 received POST-request, receiving result.json from Service 3...");
+        System.out.println("[Service 2] POST-endpoint(/service2/result)  received POST-request, receiving result.json from Service 3...");
         System.out.println("in SERVICE2, received:"+stringStatistics);
         Statistics statistics = mapper.readValue(stringStatistics, Statistics.class);
 

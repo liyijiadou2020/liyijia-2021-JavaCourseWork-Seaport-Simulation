@@ -1,11 +1,10 @@
-package Service2;
+package service2;
 
-import Service3.Simulator;
-import Service3.Statistics;
+import pojo.Statistics;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import org.jetbrains.annotations.Nullable;
 import pojo.Performance;
-import pojo.Timetable;
+import service1.Timetable;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectWriter;
 

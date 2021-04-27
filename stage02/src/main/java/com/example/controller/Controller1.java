@@ -37,7 +37,7 @@ public class Controller1 {
      */
     @GetMapping("/service1/timetable")
     public static String generateTimetable() throws IOException {
-        System.out.println("#Service 1-generateTimetable: received request, start generating timetable...");
+        System.out.println("[Service 1] GET-endpoint(/service1/timetable) received request, starts generating timetable...");
         Timetable timetable = randomTimetable();
         return getJson(timetable);
     }
@@ -49,7 +49,7 @@ public class Controller1 {
      */
     @GetMapping("/service1/performance")
     public static String generatePerformance() throws IOException {
-        System.out.println("#Service 1-generatePerformance: received request, start generating performance...");
+        System.out.println("[Service 1] GET-endpoint(/service1/performance) received request, starts generating performance...");
         Performance performance=getDefaultPerformanceCranes();
         return getJson(performance);
     }
