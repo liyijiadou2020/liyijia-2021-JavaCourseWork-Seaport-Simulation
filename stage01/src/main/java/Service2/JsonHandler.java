@@ -22,7 +22,7 @@ import static utils.Constant.*;
  * @Version: 0.0
  * @Descriptions:
  */
-public class JsonHandler1 {
+public class JsonHandler {
 
     static ObjectMapper mapper = new ObjectMapper();
 

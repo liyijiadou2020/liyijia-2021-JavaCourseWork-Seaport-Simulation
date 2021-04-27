@@ -21,8 +21,8 @@ public class Constant {
     public static final int COAST_PER_HOUR = 100;
 
 
-    public static final int MIN_COUNT_OF_NODES = 90;
-    public static final int MAX_COUNT_OF_NODES = 150;
+    public static final int MIN_COUNT_OF_NODES = 200;
+    public static final int MAX_COUNT_OF_NODES = 300;
 
 
     public static final int PERFORMANCE_LOOSE = 65;

@@ -18,23 +18,6 @@ public class Crane implements Runnable {
 
     private final Integer performance;
     private final CargoType typeCargo;
-    /**
-     * static object - all the cranes share mapLockers, because in specific fleet(e.x. fleet liquid ships)
-     *                 they need to conduct unload task serially
-     *  As the following text suggests:
-     *  | all LOOSE -- a lock     |
-     *  | all LIQUID -- a lock    |
-     *  | all CONTAINER -- a lock |
-     *
-     * ConcurrentHashMap(CHM):
-     *  1. Retrieval operations (including get) generally do not block, so may overlap with update operations (including put and remove).
-     *  2.
-     *  Why CHM?
-     *      1. Efficient, one of the most common used concurrent container
-     *      2. Every fleet owners a lock, but fleets can work concurrently.
-     *          (e.x. When LIQUID fleet works, CONTAINER fleet is not blocking. Instead, it can work too)
-     *
-     */
     private static final ConcurrentMap<CargoType, Lock> mapLockers = new ConcurrentHashMap<>(); //ConcurrentMap- 每个线程对应一把锁
     public static volatile int fineCounter=0;
 
@@ -94,7 +77,8 @@ public class Crane implements Runnable {
                             now()) {
                         // modified
                         System.out.println("Arrived a ship: "+ queuesAllShips.get(typeCargo).peek().getName()
-                                + "("+ queuesAllShips.get(typeCargo).peek().getCargo().getTypeCargo() +")...\n"
+                                + "("+ queuesAllShips.get(typeCargo).peek().getCargo().getTypeCargo() +"): arrival time: "
+                                + queuesAllShips.get(typeCargo).peek().getArriveTime()+" ...\n"
                                 + "-1->Crane: "
                                 + Thread.currentThread()+" is adding "+ queuesAllShips.get(typeCargo).peek().getName()
                                 +" into waiting queue...");
@@ -134,22 +118,6 @@ public class Crane implements Runnable {
 
                         System.out.println("-3->Crane: "+Thread.currentThread()+", currentShip:"+ currentShip.getName() +" delay="+currentDelay+"(min), cranes= "+currentShip.getCranesCount());
                     }
-
-                /**
-                 * if 没有正在卸货的船（nowInUnloading）
-                 *    if 某种船队的nowInUnloading非空
-                 *    then
-                 *      for 船队的每一条nowInUnloading中的船ship
-                 *          if ship的服务起重机数量<2并且有空闲的起重机
-                 *          then 把ship放到unloadingShip去
-                 *               unloadingShip的起重机数量++
-                 *               countFreeCranes的数量-1
-                 *          end
-                 *      end
-                 *    end
-                 * end
-                 *
-                 */
 
                 /**
                  * 如果queuesWaiting已经为空,那么currentShip就为null, 这种情况下会进去这个循环
@@ -193,9 +161,9 @@ public class Crane implements Runnable {
                         wd.setMinute(currentShip.getStartUnloadTime().getMinute()-currentShip.getArriveTime().getMinute());
                         currentShip.setWaitDuration(wd);
                         mapSumWD.put(currentShip.getCargo().getTypeCargo(), wd.getMinute());
-                        System.out.println("~~~> Crane: current ship WD="+wd.getMinute());
+                        System.out.println("~~> ship: "+currentShip.getName() + " wait duration: "+ currentShip.getWaitDuration().getMinute());
                         // ------ 4-21 -----
-                        System.out.println("-6->Crane: "+Thread.currentThread()+". currentShip: "+currentShip.getName()+"starts unloading...");
+                        System.out.println("-6->Crane: "+Thread.currentThread()+". currentShip: "+currentShip.getName()+" starts unloading...");
                     }
 
                     if (currentShip.isUnloading()) {
@@ -276,25 +244,89 @@ public class Crane implements Runnable {
 
 
     /**
-     * ConcurrentMap是一个接口。 ConcurrentHashMap是一个实现类
-     * public interface ConcurrentMap<K, V> extends Map<K, V> {
-     *     V putIfAbsent(K key, V value);               //插入元素
-     *     boolean remove(Object key, Object value);    //移除元素
-     *     boolean replace(K key, V oldValue, V newValue);  //替换元素
-     *     V replace(K key, V value);  //替换元素
-     * }
-     * ConcurrentHashMap是一个线程安全，并且是一个高效的HashMap。
-     *
-     */
-
-    /**
      * 3 times.
      */
     static {
         for (CargoType typeOfCargo : CargoType.values()) {
-            System.out.println("TypeCargo="+typeOfCargo);
+            System.out.println("static block: typeCargo="+typeOfCargo);
             mapLockers.put(typeOfCargo,  new ReentrantLock()); /*不公平队列*/
         }
     }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * static object - all the cranes share mapLockers, because in specific fleet(e.x. fleet liquid ships)
+ *                 they need to conduct unload task serially
+ *  As the following text suggests:
+ *  | all LOOSE -- a lock     |
+ *  | all LIQUID -- a lock    |
+ *  | all CONTAINER -- a lock |
+ *
+ * ConcurrentHashMap(CHM):
+ *  1. Retrieval operations (including get) generally do not block, so may overlap with update operations (including put and remove).
+ *  2.
+ *  Why CHM?
+ *      1. Efficient, one of the most common used concurrent container
+ *      2. Every fleet owners a lock, but fleets can work concurrently.
+ *          (e.x. When LIQUID fleet works, CONTAINER fleet is not blocking. Instead, it can work too)
+ *
+ */
+
+
+
+
+/**
+ * if 没有正在卸货的船（nowInUnloading）
+ *    if 某种船队的nowInUnloading非空
+ *    then
+ *      for 船队的每一条nowInUnloading中的船ship
+ *          if ship的服务起重机数量<2并且有空闲的起重机
+ *          then 把ship放到unloadingShip去
+ *               unloadingShip的起重机数量++
+ *               countFreeCranes的数量-1
+ *          end
+ *      end
+ *    end
+ * end
+ *
+ */
+
+
+/**
+ * ConcurrentMap是一个接口。 ConcurrentHashMap是一个实现类
+ * public interface ConcurrentMap<K, V> extends Map<K, V> {
+ *     V putIfAbsent(K key, V value);               //插入元素
+ *     boolean remove(Object key, Object value);    //移除元素
+ *     boolean replace(K key, V oldValue, V newValue);  //替换元素
+ *     V replace(K key, V value);  //替换元素
+ * }
+ * ConcurrentHashMap是一个线程安全，并且是一个高效的HashMap。
+ *
+ */

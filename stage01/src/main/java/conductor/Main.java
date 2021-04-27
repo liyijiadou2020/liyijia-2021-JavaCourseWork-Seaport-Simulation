@@ -2,7 +2,8 @@ package conductor;
 import Service3.Simulator;
 import pojo.Performance;
 import pojo.Timetable;
-import static Service2.JsonHandler1.*;
+
+import static Service2.JsonHandler.*;
 import static utils.ParameterFormer.*;
 
 
@@ -16,7 +17,7 @@ public class Main {
              */
             Timetable timetable = randomTimetable();
             Performance performance = getDefaultPerformanceCranes();
-            printTimetable(timetable);
+//            printTimetable(timetable);
             printPerformance(performance);
 
             /**
@@ -34,10 +35,11 @@ public class Main {
             /**
              * print timetable
              */
-            printTimetable(timetable);
+//            printTimetable(timetable);
+//            System.out.println(timetable);
 
             /**
-             * simulate
+             * simulate 直接从timetable里面获取
              */
             Simulator.simulate();
 

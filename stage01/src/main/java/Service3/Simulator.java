@@ -1,8 +1,6 @@
 package Service3;
 
-import Service2.JsonHandler1;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import Service2.JsonHandler;
 import pojo.Ship;
 import pojo.Timetable;
 import pojo.*;
@@ -10,13 +8,17 @@ import java.io.IOException;
 import java.util.*;
 import java.util.concurrent.*;
 
-import static Service2.JsonHandler1.getTimetableFromJson;
+import static Service2.JsonHandler.getTimetableFromJson;
 import static pojo.CargoType.*;
 import static utils.Constant.*;
 import static utils.ParameterFormer.*;
 
 
 public class Simulator {
+
+
+    // modified 4-27 用来调试
+    static int modelingTimes = 0;
 
     /**
      * result : отчёт, содержающий результат моделирования
@@ -125,6 +127,9 @@ public class Simulator {
 
         init();
 
+        System.out.println("### In simulate:");
+        printTimetable(timetable);
+
         /**
          * моделировать
          */
@@ -184,15 +189,14 @@ public class Simulator {
 
     // modified 4-23 private->public
     public static void init() {
-        initTimetableFromJson("timetable.json");
-        initPerformanceFromJson("performance.json");
+        initTimetableFromJson(TIMETABLE_JSON_PATH);
+        initPerformanceFromJson(PERFORMANCE_JSON_PATH);
         initShips();
         initCountCranes();
-
     }
 
     public static void initPerformanceFromJson(String filename) {
-        Performance performanceCranes =  JsonHandler1.getPerformanceFromJson(filename);
+        Performance performanceCranes =  JsonHandler.getPerformanceFromJson(filename);
         mapPerformanceCrane.put(LOOSE, performanceCranes.getLoosePerformance());
         mapPerformanceCrane.put(LIQUID, performanceCranes.getLiquidPerformance());
         mapPerformanceCrane.put(CONTAINER, performanceCranes.getContainerPerformance());
@@ -221,6 +225,9 @@ public class Simulator {
             }
             ships.add(ship);
         }
+        // modified 4-27
+        ships.sort(Comparator.naturalOrder());
+        System.out.println("########Simulator: Sorted ships by times");
     }
 
     private static void initBeforeOptimization() {
@@ -394,6 +401,9 @@ public class Simulator {
 
     private static void modeling() {
 
+        // modified 4-27
+        System.out.println("######## modeling times="+(++modelingTimes));
+
         timer = new TaskTimer(); // Инициализируем время здесь
         int countAllCranes = 0;
         Map<CargoType, Integer> mapOldFreeCranesCount = new HashMap<>();
@@ -427,7 +437,8 @@ public class Simulator {
 
             if (!isMinFine.get(typeCargo)) {
 
-                System.out.println("#Port-------> init queues");
+                // modified 4-27
+                System.out.println("#Port-------> init queues... "+typeCargo+" is not min. Now initialize <unloading, unloaded, waiting, mapCranes> and try to start all cranes...");
 
                 unloading.put(typeCargo, new CopyOnWriteArrayList<>());
                 unloaded.put(typeCargo, new CopyOnWriteArrayList<>());
@@ -439,11 +450,17 @@ public class Simulator {
                             typeCargo)));
                 }
 
+                int howManyThreadStart = 0;
                 for (Thread crane : mapCranes.get(typeCargo)) { //把该类型下的所有起重机启动起来
+                    System.out.println(typeCargo + " ---->Simulator: crane start: "+(++howManyThreadStart));
                     crane.start();
+
                 }
             }
         }
+
+        // modified 4-27
+        System.out.println("-->>>>>>>>>>>>> All cranes start modeling... <<<<<<<<<<<<<<<<<------");
 
         /**
          * Ждем, пока не все потоки выполняет разгрузку
@@ -461,6 +478,10 @@ public class Simulator {
 
             }
         }
+
+        // modified 4-27
+        System.out.println("-->>>>>>>>>>>>> All cranes stop modeling... <<<<<<<<<<<<<<<<<------");
+
     } // modeling
 
 

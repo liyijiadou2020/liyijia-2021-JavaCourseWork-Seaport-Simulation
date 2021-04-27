@@ -33,6 +33,6 @@ public class Timetable {
     public String toString() {
         return "TimeTable{" +
                 "timeTable=" + schedules +
-                '}';
+                '}'+'\n';
     }
 }
