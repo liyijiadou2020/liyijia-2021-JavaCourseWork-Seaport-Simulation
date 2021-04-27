@@ -163,9 +163,7 @@ public class DayHourMinute implements Comparable<DayHourMinute> {
 
     @Override
     public String toString() {
-        return String.format("%02d", day) +
-                ":" + String.format("%02d", hour) +
-                ":" + String.format("%02d", minute);
+        return String.format("%02d", day) + ":" + String.format("%02d", hour) + ":" + String.format("%02d", minute);
     }
 
     @Override
@@ -175,10 +173,8 @@ public class DayHourMinute implements Comparable<DayHourMinute> {
         Integer copyMinute = minute;
 
         int result;
-        if ((result = copyDay.compareTo(other.getDay())) == 0) {
-            if ((result = copyHour.compareTo(other.getHour())) == 0) {
-                result = copyMinute.compareTo(other.getMinute());
-            }
+        if ((result = copyDay.compareTo(other.getDay())) == 0 && (result = copyHour.compareTo(other.getHour())) == 0) {
+            result = copyMinute.compareTo(other.getMinute());
         }
 
         return result;

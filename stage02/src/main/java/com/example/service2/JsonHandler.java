@@ -20,7 +20,7 @@ import static com.example.utils.Constant.*;
 /**
  * @Autor: liyijiadou
  * @create :2021-04-23 13:23:00
- * @Version: 0.0
+ * @Version: 1.0
  * @Descriptions:
  */
 public class JsonHandler {
@@ -80,38 +80,7 @@ public class JsonHandler {
         System.out.println(file.getName()+" is formed.");
     }
 
-//
-//    @Nullable
-//    public static Performance getPerformanceFromJson(String filename) {
-//        Path pathToPerformanceCranes = Paths.get(filename);
-//
-//        Performance performanceCranes = null;
-//        try {
-//            performanceCranes = mapper.readValue(new File(String.valueOf(pathToPerformanceCranes)),
-//                    Performance.class);
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//        return performanceCranes;
-//    }
-
-//    @Nullable
-//    public static Timetable getTimetableFromJson(String filename) {
-//
-//        Path pathToTimetable = Paths.get(filename);
-//        Timetable timetable=null;
-//        try {
-//            timetable = mapper.readValue(new File(String.valueOf(pathToTimetable)), Timetable.class);
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//        return timetable;
-//    }
-
     /**
-     * TODO обращается к GET-endpoint сервиса 2
-     * TODO 需要发送json格式post请求数据
-     * TODO 向2提出POST请求,并且发送Statistics对象.这里发送的是字符串
      * @throws IOException
      */
     public static void postStatistics() throws IOException {
@@ -122,19 +91,7 @@ public class JsonHandler {
                 Statistics.class);
     }
 
-//    @Nullable
-//    private static String getJson(Statistics statistics) throws IOException {
-//
-//        String json = null;
-//        try {
-//            json = mapper.writeValueAsString(statistics);
-//        } catch (JsonProcessingException e) {
-//            e.printStackTrace();
-//        }
-//        return json;
-//    }
 
-    // TODO 重复!!!
     @Nullable
     public static String getJson(Performance performance) throws IOException {
         ObjectWriter ow = new ObjectMapper().writer().withDefaultPrettyPrinter();

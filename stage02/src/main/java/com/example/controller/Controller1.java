@@ -19,7 +19,7 @@ import static com.example.utils.ParameterFormer.randomTimetable;
 /**
  * @Autor: liyijiadou
  * @create :2021-04-24 06:28:00
- * @Version: 0.0
+ * @Version: 1.0
  * @Descriptions:
  */
 
@@ -27,13 +27,12 @@ import static com.example.utils.ParameterFormer.randomTimetable;
 @RestController
 public class Controller1 {
 
-    // modified
     static ObjectWriter ow= new ObjectMapper().writer().withDefaultPrettyPrinter();
 
     /**
      * GET-endpoint, возвращающий расписание
      * http://localhost:8090/service1/timetable
-     * @return
+     * @return timetable in json
      */
     @GetMapping("/service1/timetable")
     public static String generateTimetable() throws IOException {
@@ -45,7 +44,7 @@ public class Controller1 {
     /**
      * GET-endpoint, возвращающий производительность
      * http://localhost:8090/service1/performance
-     * @return
+     * @return performance in json
      */
     @GetMapping("/service1/performance")
     public static String generatePerformance() throws IOException {

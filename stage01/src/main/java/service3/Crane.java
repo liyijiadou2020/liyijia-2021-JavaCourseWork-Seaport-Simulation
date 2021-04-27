@@ -136,13 +136,11 @@ public class Crane implements Runnable {
                         startTimeUnloading.setMinute(now());
                         currentShip.setStartUnloadTime(startTimeUnloading);
 
-                        // ----- modified 4-21新增：sumWD  WD=SUT-AT
                         DayHourMinute wd = new DayHourMinute();
                         wd.setMinute(currentShip.getStartUnloadTime().getMinute()-currentShip.getArriveTime().getMinute());
                         currentShip.setWaitDuration(wd);
                         mapSumWD.put(currentShip.getCargo().getCargoType(), wd.getMinute());
                         System.out.println("~~~> Crane: current ship WD="+wd.getMinute());
-                        // ------ 4-21 -----
                         System.out.println("-6->Crane: "+Thread.currentThread()+". currentShip: "+currentShip.getName()+"starts unloading...");
                     }
 
@@ -211,60 +209,8 @@ public class Crane implements Runnable {
     static {
         for (CargoType typeOfCargo : CargoType.values()) {
             System.out.println("TypeCargo="+typeOfCargo);
-            mapLockers.put(typeOfCargo,  new ReentrantLock()); /*不公平队列*/
+            mapLockers.put(typeOfCargo,  new ReentrantLock());
         }
     }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/**
- * ConcurrentMap是一个接口。 ConcurrentHashMap是一个实现类
- * public interface ConcurrentMap<K, V> extends Map<K, V> {
- *     V putIfAbsent(K key, V value);               //插入元素
- *     boolean remove(Object key, Object value);    //移除元素
- *     boolean replace(K key, V oldValue, V newValue);  //替换元素
- *     V replace(K key, V value);  //替换元素
- * }
- * ConcurrentHashMap是一个线程安全，并且是一个高效的HashMap。
- *
- */
-
-/**
- * 3 times.
- */
-
-
-/**
- * static object - all the cranes share mapLockers, because in specific fleet(e.x. fleet liquid ships)
- *                 they need to conduct unload task serially
- *  As the following text suggests:
- *  | all LOOSE -- lock     |
- *  | all LIQUID -- lock    |
- *  | all CONTAINER -- lock |
- *
- * ConcurrentHashMap(CHM):
- *  1. Retrieval operations (including get) generally do not block, so may overlap with update operations (including put and remove).
- *  2.
- *  Why CHM?
- *      1. efficient, one of the most common used concurrent container
- *      2. Every fleet owners a lock, but fleets can work concurrently.
- *          (e.x. When LIQUID fleet works, CONTAINER fleet is not blocking, instead it can work too)
- */

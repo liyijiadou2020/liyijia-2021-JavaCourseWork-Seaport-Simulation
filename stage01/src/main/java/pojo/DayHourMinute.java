@@ -46,12 +46,10 @@ public class DayHourMinute implements Comparable<DayHourMinute> {
         int hour1 = hour;
         int minute1 = minute;
 
-        // minute --> hour
         int minuteToHour = minute1 / 60;
         hour1 += minuteToHour;
         minute1 %= 60;
 
-        // hour --> day
         int hourToDay = hour1 / 24;
         day1 += hourToDay;
         hour1 %= 24;

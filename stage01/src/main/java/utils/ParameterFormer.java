@@ -88,7 +88,6 @@ public class ParameterFormer {
         int lenName = new Random().nextInt(3) + 3;
         StringBuffer name = new StringBuffer();
 
-        // 生成首字母后的随机字母
         for (int i = 0; i < lenName - 1; i++) {
             char letter = (char) (new Random().nextInt(26) + 65);
             name.append(letter);

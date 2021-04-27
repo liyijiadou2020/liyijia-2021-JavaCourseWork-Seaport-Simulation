@@ -360,19 +360,6 @@ public class Port {
         return sum;
     }
 
-    /**
-     * 计算金额的总数：
-     * 对于每一个类型
-     *  对于类型下的每一条已经完成卸载的船
-     *      计算罚款时间（ 公式：罚款时间 = 完成卸载时刻-（实际到达时刻+卸货的时间） ）
-     *      计算罚款金额（ 公式：罚款时间*100， 注意，未满1小时要按照1小时收费 ）
-     *      算好了金额，放入mapFine中
-     *  对于类型下每一条等待卸货的船
-     *      计算罚款时间（ 公式：30天的时间-（到达时刻+卸货的时间） ）
-     *      计算罚款金额（ 公式：罚款时间*100， 注意，未满1小时要按照1小时收费 ）
-     *      算好了金额，放入mapFine中
-     *
-     */
     private static void countFine() {
         for (CargoType typeCargo : values()) {
             for (Ship ship : unloaded.get(typeCargo)) { //对于已经卸货的船
@@ -408,31 +395,12 @@ public class Port {
         int countAllCranes = 0;
         Map<CargoType, Integer> mapOldFreeCranesCount = new HashMap<>();
 
-        /**
-         * высчислаем число кранов.
-         * копируем числа свободных кранов
-         *
-         * 将countOfFreeCranes中的值刷入countAllCranes，将countOfFreeCranes的值刷入oldCountOfFreeCranes（注意，oldCountOfFreeCranes不是同步的）
-         */
         for (CargoType typeCargo : values()) {
             countAllCranes += mapFreeCranesCount.get(typeCargo); // 将countOfFreeCranes中的所有值加入countAllCranes
             mapOldFreeCranesCount.put(typeCargo, mapFreeCranesCount.get(typeCargo)); // 把countOfFreeCranes中的值放入oldCountOfFreeCranes
         }
         cyclicBarrier = new CyclicBarrier(countAllCranes, timer);
-        /**
-         * 这一个for循环里面做了什么：
-         * 对于每个类型：
-         * 1. 初始化nowInUnloading，unloadedShips，mapOfCranes
-         * 2. countOfFreeCranes里的所有起重机全部加入mapOfCranes
-         * 3. 启动mapOfCranes中的所有起重机
-         *
-         * Что делается в этом цикле for:
-         *  Для каждого флота, который пока не нашел оптимизацию:
-         *      1. Инициализировать все очереди: unloading, unloaded, mapCranes, waiting
-         *      2. Все краны в mapOfCranes
-         *      3. Запустите все краны в mapOfCranes.
-         *
-         */
+
         for (CargoType typeCargo : values()) {
 
             if (!isMinFine.get(typeCargo)) {

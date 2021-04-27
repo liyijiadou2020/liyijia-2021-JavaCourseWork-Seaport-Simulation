@@ -2,7 +2,7 @@ package pojo;
 
 /**
  * @create :2021-04-23 14:55:00
- * @Version: 0.0
+ * @Version: 1.0
  * @Descriptions:
  */
 public class Statistics {

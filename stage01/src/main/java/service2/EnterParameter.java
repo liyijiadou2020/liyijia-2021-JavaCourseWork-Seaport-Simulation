@@ -9,7 +9,7 @@ import static utils.ParameterFormer.*;
 /**
  * @Autor: liyijiadou
  * @create :2021-04-23 12:28:00
- * @Version: 0.0
+ * @Version: 1.0
  * @Descriptions:
  */
 public class EnterParameter {
@@ -46,7 +46,7 @@ public class EnterParameter {
             answer = input.next();
 
         }
-        System.out.println("You have enteres "+counter+" schedule(s).");
+        System.out.println("You have entered "+counter+" schedule(s).");
 
     }
 

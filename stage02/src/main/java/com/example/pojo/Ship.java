@@ -15,15 +15,15 @@ public class Ship implements Comparable<Ship>{
      * waitDuration - время ожидания в очерери
      *
      */
-    private DayHourMinute arriveTime; /*Arrive time*/
+    private DayHourMinute arriveTime;
     private String name;
     private Cargo cargo;
     private int cranesCount = 0;
     private boolean isUnloading = false;
-    private DayHourMinute unloadDuration; /* parkingTime,unloadMinutes: 卸货所用的分钟数, == UD*/
+    private DayHourMinute unloadDuration;
     private DayHourMinute unloadDelay;
-    private DayHourMinute startUnloadTime = new DayHourMinute(); /* startTimeUnloading */
-    private DayHourMinute finishUnloadTime = new DayHourMinute(); /* finishTimeUnloading */
+    private DayHourMinute startUnloadTime = new DayHourMinute();
+    private DayHourMinute finishUnloadTime = new DayHourMinute();
     private DayHourMinute waitDuration = new DayHourMinute();
 
 
