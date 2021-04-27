@@ -17,21 +17,21 @@ import static utils.Constant.MINUTE_IN_THIRTY_DAYS;
 public class Crane implements Runnable {
 
     private final Integer performance;
-    private final CargoType typeCargo;
+    private final CargoType cargoType;
     private static final ConcurrentMap<CargoType, Lock> mapLockers = new ConcurrentHashMap<>(); //ConcurrentMap- 每个线程对应一把锁
     public static volatile int fineCounter=0;
 
     public Crane(Integer performance, CargoType typeOfCargo) {
         this.performance = performance;
-        this.typeCargo = typeOfCargo;
+        this.cargoType = typeOfCargo;
     }
 
     public Integer getPerformance() {
         return performance;
     }
 
-    public CargoType getTypeCargo() {
-        return typeCargo;
+    public CargoType getCargoType() {
+        return cargoType;
     }
 
     @Override
@@ -39,7 +39,7 @@ public class Crane implements Runnable {
      * waiting -> current -> unloading -> unloaded
      */
     public void run() {
-        Thread.currentThread().setName(Thread.currentThread().getName()+"-"+typeCargo.toString());
+        Thread.currentThread().setName(Thread.currentThread().getName()+"-"+ cargoType.toString());
         /**
          * init
          */
@@ -53,7 +53,7 @@ public class Crane implements Runnable {
                 /**
                  * Current Crane try to lock. If not succeed, thread span and wait(CAS)
                  */
-                mapLockers.get(typeCargo).lock(); //lockers-CocurrentMap<TypeCargo, Lock>, 获取typeCargo对应的锁
+                mapLockers.get(cargoType).lock(); //lockers-CocurrentMap<TypeCargo, Lock>, 获取typeCargo对应的锁
 
                 /**
                  * mapCountWaiting中【卸载中船的个数】加等于queuesForUnloading中船的个数
@@ -62,7 +62,7 @@ public class Crane implements Runnable {
                  *  mapCountWaiting - used to count waiting ships(for result statistics)
                  *  update mapCountWaiting : += waiting ships' size
                  */
-                mapCountWaiting.put(typeCargo, mapCountWaiting.get(typeCargo) + waiting.get(typeCargo).size());
+                mapCountWaiting.put(cargoType, mapCountWaiting.get(cargoType) + waiting.get(cargoType).size());
                 /**
                  * if 某船队的queuesAllShips不为空 且 某船队的queuesAllShips的第一支船（不可以为null）的到达时间<=now(queuesAllShips队首的船已经到达)
                  *  向queuesForUnloading中加入队列中的第一条船，把队列中的第一条船移出队列
@@ -72,17 +72,17 @@ public class Crane implements Runnable {
                  *  when the head of queuesAllShips arrives, add it into wait queue ( queuesAllShips.head-->waiting )
                  *
                  */
-                    if ( (!queuesAllShips.get(typeCargo).isEmpty())
-                            && Objects.requireNonNull(queuesAllShips.get(typeCargo).peek()).getArriveTime().inMinutes() <=
+                    if ( (!queuesAllShips.get(cargoType).isEmpty())
+                            && Objects.requireNonNull(queuesAllShips.get(cargoType).peek()).getArriveTime().inMinutes() <=
                             now()) {
                         // modified
-                        System.out.println("Arrived a ship: "+ queuesAllShips.get(typeCargo).peek().getName()
-                                + "("+ queuesAllShips.get(typeCargo).peek().getCargo().getTypeCargo() +"): arrival time: "
-                                + queuesAllShips.get(typeCargo).peek().getArriveTime()+" ...\n"
+                        System.out.println("Arrived a ship: "+ queuesAllShips.get(cargoType).peek().getName()
+                                + "("+ queuesAllShips.get(cargoType).peek().getCargo().getCargoType() +"): arrival time: "
+                                + queuesAllShips.get(cargoType).peek().getArriveTime()+" ...\n"
                                 + "-1->Crane: "
-                                + Thread.currentThread()+" is adding "+ queuesAllShips.get(typeCargo).peek().getName()
+                                + Thread.currentThread()+" is adding "+ queuesAllShips.get(cargoType).peek().getName()
                                 +" into waiting queue...");
-                        waiting.get(typeCargo).add(queuesAllShips.get(typeCargo).poll());
+                        waiting.get(cargoType).add(queuesAllShips.get(cargoType).poll());
                     }
 
                 /**
@@ -99,22 +99,22 @@ public class Crane implements Runnable {
                  *      -update sum unload duration: += currentDelay
                  *  5.print info of current ship
                  */
-                if ( (currentShip == null) && (!waiting.get(typeCargo).isEmpty())) {
+                if ( (currentShip == null) && (!waiting.get(cargoType).isEmpty())) {
 
-                        System.out.println("-2->Crane: "+Thread.currentThread()+" is adding "+ waiting.get(typeCargo).peek().getName()+" into loading queue...");
+                        System.out.println("-2->Crane: "+Thread.currentThread()+" is adding "+ waiting.get(cargoType).peek().getName()+" into loading queue...");
 
-                        currentShip = waiting.get(typeCargo).poll();
-                        unloading.get(typeCargo).add(currentShip); // queuesForUnloading --> nowInUnloading
+                        currentShip = waiting.get(cargoType).poll();
+                        unloading.get(cargoType).add(currentShip); // queuesForUnloading --> nowInUnloading
 
                         currentShip.increaseCrane(); // 当前为unloadingShip服务的起重机数量++
                         currentDelay = DayHourMinute.generateRandomMinute(0, 1440); // 设置随机的 完成卸货偏移时间delay, set a random dalay(0~1440)
                         currentShip.setUnloadDelay(new DayHourMinute(currentDelay));
                         // （船的卸货时间也许会比预期更多，范围是0~1440分钟.也就是说delay的范围是0~1440分钟）
 
-                        mapMaxDelay.put(typeCargo, Integer.max(mapMaxDelay.get(typeCargo), currentDelay)); // 比较：maxTimeStop中和timeStop比较，谁大
-                        mapSumDelay.put(typeCargo, currentDelay); // modified 4-22新增
-                        mapSumUD.put(typeCargo, mapSumUD.get(typeCargo) + currentDelay); // todo 将sumTimeStop加上timeStop(有点问题)
-                        mapFreeCranesCount.replace(typeCargo, mapFreeCranesCount.get(typeCargo) - 1); // 船队所对应的countFreeCranes数量-1
+                        mapMaxDelay.put(cargoType, Integer.max(mapMaxDelay.get(cargoType), currentDelay)); // 比较：maxTimeStop中和timeStop比较，谁大
+                        mapSumDelay.put(cargoType, currentDelay); // modified 4-22新增
+                        mapSumUD.put(cargoType, mapSumUD.get(cargoType) + currentDelay); // todo 将sumTimeStop加上timeStop(有点问题)
+                        mapFreeCranesCount.replace(cargoType, mapFreeCranesCount.get(cargoType) - 1); // 船队所对应的countFreeCranes数量-1
 
                         System.out.println("-3->Crane: "+Thread.currentThread()+", currentShip:"+ currentShip.getName() +" delay="+currentDelay+"(min), cranes= "+currentShip.getCranesCount());
                     }
@@ -124,18 +124,18 @@ public class Crane implements Runnable {
                  * 【进入条件】queuesWaiting为空，但unloading不为空。
                  * 那么应该把unloading中的ship
                  */
-                    if ( currentShip == null && !unloading.get(typeCargo).isEmpty()) {
-                        for (Ship ship : unloading.get(typeCargo)) {
+                    if ( currentShip == null && !unloading.get(cargoType).isEmpty()) {
+                        for (Ship ship : unloading.get(cargoType)) {
                             /**
                              * 只会对【队首的一条船】进行cranes++。完成之后即刻break
                              */
-                            if (ship.getCranesCount() < 2 && mapFreeCranesCount.get(typeCargo) > 0) {
+                            if (ship.getCranesCount() < 2 && mapFreeCranesCount.get(cargoType) > 0) {
                                 currentShip = ship;
                                 currentShip.increaseCrane(); // todo 这里是不是应该把UD/=2？
-                                mapFreeCranesCount.replace(typeCargo, mapFreeCranesCount.get(typeCargo) - 1);
+                                mapFreeCranesCount.replace(cargoType, mapFreeCranesCount.get(cargoType) - 1);
                                 System.out.println("-4->Crane: "+Thread.currentThread()+". Unloading is not empty. currentShip="+currentShip.getName()
                                         +", cranes="+currentShip.getCranesCount()
-                                +"(after reducing)Free cranes count="+mapFreeCranesCount.get(typeCargo));
+                                +"(after reducing)Free cranes count="+mapFreeCranesCount.get(cargoType));
                                 break;
                             }
                         }
@@ -144,7 +144,7 @@ public class Crane implements Runnable {
                 if (currentShip == null) {
 //                    System.out.println(
 //                                "【这里的输出实在太多了】-5->Crane: "+Thread.currentThread()+"unloading.size="+unloading.size()+Thread.currentThread()+" releasing lock...");
-                    mapLockers.get(typeCargo).unlock();
+                    mapLockers.get(cargoType).unlock();
                     cyclicBarrier.await();
                     continue;
                 }
@@ -160,7 +160,7 @@ public class Crane implements Runnable {
                         DayHourMinute wd = new DayHourMinute();
                         wd.setMinute(currentShip.getStartUnloadTime().getMinute()-currentShip.getArriveTime().getMinute());
                         currentShip.setWaitDuration(wd);
-                        mapSumWD.put(currentShip.getCargo().getTypeCargo(), wd.getMinute());
+                        mapSumWD.put(currentShip.getCargo().getCargoType(), wd.getMinute());
                         System.out.println("~~> ship: "+currentShip.getName() + " wait duration: "+ currentShip.getWaitDuration().getMinute());
                         // ------ 4-21 -----
                         System.out.println("-6->Crane: "+Thread.currentThread()+". currentShip: "+currentShip.getName()+" starts unloading...");
@@ -182,7 +182,7 @@ public class Crane implements Runnable {
                             + "with " + currentShip.getCranesCount() + " crane(s). Releasing the crane...");
 
                             currentShip.setCranesCount(currentShip.getCranesCount() - 1);
-                            mapFreeCranesCount.replace(typeCargo, mapFreeCranesCount.get(typeCargo) + 1);
+                            mapFreeCranesCount.replace(cargoType, mapFreeCranesCount.get(cargoType) + 1);
                         }
 
                         if (currentShip.getCranesCount() == 0) {
@@ -194,26 +194,26 @@ public class Crane implements Runnable {
                             System.out.println("-10->Crane: "+Thread.currentThread()+ " finished unloading " + currentShip.getName()
                                     +". Finished unload time:"+finishTimeUnloading);
 
-                            System.out.println("-11-> unloading.size="+unloading.get(typeCargo).size()+" unloaded.size="+unloaded.get(typeCargo).size());
+                            System.out.println("-11-> unloading.size="+unloading.get(cargoType).size()+" unloaded.size="+unloaded.get(cargoType).size());
 
-                            unloaded.get(typeCargo).add(currentShip);
+                            unloaded.get(cargoType).add(currentShip);
                             currentShip.setUnloading(false);
                             //System.out.println(unloadedShips.get(typeOfCargo).size() + typeOfCargo.toString());
-                            unloading.get(typeCargo).remove(currentShip);
+                            unloading.get(cargoType).remove(currentShip);
 
                             System.out.println("-12->Crane: "+Thread.currentThread()+" removed "+currentShip.getName()+" to unloaded.");
 
-                            System.out.println("-13-> unloading.size="+unloading.get(typeCargo).size()+" unloaded.size="+unloaded.get(typeCargo).size());
+                            System.out.println("-13-> unloading.size="+unloading.get(cargoType).size()+" unloaded.size="+unloaded.get(cargoType).size());
                             //                          System.out.println(queuesAllShips.get(typeOfCargo).size() + typeOfCargo.toString());
                         }
                         currentShip = null;
                     }
 
                 }
-                mapLockers.get(typeCargo).unlock();
+                mapLockers.get(cargoType).unlock();
                 cyclicBarrier.await();
             } // while
-            mapLockers.get(typeCargo).lock();
+            mapLockers.get(cargoType).lock();
 
             /**
              * Calculate fine.
@@ -231,11 +231,11 @@ public class Crane implements Runnable {
                 if (timeFine > 0) {
                     timeFine = timeFine / 60 + timeFine % 60 != 0 ? 1 : 0;
                     int fine = timeFine * COAST_PER_HOUR;
-                    mapFine.replace(typeCargo, mapFine.get(typeCargo) + fine);
+                    mapFine.replace(cargoType, mapFine.get(cargoType) + fine);
                     System.out.println("current ship is " + currentShip.getName()+" fine is "+fine);
                 }
             }
-            mapLockers.get(typeCargo).unlock();
+            mapLockers.get(cargoType).unlock();
 
         } catch (InterruptedException | BrokenBarrierException e) {
             e.printStackTrace();

@@ -490,7 +490,7 @@ public class Simulator {
             queuesAllShips.put(typeCargo, new LinkedBlockingQueue<>());
         }
         for (Ship ship : ships) {
-            queuesAllShips.get(ship.getCargo().getTypeCargo()).add(new Ship(ship));
+            queuesAllShips.get(ship.getCargo().getCargoType()).add(new Ship(ship));
         }
     }
 

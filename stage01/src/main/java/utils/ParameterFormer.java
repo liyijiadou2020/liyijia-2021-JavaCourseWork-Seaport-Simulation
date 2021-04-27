@@ -40,7 +40,7 @@ public class ParameterFormer {
     public static @NotNull String stringShip(Ship ship){
         return (String.format("%-10s", "| Name : ")+ String.format("  %-5s |", ship.getName())
                 + String.format("%-15s", " Arrival time : ") + String.format("  %-10s |", ship.getArriveTime())
-                + String.format("%-15s", " Type Cargo : ") + String.format("  %-9s |", ship.getCargo().getTypeCargo())
+                + String.format("%-15s", " Type Cargo : ") + String.format("  %-9s |", ship.getCargo().getCargoType())
                 + String.format("%-6s", " Weight : ") + String.format("  %-4s |", ship.getCargo().getWeight())
                 + String.format("%-15s", " Unload Duration : ") + String.format("  %-10s |", ship.getUnloadDuration())
                 + String.format("%-15s", " Unload Delay : ") + String.format("  %-10s |", ship.getUnloadDelay())
@@ -54,7 +54,7 @@ public class ParameterFormer {
     public static String stringSchedule(Schedule schedule){
             return (String.format("%-10s", "| Name : ")+ String.format("  %-4s |", schedule.getNameShip())
                     + String.format("%-15s", " Arrival time : ") + String.format("  %-10s |", schedule.getArriveTime())
-                    + String.format("%-15s", " Type Cargo : ") + String.format("  %-15s |", schedule.getCargo().getTypeCargo())
+                    + String.format("%-15s", " Type Cargo : ") + String.format("  %-15s |", schedule.getCargo().getCargoType())
                     + String.format("%-6s", " Weight : ") + String.format("  %-8s |", schedule.getCargo().getWeight())
                     + String.format("%-15s", " Unload Duration : ") + String.format("  %-10s |", schedule.getUnloadDuration())
             );
@@ -102,7 +102,7 @@ public class ParameterFormer {
 
     public static int calculateUnloadDuration(Cargo cargo){
         int UD =0;
-        switch (cargo.getTypeCargo()) {
+        switch (cargo.getCargoType()) {
             case LOOSE: UD = cargo.getWeight() / PERFORMANCE_LOOSE;  break;
             case LIQUID: UD = cargo.getWeight() / PERFORMANCE_LIQUID; break;
             case CONTAINER: UD = cargo.getWeight() / PERFORMANCE_CONTAINER; break;
